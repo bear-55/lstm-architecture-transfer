@@ -1,0 +1,1 @@
+Fig. 4. Decomposition of mean late-period NSE gains in held-out catchments. The waterfall subtracts retraining loss from retained gain to obtain transferred gain; adjacent bars show the global-rule gain and local increment. Error bars are synchronized seed/HUC2 95% intervals for gains.

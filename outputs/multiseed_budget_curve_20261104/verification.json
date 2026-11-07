@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "metric_arrays_match_previously_verified_raw_predictions": true,
+  "explicit_target_subset_enumeration_passed": true,
+  "source_target_identity_overlap": false,
+  "bootstrap_global_rule_reselected": true,
+  "explicit_bootstrap_witnesses": 20,
+  "one_and_five_seed_bootstrap_draws_match_previous_results": true,
+  "unordered_126_partitions_match_oriented_252_partitions": [
+    "M1__m5__NSE",
+    "M1__m5__NSE_star",
+    "EA__m5__NSE",
+    "EA__m5__NSE_star"
+  ],
+  "script_sha256": "a5b4748e67522f80437f6882e9636242648966158b502046637e657245ef27f2"
+}

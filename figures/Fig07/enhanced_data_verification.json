@@ -1,0 +1,492 @@
+{
+  "status": "PASS",
+  "upper_panel": [
+    {
+      "model": "M1",
+      "key": "main",
+      "estimate": 0.07254970749937156,
+      "low": 0.02857749817657056,
+      "high": 0.15219206935728397,
+      "n": 2000,
+      "interval": "95% interval"
+    },
+    {
+      "model": "M1",
+      "key": "median",
+      "estimate": 0.020569945112114116,
+      "low": 0.009375803469490606,
+      "high": 0.03049853323641567,
+      "n": 2000,
+      "interval": "95% interval"
+    },
+    {
+      "model": "M1",
+      "key": "omit3",
+      "estimate": 0.03897377890003901,
+      "low": 0.022328746128843176,
+      "high": 0.06175829063989825,
+      "n": 2000,
+      "interval": "95% interval"
+    },
+    {
+      "model": "M1",
+      "key": "omit7",
+      "estimate": 0.029806337625130856,
+      "low": 0.017969119847680355,
+      "high": 0.0447661707385084,
+      "n": 2000,
+      "interval": "95% interval"
+    },
+    {
+      "model": "M1",
+      "key": "omitlib",
+      "estimate": 0.030349096622896355,
+      "low": 0.017481162634042195,
+      "high": 0.04722575223633864,
+      "n": 2000,
+      "interval": "95% interval"
+    },
+    {
+      "model": "M1",
+      "key": "seed_only",
+      "estimate": 0.07254970749937156,
+      "low": 0.0499130490729545,
+      "high": 0.09823343337570649,
+      "n": 2000,
+      "interval": "95% interval"
+    },
+    {
+      "model": "M1",
+      "key": "prespec",
+      "estimate": 0.066285905840823,
+      "low": 0.024572749825004042,
+      "high": 0.1385370317963359,
+      "n": 5000,
+      "interval": "95% interval"
+    },
+    {
+      "model": "M1",
+      "key": "windows",
+      "estimate": 0.06602961851458598,
+      "low": 0.06095545044381857,
+      "high": 0.06967044307268257,
+      "n": 7,
+      "interval": "Observed window range"
+    },
+    {
+      "model": "M1",
+      "key": "k5",
+      "estimate": 0.04054004450237501,
+      "low": 0.01577619399987015,
+      "high": 0.07911713369897438,
+      "n": 20000,
+      "interval": "95% HUC2 interval conditional on the fitted library"
+    },
+    {
+      "model": "M1",
+      "key": "train_mean",
+      "estimate": 0.008916779721965007,
+      "low": -0.02416516834072926,
+      "high": 0.039213857901512376,
+      "n": 2000,
+      "interval": "95% interval"
+    },
+    {
+      "model": "M1",
+      "key": "train_median",
+      "estimate": 0.009117227320264168,
+      "low": 0.004298544218570428,
+      "high": 0.015996303223310106,
+      "n": 2000,
+      "interval": "95% interval"
+    },
+    {
+      "model": "EA",
+      "key": "main",
+      "estimate": 0.04857866002488194,
+      "low": 0.023243370691747093,
+      "high": 0.09230231621380068,
+      "n": 2000,
+      "interval": "95% interval"
+    },
+    {
+      "model": "EA",
+      "key": "median",
+      "estimate": 0.018017852879983844,
+      "low": 0.009458902612771658,
+      "high": 0.025297302330616424,
+      "n": 2000,
+      "interval": "95% interval"
+    },
+    {
+      "model": "EA",
+      "key": "omit3",
+      "estimate": 0.03359478346158118,
+      "low": 0.019879065950245075,
+      "high": 0.05070328524085713,
+      "n": 2000,
+      "interval": "95% interval"
+    },
+    {
+      "model": "EA",
+      "key": "omit7",
+      "estimate": 0.025313556723733425,
+      "low": 0.014048514617146754,
+      "high": 0.035608650942998865,
+      "n": 2000,
+      "interval": "95% interval"
+    },
+    {
+      "model": "EA",
+      "key": "omitlib",
+      "estimate": 0.031839634999321194,
+      "low": 0.01801156870037916,
+      "high": 0.05217355458031598,
+      "n": 2000,
+      "interval": "95% interval"
+    },
+    {
+      "model": "EA",
+      "key": "seed_only",
+      "estimate": 0.04857866002488194,
+      "low": 0.038456475207670184,
+      "high": 0.06080296119487768,
+      "n": 2000,
+      "interval": "95% interval"
+    },
+    {
+      "model": "EA",
+      "key": "prespec",
+      "estimate": 0.05692162675958399,
+      "low": 0.025966314152334805,
+      "high": 0.1167811873636757,
+      "n": 5000,
+      "interval": "95% interval"
+    },
+    {
+      "model": "EA",
+      "key": "windows",
+      "estimate": 0.05128342508836999,
+      "low": 0.044441360165446045,
+      "high": 0.05817564093463589,
+      "n": 7,
+      "interval": "Observed window range"
+    },
+    {
+      "model": "EA",
+      "key": "k5",
+      "estimate": 0.018318856174240422,
+      "low": 0.010102445762192248,
+      "high": 0.03144696400737429,
+      "n": 20000,
+      "interval": "95% HUC2 interval conditional on the fitted library"
+    },
+    {
+      "model": "EA",
+      "key": "train_mean",
+      "estimate": 0.0170497290105442,
+      "low": -0.006781747466575283,
+      "high": 0.05147411039540664,
+      "n": 2000,
+      "interval": "95% interval"
+    },
+    {
+      "model": "EA",
+      "key": "train_median",
+      "estimate": 0.008310178676684286,
+      "low": 0.0036319032350906194,
+      "high": 0.013019244808085298,
+      "n": 2000,
+      "interval": "95% interval"
+    },
+    {
+      "model": "EA",
+      "key": "perm",
+      "estimate": 0.04857866002488194,
+      "low": 0.043454452262691075,
+      "high": 0.06398167891666967,
+      "n": 2000,
+      "interval": "Central 95% of permutations; point = original pairing"
+    },
+    {
+      "model": "EA",
+      "key": "ext_nse",
+      "estimate": 0.0025200561251300917,
+      "low": 3.277496305092821e-05,
+      "high": 0.005289484943091587,
+      "n": 2000,
+      "interval": "95% interval"
+    },
+    {
+      "model": "EA",
+      "key": "ext_mse",
+      "estimate": 0.00940905863544938,
+      "low": 0.0029235168651489253,
+      "high": 0.022238042603765888,
+      "n": 2000,
+      "interval": "95% interval"
+    }
+  ],
+  "matching": [
+    {
+      "model": "M1",
+      "scheme": "unmatched",
+      "point": 0.018652356915279316,
+      "low": 0.006250476729513168,
+      "high": 0.03355911409308716,
+      "n_heldout": 107,
+      "n_training": 370
+    },
+    {
+      "model": "M1",
+      "scheme": "across_HUC2",
+      "point": 0.02304188271012073,
+      "low": 0.009871313085174423,
+      "high": 0.03864959023017142,
+      "n_heldout": 101,
+      "n_training": 101
+    },
+    {
+      "model": "M1",
+      "scheme": "within_HUC2",
+      "point": 0.007673531494310579,
+      "low": -0.0056296243136609685,
+      "high": 0.020112841085632438,
+      "n_heldout": 77,
+      "n_training": 77
+    },
+    {
+      "model": "EA",
+      "scheme": "unmatched",
+      "point": 0.01706880667596171,
+      "low": 0.0064095858913340836,
+      "high": 0.028551968894438277,
+      "n_heldout": 107,
+      "n_training": 370
+    },
+    {
+      "model": "EA",
+      "scheme": "across_HUC2",
+      "point": 0.019042381674114452,
+      "low": 0.007734451904983006,
+      "high": 0.03187448672287161,
+      "n_heldout": 101,
+      "n_training": 101
+    },
+    {
+      "model": "EA",
+      "scheme": "within_HUC2",
+      "point": 0.010052683106878034,
+      "low": -0.0014451506970956283,
+      "high": 0.020997804791059494,
+      "n_heldout": 77,
+      "n_training": 77
+    }
+  ],
+  "ratios": [
+    {
+      "model": "M1",
+      "check": "seed_only",
+      "D": 0.07254970749937156,
+      "main_D": 0.07254970749937156,
+      "percent": 100.0,
+      "bounds_include_zero": false,
+      "interval_kind": "95% interval"
+    },
+    {
+      "model": "M1",
+      "check": "median",
+      "D": 0.020569945112114116,
+      "main_D": 0.07254970749937156,
+      "percent": 28.35289875192439,
+      "bounds_include_zero": false,
+      "interval_kind": "95% interval"
+    },
+    {
+      "model": "M1",
+      "check": "omit3",
+      "D": 0.03897377890003901,
+      "main_D": 0.07254970749937156,
+      "percent": 53.720104799011914,
+      "bounds_include_zero": false,
+      "interval_kind": "95% interval"
+    },
+    {
+      "model": "M1",
+      "check": "omit7",
+      "D": 0.029806337625130856,
+      "main_D": 0.07254970749937156,
+      "percent": 41.084021772781156,
+      "bounds_include_zero": false,
+      "interval_kind": "95% interval"
+    },
+    {
+      "model": "M1",
+      "check": "omitlib",
+      "D": 0.030349096622896355,
+      "main_D": 0.07254970749937156,
+      "percent": 41.832141946484406,
+      "bounds_include_zero": false,
+      "interval_kind": "95% interval"
+    },
+    {
+      "model": "M1",
+      "check": "prespec",
+      "D": 0.066285905840823,
+      "main_D": 0.07254970749937156,
+      "percent": 91.36619309098825,
+      "bounds_include_zero": false,
+      "interval_kind": "95% interval"
+    },
+    {
+      "model": "M1",
+      "check": "windows",
+      "D": 0.06602961851458598,
+      "main_D": 0.07254970749937156,
+      "percent": 91.01293553134992,
+      "bounds_include_zero": false,
+      "interval_kind": "Observed window range"
+    },
+    {
+      "model": "M1",
+      "check": "k5",
+      "D": 0.04054004450237501,
+      "main_D": 0.07254970749937156,
+      "percent": 55.8789909700548,
+      "bounds_include_zero": false,
+      "interval_kind": "95% HUC2 interval conditional on the fitted library"
+    },
+    {
+      "model": "M1",
+      "check": "train_mean",
+      "D": 0.008916779721965007,
+      "main_D": 0.07254970749937156,
+      "percent": 12.290579837337381,
+      "bounds_include_zero": true,
+      "interval_kind": "95% interval"
+    },
+    {
+      "model": "M1",
+      "check": "train_median",
+      "D": 0.009117227320264168,
+      "main_D": 0.07254970749937156,
+      "percent": 12.566869853118487,
+      "bounds_include_zero": false,
+      "interval_kind": "95% interval"
+    },
+    {
+      "model": "EA",
+      "check": "seed_only",
+      "D": 0.04857866002488194,
+      "main_D": 0.04857866002488194,
+      "percent": 100.0,
+      "bounds_include_zero": false,
+      "interval_kind": "95% interval"
+    },
+    {
+      "model": "EA",
+      "check": "median",
+      "D": 0.018017852879983844,
+      "main_D": 0.04857866002488194,
+      "percent": 37.09005738477578,
+      "bounds_include_zero": false,
+      "interval_kind": "95% interval"
+    },
+    {
+      "model": "EA",
+      "check": "omit3",
+      "D": 0.03359478346158118,
+      "main_D": 0.04857866002488194,
+      "percent": 69.15543459694847,
+      "bounds_include_zero": false,
+      "interval_kind": "95% interval"
+    },
+    {
+      "model": "EA",
+      "check": "omit7",
+      "D": 0.025313556723733425,
+      "main_D": 0.04857866002488194,
+      "percent": 52.108388149792205,
+      "bounds_include_zero": false,
+      "interval_kind": "95% interval"
+    },
+    {
+      "model": "EA",
+      "check": "omitlib",
+      "D": 0.031839634999321194,
+      "main_D": 0.04857866002488194,
+      "percent": 65.54243155948099,
+      "bounds_include_zero": false,
+      "interval_kind": "95% interval"
+    },
+    {
+      "model": "EA",
+      "check": "prespec",
+      "D": 0.05692162675958399,
+      "main_D": 0.04857866002488194,
+      "percent": 117.17413928344008,
+      "bounds_include_zero": false,
+      "interval_kind": "95% interval"
+    },
+    {
+      "model": "EA",
+      "check": "windows",
+      "D": 0.05128342508836999,
+      "main_D": 0.04857866002488194,
+      "percent": 105.56780500347823,
+      "bounds_include_zero": false,
+      "interval_kind": "Observed window range"
+    },
+    {
+      "model": "EA",
+      "check": "k5",
+      "D": 0.018318856174240422,
+      "main_D": 0.04857866002488194,
+      "percent": 37.70967779855913,
+      "bounds_include_zero": false,
+      "interval_kind": "95% HUC2 interval conditional on the fitted library"
+    },
+    {
+      "model": "EA",
+      "check": "train_mean",
+      "D": 0.0170497290105442,
+      "main_D": 0.04857866002488194,
+      "percent": 35.097157891574916,
+      "bounds_include_zero": true,
+      "interval_kind": "95% interval"
+    },
+    {
+      "model": "EA",
+      "check": "train_median",
+      "D": 0.008310178676684286,
+      "main_D": 0.04857866002488194,
+      "percent": 17.1066445069251,
+      "bounds_include_zero": false,
+      "interval_kind": "95% interval"
+    }
+  ],
+  "input_sha256": {
+    "deliverables/data_request_20261103/01_scores_long.csv": "ed2d0a3e517b020e9ed522cad9708053c9f6a62829c5ae56092672fe23d9a790",
+    "deliverables/data_request_20261103/03_basin_metadata_531.csv": "27174441aaeb25a039bbd9526c4b5f03892274f7f6cc4d4d22a8f70c3c024d05",
+    "figures/Fig04/data/window_losses.csv": "4599d4507593e028e1d640a787b33415502a2a92335da09503364daed4bdd25d",
+    "outputs/ea_selection_analysis_20261101/primary_arrays.npz": "404a2569260d53363ef8ae2946709762622392036060b7420a2cb3ce9856af9f",
+    "outputs/multimetric_transfer_20261102/bootstrap_draws.npz": "e1d5a6641ab50e8994b91ba1da4b56cfc54e22fa8abbbe1a0b62f97f5b257e0f",
+    "outputs/multiseed_budget_curve_20261104/bootstrap_draws.npz": "fd8529ebd041975380580a64b2a113212a364d17ca491cbac4304ee9b860e2c8",
+    "outputs/retraining_confirmation_analysis_20261031/primary_arrays.npz": "9dd942891f54f5bcf4cc01b54bd54f4833ebda86027aee6551125f1a83c70031",
+    "outputs/selection_transfer_P1_20261102/matching_pairs.csv": "1f68e77a3a0b0da7a1d7c594351d970d618a75cecd2d414f54e378ce7e01698a",
+    "outputs/selection_transfer_P1_20261102/P1_contrast_draws.npz": "0e9522d5c7de5f4e76a81c2d47ee76ac416eec927944e5f45c3d5a30b7f7f3ef",
+    "outputs/training_domain_followup_20261102/unseen_aligned/metric_arrays.npz": "afa5d1b17a0d88c51aeee4f9d727f9bb88fdcdf8d92cced8da351cc7507fcce7",
+    "outputs/weakness_resolution_20261102/external_MSE/metric_arrays.npz": "5f53e744d6c1df819900be8a664d8ae2854150454e3542d504980feea1c8ec84",
+    "outputs/weakness_resolution_20261102/external_MSE/selection_bootstrap_EA.csv": "521d57cb317c5ea09fd375775c492ba638b40c26cb3ae11fab8e2ed3430ebec5",
+    "outputs/weakness_resolution_20261102/external_NSE/metric_arrays.npz": "8c84e2d24766f55ad6374ceecc1e28d21c4eb96f92f96891f0f7c50a11e7cda5",
+    "outputs/weakness_resolution_20261102/external_NSE/selection_bootstrap_EA.csv": "082267902ab8a3bcad127ae574d83983f7262b552e012362e02377dddc51b637",
+    "outputs/weakness_resolution_20261102/local_internal/metric_arrays.npz": "035d08351094ff3739d4693f2e96ff27cd59624e6eb186c6a4a13f9f039445d6",
+    "figures/Fig07/data/forest_endpoints.csv": "353c2bd56473aafad50031c60454bdfe4aa700b5b5e1d630b0b8842ff05f3bfa",
+    "figures/Fig07/data/matching_contrasts.csv": "9bb7cc594746a72e6aa49986e6fa37bbd54bcd3a878309fa2304f89a3d138de3",
+    "figures/Fig07/data/bootstrap_draws.npz": "6cd2288ccd287eb193494b640436d66b0e9ee3759b7015c57e8e7f072ec0742a",
+    "figures/Fig07/data/bootstrap_weights.npz": "04d4fb05018945c4ce335b57c877e19ab63fede775c15fe615f544f2810bcaf2"
+  },
+  "window_statistic": "Seven individual estimates; min–max in a,b and mean in d",
+  "five_source": "20,000 fixed-library HUC2 draws; 252 ordered allocations",
+  "seed_pairing": "2,000 B0-label permutations; diamond is the original pairing"
+}

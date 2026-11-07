@@ -1,0 +1,37 @@
+{
+  "completed_at_utc": "2026-09-15T07:56:58.771685+00:00",
+  "candidate_count": 531,
+  "usable_count": 509,
+  "excluded_count": 22,
+  "role_eligible_counts": {
+    "train": 522,
+    "val": 520,
+    "test": 514
+  },
+  "threshold_sensitivity": {
+    "0.5": 522,
+    "0.7": 509,
+    "0.8": 509,
+    "0.9": 499,
+    "0.95": 488
+  },
+  "reason_counts_overlapping": {
+    "test_joint_coverage_below_80pct": 13,
+    "val_joint_coverage_below_80pct": 10,
+    "climate_temperature_coverage": 4,
+    "climate_cold_precip_coverage": 4,
+    "train_joint_coverage_below_80pct": 8,
+    "val_minimum_days_or_nse_undefined": 1,
+    "train_minimum_days_or_nse_undefined": 3
+  },
+  "q_flag_counts": {
+    "A": 3337254,
+    "A:e": 347886
+  },
+  "protected_pilot_files_unchanged": true,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.2",
+  "pandas": "2.3.1",
+  "usable_list_sha256": "60a1fda095517efa4bc7f8d2282ebff45de436d6e356f44963cfb23416183695",
+  "access_log_sha256": "1297637870d28978b02f334f5cd4a3f43b762d6b434273039693554fa57db969"
+}

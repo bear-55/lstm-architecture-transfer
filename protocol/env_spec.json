@@ -1,0 +1,13 @@
+{
+  "provider": "Beijing Super Cloud Computing Center, direct Ubuntu host",
+  "base": "existing Ubuntu 22.04 image and restored /data mount",
+  "python": "3.12.x, record exact patch; no reinstall required if witness passes",
+  "pip_phases": [["torch==2.12.1+cu130"], ["numpy==2.3.2", "pandas==2.3.1", "PyYAML==6.0.2"]],
+  "resource": {"gpus": 1, "gpu_name": "NVIDIA GeForce RTX 5090", "memory_gib_nominal": 32},
+  "environment": {"CUDA_VISIBLE_DEVICES": "0", "OMP_NUM_THREADS": "1", "MKL_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "CUBLAS_WORKSPACE_CONFIG": ":4096:8"},
+  "execution": "float32; TF32 disabled; deterministic algorithms; B0 native fused and M1 existing CUDA Graph backend",
+  "python_path": "/data/formal_pub_527/.venv/bin/python",
+  "project_directory": "/data/retraining_confirmation_20261029",
+  "smoke": {"command": "/data/formal_pub_527/.venv/bin/python -u cloud/run_retraining_confirmation.py preflight", "expect": "PREFLIGHT_PASSED"},
+  "status": "declarative; remote full-shape witness pending; reported basic CUDA test passed"
+}

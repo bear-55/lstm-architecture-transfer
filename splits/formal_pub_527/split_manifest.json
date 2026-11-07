@@ -1,0 +1,139 @@
+{
+  "status": "frozen_split_only_not_training_cache",
+  "counts": {
+    "train": 370,
+    "val": 50,
+    "test": 107
+  },
+  "accepted_attempt": 0,
+  "split_seed_components": [
+    20260915,
+    0
+  ],
+  "model_training_seeds_are_separate": true,
+  "code_sha256": "c6bc85e5116c0031ebdb9cd0fdc47631a7d0ae329d089b8852741340b361cdc2",
+  "input_hashes": {
+    "data_contract\\formal_531_audit\\selected_527_basins.txt": "c91be96273069c8d961a8de9dafc88f4b102fff20f27545ecdfcb5601d358882",
+    "data_contract\\formal_531_audit\\selected_basin_details.csv": "dc6b0d7b8af32ad280a29b4f98200b25df0b5c0b6537b9bf6cb44a742e27daf1",
+    "data_contract\\formal_531_audit\\design_group_roles.json": "99fd10911b7a010d26cd927a384bb2221f0bdaeb39e8ad8f44fb2d6641f1a846",
+    "data_contract\\formal_531_audit\\protocol.json": "f555c4d994e2d1c9ed9528dfd581447acfe318808e86736c4c0ae1109051f534",
+    "data_contract\\formal_531_audit\\source_hashes.json": "ae4dd869f7c7a22c32c82e7c81fc7ca2e33ac7ff9ca511022a2298c80666fbca",
+    "data_contract\\formal_531_audit\\geometry_review.json": "88750fa6cdb8ad8229292d57b9037738ec64ca2bb71ac96275d9b3aa9293e19c",
+    "data_contract\\feature_manifest.csv": "58fb0541e1df6ecd57e146451d5a72e063eaff2b19106d6ea06d7eadbcd64297",
+    "data_contract\\basin_qc.csv": "bf1208aa81cbddd96c205aa0a72b8e70e6fada0bac3ebd50334892e0fcb9cfa5",
+    "data\\manifests\\source_files.csv": "4bdf1b7b84428a1eb541c131248391e9278dd5c38ea15f24a615dd25010ef1bc"
+  },
+  "pilot_hashes_unchanged": {
+    "configs\\pilot.yaml": "38cc9ffa4311ba83899d7fc37d908e071f4cb2f81d2ab142fed27f127e9d644c",
+    "data\\processed\\scaler.json": "8aeb1fdf3fcf97da43361f4a4f1acd2216f7cf52ea41f009a576f9dd584914fe",
+    "splits\\selection_manifest.json": "82b3a42911f05d020b73db7d470e3d1b8299e964e08a13e0f055e34eb8698ee9",
+    "splits\\random_pub_test.txt": "99ae760d10f1a48551cfa26b7cd33509bce83c34ee418cc7fda2b103360c1d62",
+    "splits\\random_pub_train.txt": "4145823cb18a52fe722d1b0824584e81f8e77d984562ac85b0823f25bfdc01cc",
+    "splits\\random_pub_val.txt": "342464c5f0e08c0d7f063a353673ebfd875366a70fd740283973821c56ef425e"
+  },
+  "Q_contents_read": false,
+  "scaler_or_imputer_fitted": false,
+  "climate_threshold_scope": "all 527 allowed candidate covariates, frozen once",
+  "solver": {
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "objective": 162.95365282590137,
+    "climate_abs_deviation_sum": 5.851992409867178,
+    "max_climate_cell_deviation": 0.7836812144212502,
+    "targets": [
+      [
+        61.78368121442125,
+        8.349146110056926,
+        17.86717267552182
+      ],
+      [
+        61.78368121442125,
+        8.349146110056926,
+        17.86717267552182
+      ],
+      [
+        61.78368121442125,
+        8.349146110056926,
+        17.86717267552182
+      ],
+      [
+        61.081593927893735,
+        8.25426944971537,
+        17.66413662239089
+      ],
+      [
+        61.78368121442125,
+        8.349146110056926,
+        17.86717267552182
+      ],
+      [
+        61.78368121442125,
+        8.349146110056926,
+        17.86717267552182
+      ]
+    ],
+    "actual": [
+      [
+        62,
+        8,
+        18
+      ],
+      [
+        61,
+        9,
+        18
+      ],
+      [
+        62,
+        8,
+        18
+      ],
+      [
+        61,
+        9,
+        17
+      ],
+      [
+        62,
+        8,
+        18
+      ],
+      [
+        62,
+        8,
+        18
+      ]
+    ]
+  },
+  "versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.3.2",
+    "pandas": "2.3.1",
+    "scipy": "1.16.1",
+    "matplotlib": "3.10.5"
+  },
+  "output_hashes": {
+    "attempt_00\\assignment.csv": "1bed62eece9f4d55be0632cb4ec6b7be6847074aff5756ab0791c6f5d4ace6fb",
+    "attempt_00\\geographic_diagnostics.csv": "83fc458c8f0ad0ed9b0471d36fd98f298d5d32f7afccf79454ffa64099ba4b7a",
+    "attempt_00\\land_diagnostics.csv": "37fc5aeb6049565cfaede822b2fa676490e7da89a0d96f9d2f9762df0544629a",
+    "attempt_00\\result.json": "118b3417cf6f33e49f2ccef2edeeb4892aa611d5924ca8ce10eb31aaadd3d198",
+    "attribute_distribution_summary.csv": "b4cb8475402be667a338487f6e100ae13ccd1412984db131c7012c234ee7f35d",
+    "basin_assignment.csv": "b58c8b73d253ccc84ff00110566215ac3ad91cf2c50bc525c28cd0b51cb09a3c",
+    "candidate_attributes.csv": "8c1ea9ce9b0b5cd925d9c949c35e4ff8bf3e1109445eca93cc6d317345cb8032",
+    "climate_stratum_counts.csv": "137d8f099598ae43551b27a85d4005449269a85fbfaa920c77fb4e9e744b8f18",
+    "climate_thresholds.json": "9da9eb596cb40087b577588e717cd85deed348c7f5972dbfe1120307f9c8cf58",
+    "figures\\climate_distributions.png": "fb53ec337e994799b3c55dfaaa9d4b244de62737c1f79c4cd796e53c59974c97",
+    "figures\\climate_distributions.svg": "309966aa0afbd480110a503fb56bd88ce75ef10fa01c03c328d1a05ab6e2593a",
+    "figures\\geographic_distribution.png": "1422464aba196be3b0a4e28d2a572b2beabc659b8c68525899cfc624d6934fb5",
+    "figures\\geographic_distribution.svg": "e23a449626b271fbfbe8eccae33fc456d9cfd2a464017802c5b4b7818ec54404",
+    "figures\\land_distributions.png": "3fc96d492d611f838f0f19a83bedc46fd43ace7eb993e98947bb30b52ab4d9b9",
+    "figures\\land_distributions.svg": "a52cb675769fe64b9ae2f2c3bfc1bbe520915b9f53e809b50a9e7e1498219bd2",
+    "geographic_balance_diagnostics.csv": "83fc458c8f0ad0ed9b0471d36fd98f298d5d32f7afccf79454ffa64099ba4b7a",
+    "land_balance_diagnostics.csv": "37fc5aeb6049565cfaede822b2fa676490e7da89a0d96f9d2f9762df0544629a",
+    "protocol.json": "52fbada7e375111e9e69707ff0204ca413b28e91ef7557838388c2b6cd452b00",
+    "README.md": "67bad32ed74c63b7ead092f225263d816d4af5fe1ea17216b35f1e847ca895fb",
+    "test.txt": "dd5d93c7d30bda6d66a1c0d602e74905afa717443c03be9e7bd9a6f8340db585",
+    "train.txt": "d857894dc6a6ccf3c5a19f9acfc7c57d63d6e29a653183d9386658ebca9ab8e9",
+    "val.txt": "29c21cc7d5f8a58bf66d8eacbd9341e1134bc9f63332fee69852277096f51a31"
+  },
+  "frozen_at_utc": "2026-09-15T08:21:22.668627+00:00"
+}

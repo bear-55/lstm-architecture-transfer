@@ -1,0 +1,145 @@
+panel,scenario,group,comparison,metric,n_periods,n_seeds,n_catchments,component,share_pct
+a,heldout107,Held-out,M1/B0,NSE,2,10,107,Catchment,4.0233544483809558
+a,heldout107,Held-out,M1/B0,NSE,2,10,107,Seed,0.5313071969784704
+a,heldout107,Held-out,M1/B0,NSE,2,10,107,Seed×Catchment,53.148690208343403
+a,heldout107,Held-out,M1/B0,NSE,2,10,107,Period×Catchment,3.3074293632386449
+a,heldout107,Held-out,M1/B0,NSE,2,10,107,Period×Seed×Catchment,38.73317449704787
+a,heldout107,Held-out,M1/B0,NSE,2,10,107,Period terms,0.25604428601065271
+a,heldout107,Held-out,M1/B0,NSE_star,2,10,107,Catchment,6.8457458422717901
+a,heldout107,Held-out,M1/B0,NSE_star,2,10,107,Seed,3.2647995307733306
+a,heldout107,Held-out,M1/B0,NSE_star,2,10,107,Seed×Catchment,75.01594341380148
+a,heldout107,Held-out,M1/B0,NSE_star,2,10,107,Period×Catchment,1.7666585359275699
+a,heldout107,Held-out,M1/B0,NSE_star,2,10,107,Period×Seed×Catchment,12.770033003841544
+a,heldout107,Held-out,M1/B0,NSE_star,2,10,107,Period terms,0.33681967338430074
+a,heldout107,Held-out,M1/B0,KGE,2,10,107,Catchment,10.315864981619157
+a,heldout107,Held-out,M1/B0,KGE,2,10,107,Seed,2.120882689064441
+a,heldout107,Held-out,M1/B0,KGE,2,10,107,Seed×Catchment,68.572074211331994
+a,heldout107,Held-out,M1/B0,KGE,2,10,107,Period×Catchment,2.6518434355472036
+a,heldout107,Held-out,M1/B0,KGE,2,10,107,Period×Seed×Catchment,16.151951555106955
+a,heldout107,Held-out,M1/B0,KGE,2,10,107,Period terms,0.18738312733025841
+a,heldout107,Held-out,M1/B0,abs_FHV_pct,2,10,107,Catchment,7.359389551584786
+a,heldout107,Held-out,M1/B0,abs_FHV_pct,2,10,107,Seed,0.61965563348514963
+a,heldout107,Held-out,M1/B0,abs_FHV_pct,2,10,107,Seed×Catchment,65.518887620780291
+a,heldout107,Held-out,M1/B0,abs_FHV_pct,2,10,107,Period×Catchment,3.7800538119050726
+a,heldout107,Held-out,M1/B0,abs_FHV_pct,2,10,107,Period×Seed×Catchment,22.412785675377219
+a,heldout107,Held-out,M1/B0,abs_FHV_pct,2,10,107,Period terms,0.3092277068674763
+a,heldout107,Held-out,M1/B0,nMAE_high,2,10,107,Catchment,6.3135050651545352
+a,heldout107,Held-out,M1/B0,nMAE_high,2,10,107,Seed,0.40494689528536493
+a,heldout107,Held-out,M1/B0,nMAE_high,2,10,107,Seed×Catchment,59.977279773542335
+a,heldout107,Held-out,M1/B0,nMAE_high,2,10,107,Period×Catchment,4.7552352065934809
+a,heldout107,Held-out,M1/B0,nMAE_high,2,10,107,Period×Seed×Catchment,28.024058605168946
+a,heldout107,Held-out,M1/B0,nMAE_high,2,10,107,Period terms,0.52497445425533851
+a,heldout107,Held-out,M1/B0,nMAE_low,2,10,107,Catchment,7.9821108443782389
+a,heldout107,Held-out,M1/B0,nMAE_low,2,10,107,Seed,3.7950249981644681
+a,heldout107,Held-out,M1/B0,nMAE_low,2,10,107,Seed×Catchment,76.24724523580602
+a,heldout107,Held-out,M1/B0,nMAE_low,2,10,107,Period×Catchment,0.55466010782348552
+a,heldout107,Held-out,M1/B0,nMAE_low,2,10,107,Period×Seed×Catchment,11.218603568223475
+a,heldout107,Held-out,M1/B0,nMAE_low,2,10,107,Period terms,0.20235524560431833
+a,heldout107,Held-out,EA/B0,NSE,2,10,107,Catchment,14.927041943865426
+a,heldout107,Held-out,EA/B0,NSE,2,10,107,Seed,0.32465503399792012
+a,heldout107,Held-out,EA/B0,NSE,2,10,107,Seed×Catchment,43.013627634775382
+a,heldout107,Held-out,EA/B0,NSE,2,10,107,Period×Catchment,10.039569031391478
+a,heldout107,Held-out,EA/B0,NSE,2,10,107,Period×Seed×Catchment,31.335670071123563
+a,heldout107,Held-out,EA/B0,NSE,2,10,107,Period terms,0.35943628484621654
+a,heldout107,Held-out,EA/B0,NSE_star,2,10,107,Catchment,19.558782205532012
+a,heldout107,Held-out,EA/B0,NSE_star,2,10,107,Seed,1.1261295541968595
+a,heldout107,Held-out,EA/B0,NSE_star,2,10,107,Seed×Catchment,62.728175755736721
+a,heldout107,Held-out,EA/B0,NSE_star,2,10,107,Period×Catchment,3.2213528710587132
+a,heldout107,Held-out,EA/B0,NSE_star,2,10,107,Period×Seed×Catchment,13.138863391221681
+a,heldout107,Held-out,EA/B0,NSE_star,2,10,107,Period terms,0.22669622225401825
+a,heldout107,Held-out,EA/B0,KGE,2,10,107,Catchment,18.731596883106178
+a,heldout107,Held-out,EA/B0,KGE,2,10,107,Seed,0.93226480621378338
+a,heldout107,Held-out,EA/B0,KGE,2,10,107,Seed×Catchment,61.474287804737919
+a,heldout107,Held-out,EA/B0,KGE,2,10,107,Period×Catchment,2.7094459947192338
+a,heldout107,Held-out,EA/B0,KGE,2,10,107,Period×Seed×Catchment,16.022467296091925
+a,heldout107,Held-out,EA/B0,KGE,2,10,107,Period terms,0.12993721513094136
+a,heldout107,Held-out,EA/B0,abs_FHV_pct,2,10,107,Catchment,13.382289910375103
+a,heldout107,Held-out,EA/B0,abs_FHV_pct,2,10,107,Seed,0.32158398112050463
+a,heldout107,Held-out,EA/B0,abs_FHV_pct,2,10,107,Seed×Catchment,59.474635181877893
+a,heldout107,Held-out,EA/B0,abs_FHV_pct,2,10,107,Period×Catchment,7.5206174262744803
+a,heldout107,Held-out,EA/B0,abs_FHV_pct,2,10,107,Period×Seed×Catchment,18.98745154175365
+a,heldout107,Held-out,EA/B0,abs_FHV_pct,2,10,107,Period terms,0.31342195859835914
+a,heldout107,Held-out,EA/B0,nMAE_high,2,10,107,Catchment,10.249509881847311
+a,heldout107,Held-out,EA/B0,nMAE_high,2,10,107,Seed,0.72748199623743415
+a,heldout107,Held-out,EA/B0,nMAE_high,2,10,107,Seed×Catchment,49.741268465690609
+a,heldout107,Held-out,EA/B0,nMAE_high,2,10,107,Period×Catchment,3.977825017805281
+a,heldout107,Held-out,EA/B0,nMAE_high,2,10,107,Period×Seed×Catchment,34.919557615853627
+a,heldout107,Held-out,EA/B0,nMAE_high,2,10,107,Period terms,0.38435702256576354
+a,heldout107,Held-out,EA/B0,nMAE_low,2,10,107,Catchment,25.498859213607084
+a,heldout107,Held-out,EA/B0,nMAE_low,2,10,107,Seed,1.4077726947038005
+a,heldout107,Held-out,EA/B0,nMAE_low,2,10,107,Seed×Catchment,58.4429899802535
+a,heldout107,Held-out,EA/B0,nMAE_low,2,10,107,Period×Catchment,6.4076972935636807
+a,heldout107,Held-out,EA/B0,nMAE_low,2,10,107,Period×Seed×Catchment,8.0088006860183309
+a,heldout107,Held-out,EA/B0,nMAE_low,2,10,107,Period terms,0.2338801318535958
+b,trained370,Training,M1/B0,NSE,2,10,370,Catchment,3.9074467528527022
+b,trained370,Training,M1/B0,NSE,2,10,370,Seed,0.74112080800896285
+b,trained370,Training,M1/B0,NSE,2,10,370,Seed×Catchment,46.742462153266715
+b,trained370,Training,M1/B0,NSE,2,10,370,Period×Catchment,3.0062303168634412
+b,trained370,Training,M1/B0,NSE,2,10,370,Period×Seed×Catchment,45.450764238217396
+b,trained370,Training,M1/B0,NSE,2,10,370,Period terms,0.15197573079078086
+b,trained370,Training,M1/B0,NSE_star,2,10,370,Catchment,5.4192857775907379
+b,trained370,Training,M1/B0,NSE_star,2,10,370,Seed,7.5554584596115504
+b,trained370,Training,M1/B0,NSE_star,2,10,370,Seed×Catchment,56.310375859982301
+b,trained370,Training,M1/B0,NSE_star,2,10,370,Period×Catchment,2.3555569156229663
+b,trained370,Training,M1/B0,NSE_star,2,10,370,Period×Seed×Catchment,28.114304341030852
+b,trained370,Training,M1/B0,NSE_star,2,10,370,Period terms,0.24501864616160132
+b,trained370,Training,M1/B0,KGE,2,10,370,Catchment,7.2694083823458637
+b,trained370,Training,M1/B0,KGE,2,10,370,Seed,6.9540011938909831
+b,trained370,Training,M1/B0,KGE,2,10,370,Seed×Catchment,55.299288758166689
+b,trained370,Training,M1/B0,KGE,2,10,370,Period×Catchment,4.1936937626237931
+b,trained370,Training,M1/B0,KGE,2,10,370,Period×Seed×Catchment,26.121084167695258
+b,trained370,Training,M1/B0,KGE,2,10,370,Period terms,0.16252373527742242
+b,trained370,Training,M1/B0,abs_FHV_pct,2,10,370,Catchment,7.4320973837169211
+b,trained370,Training,M1/B0,abs_FHV_pct,2,10,370,Seed,3.5240303161429289
+b,trained370,Training,M1/B0,abs_FHV_pct,2,10,370,Seed×Catchment,54.939002693568852
+b,trained370,Training,M1/B0,abs_FHV_pct,2,10,370,Period×Catchment,5.0975531402277268
+b,trained370,Training,M1/B0,abs_FHV_pct,2,10,370,Period×Seed×Catchment,28.852218381391292
+b,trained370,Training,M1/B0,abs_FHV_pct,2,10,370,Period terms,0.15509808495226587
+b,trained370,Training,M1/B0,nMAE_high,2,10,370,Catchment,11.313018636929304
+b,trained370,Training,M1/B0,nMAE_high,2,10,370,Seed,1.0653747520098011
+b,trained370,Training,M1/B0,nMAE_high,2,10,370,Seed×Catchment,51.164312504326361
+b,trained370,Training,M1/B0,nMAE_high,2,10,370,Period×Catchment,9.2237379588276376
+b,trained370,Training,M1/B0,nMAE_high,2,10,370,Period×Seed×Catchment,26.960374516505819
+b,trained370,Training,M1/B0,nMAE_high,2,10,370,Period terms,0.27318163140109392
+b,trained370,Training,M1/B0,nMAE_low,2,10,370,Catchment,5.0861881263153945
+b,trained370,Training,M1/B0,nMAE_low,2,10,370,Seed,7.3557187012841307
+b,trained370,Training,M1/B0,nMAE_low,2,10,370,Seed×Catchment,72.349841007699709
+b,trained370,Training,M1/B0,nMAE_low,2,10,370,Period×Catchment,1.0590543225302278
+b,trained370,Training,M1/B0,nMAE_low,2,10,370,Period×Seed×Catchment,14.112780132293619
+b,trained370,Training,M1/B0,nMAE_low,2,10,370,Period terms,0.036417709876908282
+b,trained370,Training,EA/B0,NSE,2,10,370,Catchment,6.0214757070902536
+b,trained370,Training,EA/B0,NSE,2,10,370,Seed,0.42475278668630234
+b,trained370,Training,EA/B0,NSE,2,10,370,Seed×Catchment,47.652712258847146
+b,trained370,Training,EA/B0,NSE,2,10,370,Period×Catchment,1.6074152692013068
+b,trained370,Training,EA/B0,NSE,2,10,370,Period×Seed×Catchment,44.157151390445016
+b,trained370,Training,EA/B0,NSE,2,10,370,Period terms,0.13649258772998693
+b,trained370,Training,EA/B0,NSE_star,2,10,370,Catchment,9.2781569304084872
+b,trained370,Training,EA/B0,NSE_star,2,10,370,Seed,3.1630753987356135
+b,trained370,Training,EA/B0,NSE_star,2,10,370,Seed×Catchment,53.351000469621766
+b,trained370,Training,EA/B0,NSE_star,2,10,370,Period×Catchment,3.5522226857662988
+b,trained370,Training,EA/B0,NSE_star,2,10,370,Period×Seed×Catchment,30.541845921374058
+b,trained370,Training,EA/B0,NSE_star,2,10,370,Period terms,0.11369859409378154
+b,trained370,Training,EA/B0,KGE,2,10,370,Catchment,14.735450968410838
+b,trained370,Training,EA/B0,KGE,2,10,370,Seed,2.0049906055545357
+b,trained370,Training,EA/B0,KGE,2,10,370,Seed×Catchment,55.555354832402273
+b,trained370,Training,EA/B0,KGE,2,10,370,Period×Catchment,3.219678372793576
+b,trained370,Training,EA/B0,KGE,2,10,370,Period×Seed×Catchment,24.401292564554041
+b,trained370,Training,EA/B0,KGE,2,10,370,Period terms,0.083232656284738915
+b,trained370,Training,EA/B0,abs_FHV_pct,2,10,370,Catchment,10.25140150483533
+b,trained370,Training,EA/B0,abs_FHV_pct,2,10,370,Seed,2.5952789294881402
+b,trained370,Training,EA/B0,abs_FHV_pct,2,10,370,Seed×Catchment,50.370859678804067
+b,trained370,Training,EA/B0,abs_FHV_pct,2,10,370,Period×Catchment,5.0953810197876406
+b,trained370,Training,EA/B0,abs_FHV_pct,2,10,370,Period×Seed×Catchment,31.623028642590416
+b,trained370,Training,EA/B0,abs_FHV_pct,2,10,370,Period terms,0.064050224494418079
+b,trained370,Training,EA/B0,nMAE_high,2,10,370,Catchment,8.1972894591328789
+b,trained370,Training,EA/B0,nMAE_high,2,10,370,Seed,0.94759131867809021
+b,trained370,Training,EA/B0,nMAE_high,2,10,370,Seed×Catchment,50.736859351655035
+b,trained370,Training,EA/B0,nMAE_high,2,10,370,Period×Catchment,5.5408121054401569
+b,trained370,Training,EA/B0,nMAE_high,2,10,370,Period×Seed×Catchment,34.415583997219279
+b,trained370,Training,EA/B0,nMAE_high,2,10,370,Period terms,0.16186376787456258
+b,trained370,Training,EA/B0,nMAE_low,2,10,370,Catchment,14.26048391534423
+b,trained370,Training,EA/B0,nMAE_low,2,10,370,Seed,2.8650999033471489
+b,trained370,Training,EA/B0,nMAE_low,2,10,370,Seed×Catchment,68.947194779374797
+b,trained370,Training,EA/B0,nMAE_low,2,10,370,Period×Catchment,2.9483876375977176
+b,trained370,Training,EA/B0,nMAE_low,2,10,370,Period×Seed×Catchment,10.936254060690894
+b,trained370,Training,EA/B0,nMAE_low,2,10,370,Period terms,0.042579703645173342

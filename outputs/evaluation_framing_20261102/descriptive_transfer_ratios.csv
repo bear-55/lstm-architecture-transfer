@@ -1,0 +1,3 @@
+comparison,baseline,estimate,low95,high95,n_paired_bootstrap,n_nonpositive_denominators,interpretation
+M1-B0,fixed_B0,-0.2012929113644172,-1.46772049063185,0.35936615096182556,2000,0,descriptive gain ratio; not a variance or structural-information fraction
+EA-B0,fixed_B0,0.3749816354238668,-0.5041494056095168,0.6978522398169201,2000,0,descriptive gain ratio; not a variance or structural-information fraction

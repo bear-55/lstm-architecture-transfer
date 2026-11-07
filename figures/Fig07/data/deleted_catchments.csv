@@ -1,0 +1,205 @@
+comparison,metric,variant,basin_id,ranking_value,criterion
+M1/B0,NSE,drop_largest_D_3,04127997,1.0998712549259737,full-sample D_b for this comparison and metric
+M1/B0,NSE,drop_largest_D_3,07301410,0.9215283454615666,full-sample D_b for this comparison and metric
+M1/B0,NSE,drop_largest_D_3,09047700,1.6881460964411596,full-sample D_b for this comparison and metric
+M1/B0,NSE,drop_largest_D_7,04127997,1.0998712549259737,full-sample D_b for this comparison and metric
+M1/B0,NSE,drop_largest_D_7,06431500,0.20588854273334073,full-sample D_b for this comparison and metric
+M1/B0,NSE,drop_largest_D_7,07301410,0.9215283454615666,full-sample D_b for this comparison and metric
+M1/B0,NSE,drop_largest_D_7,08324000,0.3941888379498768,full-sample D_b for this comparison and metric
+M1/B0,NSE,drop_largest_D_7,09047700,1.6881460964411596,full-sample D_b for this comparison and metric
+M1/B0,NSE,drop_largest_D_7,13023000,0.21071501864204686,full-sample D_b for this comparison and metric
+M1/B0,NSE,drop_largest_D_7,14137000,0.26184684376570655,full-sample D_b for this comparison and metric
+M1/B0,NSE,drop_C_7,01487000,0.17346373920712516,EA/B0 late library gain in NSE
+M1/B0,NSE,drop_C_7,04127997,1.2541085228853104,EA/B0 late library gain in NSE
+M1/B0,NSE,drop_C_7,07301410,0.8451243102454304,EA/B0 late library gain in NSE
+M1/B0,NSE,drop_C_7,08324000,1.2290722538539356,EA/B0 late library gain in NSE
+M1/B0,NSE,drop_C_7,09047700,0.5293743638189561,EA/B0 late library gain in NSE
+M1/B0,NSE,drop_C_7,13023000,0.17712591912038333,EA/B0 late library gain in NSE
+M1/B0,NSE,drop_C_7,14137000,0.25381907118864583,EA/B0 late library gain in NSE
+M1/B0,NSE_star,drop_largest_D_3,09047700,0.3212234148664611,full-sample D_b for this comparison and metric
+M1/B0,NSE_star,drop_largest_D_3,09107000,0.14236040556799828,full-sample D_b for this comparison and metric
+M1/B0,NSE_star,drop_largest_D_3,13023000,0.17073102584171837,full-sample D_b for this comparison and metric
+M1/B0,NSE_star,drop_largest_D_7,01487000,0.11134126428466623,full-sample D_b for this comparison and metric
+M1/B0,NSE_star,drop_largest_D_7,04057800,0.11335414450935913,full-sample D_b for this comparison and metric
+M1/B0,NSE_star,drop_largest_D_7,04127997,0.1397944255450076,full-sample D_b for this comparison and metric
+M1/B0,NSE_star,drop_largest_D_7,08324000,0.10383679713728694,full-sample D_b for this comparison and metric
+M1/B0,NSE_star,drop_largest_D_7,09047700,0.3212234148664611,full-sample D_b for this comparison and metric
+M1/B0,NSE_star,drop_largest_D_7,09107000,0.14236040556799828,full-sample D_b for this comparison and metric
+M1/B0,NSE_star,drop_largest_D_7,13023000,0.17073102584171837,full-sample D_b for this comparison and metric
+M1/B0,NSE_star,drop_C_7,01487000,0.17346373920712516,EA/B0 late library gain in NSE
+M1/B0,NSE_star,drop_C_7,04127997,1.2541085228853104,EA/B0 late library gain in NSE
+M1/B0,NSE_star,drop_C_7,07301410,0.8451243102454304,EA/B0 late library gain in NSE
+M1/B0,NSE_star,drop_C_7,08324000,1.2290722538539356,EA/B0 late library gain in NSE
+M1/B0,NSE_star,drop_C_7,09047700,0.5293743638189561,EA/B0 late library gain in NSE
+M1/B0,NSE_star,drop_C_7,13023000,0.17712591912038333,EA/B0 late library gain in NSE
+M1/B0,NSE_star,drop_C_7,14137000,0.25381907118864583,EA/B0 late library gain in NSE
+M1/B0,KGE,drop_largest_D_3,04127997,0.2890131194905344,full-sample D_b for this comparison and metric
+M1/B0,KGE,drop_largest_D_3,07142300,0.29991588048283613,full-sample D_b for this comparison and metric
+M1/B0,KGE,drop_largest_D_3,09047700,0.5455355727790453,full-sample D_b for this comparison and metric
+M1/B0,KGE,drop_largest_D_7,04057800,0.14796896564620995,full-sample D_b for this comparison and metric
+M1/B0,KGE,drop_largest_D_7,04127997,0.2890131194905344,full-sample D_b for this comparison and metric
+M1/B0,KGE,drop_largest_D_7,07142300,0.29991588048283613,full-sample D_b for this comparison and metric
+M1/B0,KGE,drop_largest_D_7,08324000,0.2120313121917224,full-sample D_b for this comparison and metric
+M1/B0,KGE,drop_largest_D_7,09047700,0.5455355727790453,full-sample D_b for this comparison and metric
+M1/B0,KGE,drop_largest_D_7,09107000,0.15843598272908255,full-sample D_b for this comparison and metric
+M1/B0,KGE,drop_largest_D_7,13023000,0.14940626331925075,full-sample D_b for this comparison and metric
+M1/B0,KGE,drop_C_7,01487000,0.17346373920712516,EA/B0 late library gain in NSE
+M1/B0,KGE,drop_C_7,04127997,1.2541085228853104,EA/B0 late library gain in NSE
+M1/B0,KGE,drop_C_7,07301410,0.8451243102454304,EA/B0 late library gain in NSE
+M1/B0,KGE,drop_C_7,08324000,1.2290722538539356,EA/B0 late library gain in NSE
+M1/B0,KGE,drop_C_7,09047700,0.5293743638189561,EA/B0 late library gain in NSE
+M1/B0,KGE,drop_C_7,13023000,0.17712591912038333,EA/B0 late library gain in NSE
+M1/B0,KGE,drop_C_7,14137000,0.25381907118864583,EA/B0 late library gain in NSE
+M1/B0,abs_FHV,drop_largest_D_3,04127997,21.250045013794477,full-sample D_b for this comparison and metric
+M1/B0,abs_FHV,drop_largest_D_3,07301410,37.10941814350299,full-sample D_b for this comparison and metric
+M1/B0,abs_FHV,drop_largest_D_3,09047700,41.07448759207024,full-sample D_b for this comparison and metric
+M1/B0,abs_FHV,drop_largest_D_7,01487000,12.843493938280632,full-sample D_b for this comparison and metric
+M1/B0,abs_FHV,drop_largest_D_7,04057800,14.02528698545035,full-sample D_b for this comparison and metric
+M1/B0,abs_FHV,drop_largest_D_7,04063700,11.637207443624511,full-sample D_b for this comparison and metric
+M1/B0,abs_FHV,drop_largest_D_7,04127997,21.250045013794477,full-sample D_b for this comparison and metric
+M1/B0,abs_FHV,drop_largest_D_7,07301410,37.10941814350299,full-sample D_b for this comparison and metric
+M1/B0,abs_FHV,drop_largest_D_7,09047700,41.07448759207024,full-sample D_b for this comparison and metric
+M1/B0,abs_FHV,drop_largest_D_7,13023000,14.588859814837388,full-sample D_b for this comparison and metric
+M1/B0,abs_FHV,drop_C_7,01487000,0.17346373920712516,EA/B0 late library gain in NSE
+M1/B0,abs_FHV,drop_C_7,04127997,1.2541085228853104,EA/B0 late library gain in NSE
+M1/B0,abs_FHV,drop_C_7,07301410,0.8451243102454304,EA/B0 late library gain in NSE
+M1/B0,abs_FHV,drop_C_7,08324000,1.2290722538539356,EA/B0 late library gain in NSE
+M1/B0,abs_FHV,drop_C_7,09047700,0.5293743638189561,EA/B0 late library gain in NSE
+M1/B0,abs_FHV,drop_C_7,13023000,0.17712591912038333,EA/B0 late library gain in NSE
+M1/B0,abs_FHV,drop_C_7,14137000,0.25381907118864583,EA/B0 late library gain in NSE
+M1/B0,nMAE_high,drop_largest_D_3,07142300,0.7060396866290506,full-sample D_b for this comparison and metric
+M1/B0,nMAE_high,drop_largest_D_3,07301410,0.5319126671350106,full-sample D_b for this comparison and metric
+M1/B0,nMAE_high,drop_largest_D_3,09047700,1.8673419635797526,full-sample D_b for this comparison and metric
+M1/B0,nMAE_high,drop_largest_D_7,04057800,0.3393804433011453,full-sample D_b for this comparison and metric
+M1/B0,nMAE_high,drop_largest_D_7,07142300,0.7060396866290506,full-sample D_b for this comparison and metric
+M1/B0,nMAE_high,drop_largest_D_7,07301410,0.5319126671350106,full-sample D_b for this comparison and metric
+M1/B0,nMAE_high,drop_largest_D_7,08324000,0.503898743538874,full-sample D_b for this comparison and metric
+M1/B0,nMAE_high,drop_largest_D_7,09047700,1.8673419635797526,full-sample D_b for this comparison and metric
+M1/B0,nMAE_high,drop_largest_D_7,09107000,0.48839246474981757,full-sample D_b for this comparison and metric
+M1/B0,nMAE_high,drop_largest_D_7,13023000,0.3552591585529925,full-sample D_b for this comparison and metric
+M1/B0,nMAE_high,drop_C_7,01487000,0.17346373920712516,EA/B0 late library gain in NSE
+M1/B0,nMAE_high,drop_C_7,04127997,1.2541085228853104,EA/B0 late library gain in NSE
+M1/B0,nMAE_high,drop_C_7,07301410,0.8451243102454304,EA/B0 late library gain in NSE
+M1/B0,nMAE_high,drop_C_7,08324000,1.2290722538539356,EA/B0 late library gain in NSE
+M1/B0,nMAE_high,drop_C_7,09047700,0.5293743638189561,EA/B0 late library gain in NSE
+M1/B0,nMAE_high,drop_C_7,13023000,0.17712591912038333,EA/B0 late library gain in NSE
+M1/B0,nMAE_high,drop_C_7,14137000,0.25381907118864583,EA/B0 late library gain in NSE
+M1/B0,nMAE_low,drop_largest_D_3,02202600,0.11097602396409909,full-sample D_b for this comparison and metric
+M1/B0,nMAE_low,drop_largest_D_3,06879650,0.08864320432772661,full-sample D_b for this comparison and metric
+M1/B0,nMAE_low,drop_largest_D_3,07142300,0.1605979986053683,full-sample D_b for this comparison and metric
+M1/B0,nMAE_low,drop_largest_D_7,02081500,0.057551134166737836,full-sample D_b for this comparison and metric
+M1/B0,nMAE_low,drop_largest_D_7,02193340,0.0779919896693059,full-sample D_b for this comparison and metric
+M1/B0,nMAE_low,drop_largest_D_7,02202600,0.11097602396409909,full-sample D_b for this comparison and metric
+M1/B0,nMAE_low,drop_largest_D_7,06431500,0.04928259256591827,full-sample D_b for this comparison and metric
+M1/B0,nMAE_low,drop_largest_D_7,06879650,0.08864320432772661,full-sample D_b for this comparison and metric
+M1/B0,nMAE_low,drop_largest_D_7,07142300,0.1605979986053683,full-sample D_b for this comparison and metric
+M1/B0,nMAE_low,drop_largest_D_7,08324000,0.0691135121777486,full-sample D_b for this comparison and metric
+M1/B0,nMAE_low,drop_C_7,01487000,0.17346373920712516,EA/B0 late library gain in NSE
+M1/B0,nMAE_low,drop_C_7,04127997,1.2541085228853104,EA/B0 late library gain in NSE
+M1/B0,nMAE_low,drop_C_7,07301410,0.8451243102454304,EA/B0 late library gain in NSE
+M1/B0,nMAE_low,drop_C_7,08324000,1.2290722538539356,EA/B0 late library gain in NSE
+M1/B0,nMAE_low,drop_C_7,09047700,0.5293743638189561,EA/B0 late library gain in NSE
+M1/B0,nMAE_low,drop_C_7,13023000,0.17712591912038333,EA/B0 late library gain in NSE
+M1/B0,nMAE_low,drop_C_7,14137000,0.25381907118864583,EA/B0 late library gain in NSE
+EA/B0,NSE,drop_largest_D_3,07301410,0.34854282290051686,full-sample D_b for this comparison and metric
+EA/B0,NSE,drop_largest_D_3,08324000,0.8713033674705423,full-sample D_b for this comparison and metric
+EA/B0,NSE,drop_largest_D_3,09047700,0.4842129522868661,full-sample D_b for this comparison and metric
+EA/B0,NSE,drop_largest_D_7,04063700,0.1821158244319454,full-sample D_b for this comparison and metric
+EA/B0,NSE,drop_largest_D_7,04127918,0.268140313818652,full-sample D_b for this comparison and metric
+EA/B0,NSE,drop_largest_D_7,06431500,0.2121989090485584,full-sample D_b for this comparison and metric
+EA/B0,NSE,drop_largest_D_7,07142300,0.3000467603319448,full-sample D_b for this comparison and metric
+EA/B0,NSE,drop_largest_D_7,07301410,0.34854282290051686,full-sample D_b for this comparison and metric
+EA/B0,NSE,drop_largest_D_7,08324000,0.8713033674705423,full-sample D_b for this comparison and metric
+EA/B0,NSE,drop_largest_D_7,09047700,0.4842129522868661,full-sample D_b for this comparison and metric
+EA/B0,NSE,drop_C_7,01487000,0.17346373920712516,EA/B0 late library gain in NSE
+EA/B0,NSE,drop_C_7,04127997,1.2541085228853104,EA/B0 late library gain in NSE
+EA/B0,NSE,drop_C_7,07301410,0.8451243102454304,EA/B0 late library gain in NSE
+EA/B0,NSE,drop_C_7,08324000,1.2290722538539356,EA/B0 late library gain in NSE
+EA/B0,NSE,drop_C_7,09047700,0.5293743638189561,EA/B0 late library gain in NSE
+EA/B0,NSE,drop_C_7,13023000,0.17712591912038333,EA/B0 late library gain in NSE
+EA/B0,NSE,drop_C_7,14137000,0.25381907118864583,EA/B0 late library gain in NSE
+EA/B0,NSE_star,drop_largest_D_3,07142300,0.13508271476390565,full-sample D_b for this comparison and metric
+EA/B0,NSE_star,drop_largest_D_3,09047700,0.15545168094668355,full-sample D_b for this comparison and metric
+EA/B0,NSE_star,drop_largest_D_3,11381500,0.11675325350901145,full-sample D_b for this comparison and metric
+EA/B0,NSE_star,drop_largest_D_7,02111500,0.09859478378811462,full-sample D_b for this comparison and metric
+EA/B0,NSE_star,drop_largest_D_7,04057800,0.1019500983909606,full-sample D_b for this comparison and metric
+EA/B0,NSE_star,drop_largest_D_7,07142300,0.13508271476390565,full-sample D_b for this comparison and metric
+EA/B0,NSE_star,drop_largest_D_7,08324000,0.11262337712609302,full-sample D_b for this comparison and metric
+EA/B0,NSE_star,drop_largest_D_7,09047700,0.15545168094668355,full-sample D_b for this comparison and metric
+EA/B0,NSE_star,drop_largest_D_7,09107000,0.11280608886638588,full-sample D_b for this comparison and metric
+EA/B0,NSE_star,drop_largest_D_7,11381500,0.11675325350901145,full-sample D_b for this comparison and metric
+EA/B0,NSE_star,drop_C_7,01487000,0.17346373920712516,EA/B0 late library gain in NSE
+EA/B0,NSE_star,drop_C_7,04127997,1.2541085228853104,EA/B0 late library gain in NSE
+EA/B0,NSE_star,drop_C_7,07301410,0.8451243102454304,EA/B0 late library gain in NSE
+EA/B0,NSE_star,drop_C_7,08324000,1.2290722538539356,EA/B0 late library gain in NSE
+EA/B0,NSE_star,drop_C_7,09047700,0.5293743638189561,EA/B0 late library gain in NSE
+EA/B0,NSE_star,drop_C_7,13023000,0.17712591912038333,EA/B0 late library gain in NSE
+EA/B0,NSE_star,drop_C_7,14137000,0.25381907118864583,EA/B0 late library gain in NSE
+EA/B0,KGE,drop_largest_D_3,07142300,0.466134920213973,full-sample D_b for this comparison and metric
+EA/B0,KGE,drop_largest_D_3,07301410,0.2699100030780392,full-sample D_b for this comparison and metric
+EA/B0,KGE,drop_largest_D_3,08324000,0.37275016815091133,full-sample D_b for this comparison and metric
+EA/B0,KGE,drop_largest_D_7,02102908,0.1252368831317193,full-sample D_b for this comparison and metric
+EA/B0,KGE,drop_largest_D_7,07142300,0.466134920213973,full-sample D_b for this comparison and metric
+EA/B0,KGE,drop_largest_D_7,07301410,0.2699100030780392,full-sample D_b for this comparison and metric
+EA/B0,KGE,drop_largest_D_7,08150800,0.1165460641056448,full-sample D_b for this comparison and metric
+EA/B0,KGE,drop_largest_D_7,08324000,0.37275016815091133,full-sample D_b for this comparison and metric
+EA/B0,KGE,drop_largest_D_7,09047700,0.20461591381768807,full-sample D_b for this comparison and metric
+EA/B0,KGE,drop_largest_D_7,09107000,0.13467156747023357,full-sample D_b for this comparison and metric
+EA/B0,KGE,drop_C_7,01487000,0.17346373920712516,EA/B0 late library gain in NSE
+EA/B0,KGE,drop_C_7,04127997,1.2541085228853104,EA/B0 late library gain in NSE
+EA/B0,KGE,drop_C_7,07301410,0.8451243102454304,EA/B0 late library gain in NSE
+EA/B0,KGE,drop_C_7,08324000,1.2290722538539356,EA/B0 late library gain in NSE
+EA/B0,KGE,drop_C_7,09047700,0.5293743638189561,EA/B0 late library gain in NSE
+EA/B0,KGE,drop_C_7,13023000,0.17712591912038333,EA/B0 late library gain in NSE
+EA/B0,KGE,drop_C_7,14137000,0.25381907118864583,EA/B0 late library gain in NSE
+EA/B0,abs_FHV,drop_largest_D_3,04127918,14.26760213746267,full-sample D_b for this comparison and metric
+EA/B0,abs_FHV,drop_largest_D_3,07301410,29.93214318404484,full-sample D_b for this comparison and metric
+EA/B0,abs_FHV,drop_largest_D_3,09047700,14.97519666601314,full-sample D_b for this comparison and metric
+EA/B0,abs_FHV,drop_largest_D_7,02111500,10.448296999745075,full-sample D_b for this comparison and metric
+EA/B0,abs_FHV,drop_largest_D_7,04057800,11.30050745889036,full-sample D_b for this comparison and metric
+EA/B0,abs_FHV,drop_largest_D_7,04063700,12.40813341243802,full-sample D_b for this comparison and metric
+EA/B0,abs_FHV,drop_largest_D_7,04127918,14.26760213746267,full-sample D_b for this comparison and metric
+EA/B0,abs_FHV,drop_largest_D_7,07301410,29.93214318404484,full-sample D_b for this comparison and metric
+EA/B0,abs_FHV,drop_largest_D_7,09047700,14.97519666601314,full-sample D_b for this comparison and metric
+EA/B0,abs_FHV,drop_largest_D_7,11381500,12.747487492036365,full-sample D_b for this comparison and metric
+EA/B0,abs_FHV,drop_C_7,01487000,0.17346373920712516,EA/B0 late library gain in NSE
+EA/B0,abs_FHV,drop_C_7,04127997,1.2541085228853104,EA/B0 late library gain in NSE
+EA/B0,abs_FHV,drop_C_7,07301410,0.8451243102454304,EA/B0 late library gain in NSE
+EA/B0,abs_FHV,drop_C_7,08324000,1.2290722538539356,EA/B0 late library gain in NSE
+EA/B0,abs_FHV,drop_C_7,09047700,0.5293743638189561,EA/B0 late library gain in NSE
+EA/B0,abs_FHV,drop_C_7,13023000,0.17712591912038333,EA/B0 late library gain in NSE
+EA/B0,abs_FHV,drop_C_7,14137000,0.25381907118864583,EA/B0 late library gain in NSE
+EA/B0,nMAE_high,drop_largest_D_3,06803530,0.6545434772869497,full-sample D_b for this comparison and metric
+EA/B0,nMAE_high,drop_largest_D_3,07142300,1.3024963094835202,full-sample D_b for this comparison and metric
+EA/B0,nMAE_high,drop_largest_D_3,07301410,0.8148153968947645,full-sample D_b for this comparison and metric
+EA/B0,nMAE_high,drop_largest_D_7,06803530,0.6545434772869497,full-sample D_b for this comparison and metric
+EA/B0,nMAE_high,drop_largest_D_7,07142300,1.3024963094835202,full-sample D_b for this comparison and metric
+EA/B0,nMAE_high,drop_largest_D_7,07301410,0.8148153968947645,full-sample D_b for this comparison and metric
+EA/B0,nMAE_high,drop_largest_D_7,08150800,0.45023346850757895,full-sample D_b for this comparison and metric
+EA/B0,nMAE_high,drop_largest_D_7,08324000,0.6530611749680445,full-sample D_b for this comparison and metric
+EA/B0,nMAE_high,drop_largest_D_7,09047700,0.6251967845749531,full-sample D_b for this comparison and metric
+EA/B0,nMAE_high,drop_largest_D_7,09066000,0.4277137052804102,full-sample D_b for this comparison and metric
+EA/B0,nMAE_high,drop_C_7,01487000,0.17346373920712516,EA/B0 late library gain in NSE
+EA/B0,nMAE_high,drop_C_7,04127997,1.2541085228853104,EA/B0 late library gain in NSE
+EA/B0,nMAE_high,drop_C_7,07301410,0.8451243102454304,EA/B0 late library gain in NSE
+EA/B0,nMAE_high,drop_C_7,08324000,1.2290722538539356,EA/B0 late library gain in NSE
+EA/B0,nMAE_high,drop_C_7,09047700,0.5293743638189561,EA/B0 late library gain in NSE
+EA/B0,nMAE_high,drop_C_7,13023000,0.17712591912038333,EA/B0 late library gain in NSE
+EA/B0,nMAE_high,drop_C_7,14137000,0.25381907118864583,EA/B0 late library gain in NSE
+EA/B0,nMAE_low,drop_largest_D_3,07142300,0.2609532319243544,full-sample D_b for this comparison and metric
+EA/B0,nMAE_low,drop_largest_D_3,07301410,0.12098922418967831,full-sample D_b for this comparison and metric
+EA/B0,nMAE_low,drop_largest_D_3,08324000,0.23461743234070714,full-sample D_b for this comparison and metric
+EA/B0,nMAE_low,drop_largest_D_7,02193340,0.08610792035457474,full-sample D_b for this comparison and metric
+EA/B0,nMAE_low,drop_largest_D_7,06431500,0.037960721147363874,full-sample D_b for this comparison and metric
+EA/B0,nMAE_low,drop_largest_D_7,07142300,0.2609532319243544,full-sample D_b for this comparison and metric
+EA/B0,nMAE_low,drop_largest_D_7,07301410,0.12098922418967831,full-sample D_b for this comparison and metric
+EA/B0,nMAE_low,drop_largest_D_7,08198500,0.06518716787753792,full-sample D_b for this comparison and metric
+EA/B0,nMAE_low,drop_largest_D_7,08324000,0.23461743234070714,full-sample D_b for this comparison and metric
+EA/B0,nMAE_low,drop_largest_D_7,12041200,0.03550081877888041,full-sample D_b for this comparison and metric
+EA/B0,nMAE_low,drop_C_7,01487000,0.17346373920712516,EA/B0 late library gain in NSE
+EA/B0,nMAE_low,drop_C_7,04127997,1.2541085228853104,EA/B0 late library gain in NSE
+EA/B0,nMAE_low,drop_C_7,07301410,0.8451243102454304,EA/B0 late library gain in NSE
+EA/B0,nMAE_low,drop_C_7,08324000,1.2290722538539356,EA/B0 late library gain in NSE
+EA/B0,nMAE_low,drop_C_7,09047700,0.5293743638189561,EA/B0 late library gain in NSE
+EA/B0,nMAE_low,drop_C_7,13023000,0.17712591912038333,EA/B0 late library gain in NSE
+EA/B0,nMAE_low,drop_C_7,14137000,0.25381907118864583,EA/B0 late library gain in NSE

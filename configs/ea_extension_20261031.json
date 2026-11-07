@@ -1,0 +1,16 @@
+{
+  "study": "ea_extension_20261031",
+  "model": "EA",
+  "formal_seeds": [1009,1021,1033,1051,1063,1087,1097,1109,1123,1151],
+  "development_seed": 2027,
+  "formal_runs": 10,
+  "base_config": "configs/retraining_confirmation.json",
+  "architecture_reference": "https://hess.copernicus.org/articles/23/5089/2019/",
+  "architecture": "i=sigmoid(Ws*s+bs); (f,g,o) from x_t and h_(t-1); c_t=f*c_(t-1)+i*g; h_t=o*tanh(c_t)",
+  "static_information": "All B0 static columns, including climate and missing indicator; only input gate receives static attributes directly",
+  "initialization": "Copy corresponding coefficients from same-seed, untrained B0 initialization; discard absent connections; identical head; reset dropout RNG to seed+100000",
+  "budget": "Reuse hidden64, seq365, output dropout0.2, loss, optimizer, sampling, preprocessing, epochs30 and patience8; not original-paper hyperparameter replication or parameter-count matching",
+  "development": "One excluded seed, Train/Validation only, same budget; inspect convergence and numerical health before formal queue. If a material config revision is required, version it before formal/Test evaluation, rather than modifying existing results.",
+  "test_scoring": "Separate after all ten completed and sealed; development seed never enters Test comparison",
+  "analysis_protocol": "protocol/ea_extension_20261031.json"
+}

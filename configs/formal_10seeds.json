@@ -1,0 +1,59 @@
+{
+  "amendment_date": "2026-09-17",
+  "purpose": "Expand paired training replicates to ten for training-randomness and reparameterization controls",
+  "base_config": "configs/formal.json",
+  "models": [
+    "B0",
+    "A1",
+    "M1"
+  ],
+  "existing_seeds": [
+    11,
+    29,
+    47
+  ],
+  "additional_seeds": [
+    65,
+    83,
+    103,
+    119,
+    137,
+    155,
+    173
+  ],
+  "all_seeds": [
+    11,
+    29,
+    47,
+    65,
+    83,
+    103,
+    119,
+    137,
+    155,
+    173
+  ],
+  "additional_run_count": 21,
+  "total_run_count": 30,
+  "cohort_status": {
+    "existing": "completed; original training and test artifacts retained",
+    "additional": "planned; no added-seed training has started locally"
+  },
+  "selection_rule": "Fixed before additional-seed training; no seed or model selected using new outcomes",
+  "study_status": "Extension designed after inspecting the first three seeds; not a wholly prospective ten-seed study",
+  "unchanged": "Model, split, data, scaler, loss, optimizer, batch size, epochs, early stopping, validation selection and execution backend",
+  "frozen_training_sources": {
+    "configs/formal.json": "91da804b8d9e9e11216996d449f650a4e9a288eae32a8a227669928d87d72231",
+    "configs/formal_seed_revision.json": "3e5a2b97717332288c38fadb88596d44f59e1650a02d8526c68924da6eb7a122",
+    "src/model.py": "ea8cc6c711de313ab139a4697a5257f6a86522f5036aaf20b955070db2e0db80",
+    "src/training.py": "1cecf07fee05ca82755aad30996176ba4591efe285d9f947b2553aaf4c09f4d7",
+    "src/train.py": "d91f8de9858cad563892362c09ebfda79517bbf01361b1c590f40c4442e5231a",
+    "src/dataset.py": "b747c28ba52d7a723a66a3ca077e528ed5eb4158699076ad5b64f883bbe1a35d",
+    "src/evaluate.py": "8a60f71ad6c56773bddbbcd39f60cdb7bbb7b943e5304066193bfdd4ddaa7433",
+    "src/preprocessing.py": "803e50f170f03d2cffde1d4b61d6ebd3ea12363279b3942b7177fa19f55dca81",
+    "src/formal.py": "1ab653244c26f451042d26b6e843338f7023c1c7b788cb96c96855e5d77684b9",
+    "src/formal_graph.py": "33c4f85b8298baaee83c5e898e1bef90133695aa8b4e33196caf81cdd6191ca0",
+    "src/graph_backend.py": "9de7aed9551086253cd8edbf33b6c2a8b05557e7bfca9f66c2d80e9c9c8c9302",
+    "src/graph_checks.py": "5efe5de915ccdbd43933631a3f5f534347aa4c08a9a072201e76ac63c6887c41"
+  }
+}

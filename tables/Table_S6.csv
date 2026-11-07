@@ -1,0 +1,13 @@
+Contrast,Matching,Endpoint,Estimate,95% interval
+M1/B0,Unmatched,D,0.0187,"[0.0063, 0.0336]"
+M1/B0,Unmatched,Retained gain,0.0219,"[0.0060, 0.0397]"
+EA/B0,Unmatched,D,0.0171,"[0.0064, 0.0286]"
+EA/B0,Unmatched,Retained gain,0.0302,"[0.0136, 0.0503]"
+M1/B0,Across HUC2,D,0.0230,"[0.0099, 0.0386]"
+M1/B0,Across HUC2,Retained gain,0.0243,"[0.0073, 0.0431]"
+EA/B0,Across HUC2,D,0.0190,"[0.0077, 0.0319]"
+EA/B0,Across HUC2,Retained gain,0.0299,"[0.0138, 0.0483]"
+M1/B0,Within HUC2,D,0.0077,"[−0.0056, 0.0201]"
+M1/B0,Within HUC2,Retained gain,0.0087,"[−0.0073, 0.0250]"
+EA/B0,Within HUC2,D,0.0101,"[−0.0014, 0.0210]"
+EA/B0,Within HUC2,Retained gain,0.0161,"[0.0011, 0.0337]"

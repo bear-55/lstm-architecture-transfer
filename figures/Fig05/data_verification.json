@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "no_synthetic_data": true,
+  "n_catchments": 107,
+  "n_huc2": 16,
+  "n_seeds_per_architecture": 10,
+  "source_instances": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "evaluation_instances": 5,
+  "selection_period": "WY2000-2003",
+  "evaluation_period": "WY2004-2008",
+  "verified_endpoints": 50,
+  "verified_bootstrap_replicates": 20000,
+  "explicit_directed_allocations_checked_across_both_comparisons": 15624,
+  "all_source_subsets_kept_together": true,
+  "global_rule_reselected": true,
+  "score_definition": "Mean individual NSE; not NSE of mean discharge",
+  "interval_definition": "Pointwise 95% HUC2 percentile intervals conditional on the fixed fitted library; no seed resampling",
+  "fit_definition": "Descriptive power fit to five correlated means only within k=1..5; no extrapolation",
+  "all_D_intervals_positive": true,
+  "validations": [
+    {
+      "comparison": "M1/B0",
+      "k": 1,
+      "source_subsets": 10,
+      "directed_allocations": 1260,
+      "explicit_target_enumeration": "PASS",
+      "spatial_bootstrap_witnesses": 3
+    },
+    {
+      "comparison": "M1/B0",
+      "k": 2,
+      "source_subsets": 45,
+      "directed_allocations": 2520,
+      "explicit_target_enumeration": "PASS",
+      "spatial_bootstrap_witnesses": 3
+    },
+    {
+      "comparison": "M1/B0",
+      "k": 3,
+      "source_subsets": 120,
+      "directed_allocations": 2520,
+      "explicit_target_enumeration": "PASS",
+      "spatial_bootstrap_witnesses": 3
+    },
+    {
+      "comparison": "M1/B0",
+      "k": 4,
+      "source_subsets": 210,
+      "directed_allocations": 1260,
+      "explicit_target_enumeration": "PASS",
+      "spatial_bootstrap_witnesses": 3
+    },
+    {
+      "comparison": "M1/B0",
+      "k": 5,
+      "source_subsets": 252,
+      "directed_allocations": 252,
+      "explicit_target_enumeration": "PASS",
+      "spatial_bootstrap_witnesses": 3
+    },
+    {
+      "comparison": "EA/B0",
+      "k": 1,
+      "source_subsets": 10,
+      "directed_allocations": 1260,
+      "explicit_target_enumeration": "PASS",
+      "spatial_bootstrap_witnesses": 3
+    },
+    {
+      "comparison": "EA/B0",
+      "k": 2,
+      "source_subsets": 45,
+      "directed_allocations": 2520,
+      "explicit_target_enumeration": "PASS",
+      "spatial_bootstrap_witnesses": 3
+    },
+    {
+      "comparison": "EA/B0",
+      "k": 3,
+      "source_subsets": 120,
+      "directed_allocations": 2520,
+      "explicit_target_enumeration": "PASS",
+      "spatial_bootstrap_witnesses": 3
+    },
+    {
+      "comparison": "EA/B0",
+      "k": 4,
+      "source_subsets": 210,
+      "directed_allocations": 1260,
+      "explicit_target_enumeration": "PASS",
+      "spatial_bootstrap_witnesses": 3
+    },
+    {
+      "comparison": "EA/B0",
+      "k": 5,
+      "source_subsets": 252,
+      "directed_allocations": 252,
+      "explicit_target_enumeration": "PASS",
+      "spatial_bootstrap_witnesses": 3
+    }
+  ],
+  "sources": {
+    "outputs/training_domain_followup_20261102/unseen_aligned/metric_arrays.npz": "afa5d1b17a0d88c51aeee4f9d727f9bb88fdcdf8d92cced8da351cc7507fcce7",
+    "deliverables/data_request_20261103/01_scores_long.csv": "ed2d0a3e517b020e9ed522cad9708053c9f6a62829c5ae56092672fe23d9a790",
+    "outputs/word_v4_review_revision_20261104/numeric_review.json": "ca2c0e93ab085f6af24b758110b5434706c434103698a9c53375097df4f2f75e",
+    "outputs/multiseed_budget_curve_20261104/analysis_spec.json": "12eec6fd25e908f79161ac510ae88dfa5017b04269efa877390e293b2972976d",
+    "outputs/multiseed_budget_curve_20261104/verification.json": "d13ba8ee61d14dbf50e1e6596080a23c5a6e918ee998b2b9ff1a0085ab93a05c",
+    "outputs/multiseed_budget_curve_20261104/budget_curve_endpoints.csv": "b3dbb3540e6636a38cce68031b47d877b371993ffa14c0b170a860f70ac789ff",
+    "outputs/multiseed_budget_curve_20261104/bootstrap_draws.npz": "fd8529ebd041975380580a64b2a113212a364d17ca491cbac4304ee9b860e2c8",
+    "outputs/multiseed_budget_curve_20261104/pool_definitions.csv": "bce4e227c4f102012d95d34c53b3cf4ec522bc11cc3c8b47cece8a264a3fa2a2",
+    "outputs/multiseed_budget_curve_20261104/source_subset_results.csv": "244fc01c441a522259debd57baa46a0b2371c727337e09c495db875ca4fb1a4b",
+    "figures/figure_templates_v5_all.zip": "6b6bec143a727b8cd152be9498b786fc8b1c0892a54d438b79b06a12def7afd7"
+  },
+  "data_hashes": {
+    "curve_endpoints.csv": "01452540f2c84c70529f941e0b649fd33b66fc8fbde2eda55a479a1f666a5bb9",
+    "paired_changes_k1_k5.csv": "e28989fea3da404f9719e8a8415d4ad08054674780d257914168e1e6c1504316",
+    "power_fits.csv": "90d660ff80a985885466d4b0b84a26d649f2105adeb131b5e72eaa80e8b22d79",
+    "source_subset_results.csv": "1d41f5c0163b5d0587e108f80427bf69c96a97030b1b7828e59577c2be378000",
+    "summary.csv": "61e0c2220fd16d641b4a5d2549398c1a3ded2308b1bce4655d08bfc14319bea9"
+  }
+}

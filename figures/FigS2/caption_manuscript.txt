@@ -1,0 +1,1 @@
+Fig. S2. Catchment-level gain decompositions for six EA/B0 loss profiles. Bars show retained gain, transferred gain and their difference for both architecture contrasts on three metrics. Estimates average ten source identities and ninety distinct source–evaluation pairings; vertical scales vary by panel.

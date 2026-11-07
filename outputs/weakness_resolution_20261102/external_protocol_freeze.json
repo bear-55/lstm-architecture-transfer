@@ -1,0 +1,10 @@
+{
+  "frozen_utc": "2026-11-01T17:46:21.396062+00:00",
+  "protocol": "protocol\\weakness_resolution_external_20261102.md",
+  "sha256": "36c7cd152a0a244a8cb40248d55fcd82c2cd249de6228984d07e41686ef7932b",
+  "external_prediction_data_read_before_freeze": false,
+  "local_results_previously_seen": true,
+  "third_party_registration": false,
+  "input_checklist_sha256": "a4686b88f5f8a1f6658480c6bf8814ff4b64ba527b27afee6803014961a11e49",
+  "english_translation_sha256": "f2a9cf4233823b4cdee489b59a0f2b23c2cafd2b73d5adb2b13a22a28a6b17f5"
+}

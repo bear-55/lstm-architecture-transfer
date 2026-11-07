@@ -1,0 +1,1 @@
+Fig. S3. Empirical retraining-loss decay over the observed source budgets. Solid curves fit D = a k−α; dashed curves use the inverse-square-root reference anchored at k = 1. Error bars are conditional 95% HUC2 intervals. Fits summarize k = 1–5.

@@ -1,0 +1,11 @@
+Component,Specification,Period / details
+Training catchments,370; parameter estimation,WY1990–1999
+Validation catchments,50; early stopping and checkpoint selection (median NSE),WY2000–2003
+Held-out catchments,107; excluded from training and checkpoint selection,Selection WY2000–2003; evaluation WY2004–2008
+Training catchments (time holdout),"Same 370 catchments, outside the training period",Selection WY2000–2003; evaluation WY2004–2008
+Pre-specified analysis,107 held-out catchments,Selection WY1990–1999; evaluation WY2004–2008
+Static climate indices,Recomputed for all catchments,WY1981–1989
+B0,"Concatenation LSTM; 23,617 parameters",10 seeds
+EA,"Entity-Aware LSTM (Kratzert et al., 2019a); 15,105 parameters",10 seeds
+M1,"B0 plus rank-4 land-conditioned forget-gate residual; 24,221 parameters",10 seeds
+External archive,"Kratzert et al. (2019a) EA and LSTM, 531 training catchments; 8 seeds per architecture and loss function",Selection WY1990–1994; evaluation WY1995–1999 (retrospective holdout)

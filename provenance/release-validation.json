@@ -1,0 +1,587 @@
+{
+  "status": "PASS",
+  "validated": "2026-11-07",
+  "platform": "Windows / Python 3.12.14",
+  "analysis_table_checks": [
+    {
+      "file": "outputs/selection_transfer_P1_20261102/P1_endpoints.csv",
+      "rows": 288,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "outputs/selection_transfer_P1_20261102/matching_pairs.csv",
+      "rows": 178,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "outputs/multimetric_transfer_20261102/transfer_endpoints.csv",
+      "rows": 1296,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "outputs/multimetric_transfer_20261102/transfer_per_basin.csv",
+      "rows": 17172,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "outputs/jh_predraft_audit_20261102/main_NSE_endpoints.csv",
+      "rows": 18,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "outputs/multiseed_budget_curve_20261104/budget_curve_endpoints.csv",
+      "rows": 160,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "outputs/multiseed_budget_curve_20261104/source_subset_results.csv",
+      "rows": 2548,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "outputs/multiseed_budget_curve_20261104/paired_budget_changes.csv",
+      "rows": 60,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "tables/Table_S3.csv",
+      "rows": 36,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "outputs/metric_evidence_plan_20261102/flv_valid103_endpoints.csv",
+      "rows": 36,
+      "max_absolute_difference": 0.0
+    }
+  ],
+  "seed_and_permutation_checks": "PASS",
+  "figure_input_table_checks": [
+    {
+      "file": "figures/Fig02/data/figure2_catchments.csv",
+      "rows": 527,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig03/data/correlations_by_seed.csv",
+      "rows": 48,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig03/data/correlation_summary.csv",
+      "rows": 5,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig03/data/quintiles_by_seed.csv",
+      "rows": 720,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig03/data/quintile_summary.csv",
+      "rows": 75,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig03/data/trajectories.csv",
+      "rows": 13788,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig03/data/variance_components.csv",
+      "rows": 168,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig03/data/variance_shares.csv",
+      "rows": 144,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig04/data/endpoints.csv",
+      "rows": 18,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig04/data/gains.csv",
+      "rows": 10,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig04/data/global_increments.csv",
+      "rows": 4,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig04/data/per_catchment_gains.csv",
+      "rows": 1485,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig04/data/transfer_ratios.csv",
+      "rows": 2,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig04/data/window_losses.csv",
+      "rows": 14,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig04/data/window_precision_check.csv",
+      "rows": 14,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig04/data/window_references.csv",
+      "rows": 2,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig05/data/curve_endpoints.csv",
+      "rows": 50,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig05/data/paired_changes_k1_k5.csv",
+      "rows": 10,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig05/data/power_fits.csv",
+      "rows": 2,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig05/data/source_subset_results.csv",
+      "rows": 1274,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig05/data/summary.csv",
+      "rows": 2,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig06/data/density_coordinates.csv",
+      "rows": 6000,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig06/data/distribution_statistics.csv",
+      "rows": 20,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig06/data/historical_choices.csv",
+      "rows": 2140,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig06/data/metric_summary.csv",
+      "rows": 10,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig06/data/per_catchment_gains.csv",
+      "rows": 1070,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig07/data/deleted_catchments.csv",
+      "rows": 204,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig07/data/EA_library_gain_ranking.csv",
+      "rows": 107,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig07/data/forest_endpoints.csv",
+      "rows": 25,
+      "max_absolute_difference": 3.0531133177191805e-16
+    },
+    {
+      "file": "figures/Fig07/data/matching_contrasts.csv",
+      "rows": 12,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig07/data/per_catchment_losses.csv",
+      "rows": 1284,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig07/data/retained_shares.csv",
+      "rows": 20,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig07/data/robustness_endpoints.csv",
+      "rows": 60,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig08/data/early_risk_groups.csv",
+      "rows": 107,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig08/data/failure_case_selections.csv",
+      "rows": 3,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig08/data/failure_counts.csv",
+      "rows": 3,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig08/data/failure_matrix.csv",
+      "rows": 3,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig08/data/gain_concentration.csv",
+      "rows": 107,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig08/data/historical_selections.csv",
+      "rows": 1008,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig08/data/radar_axis_ranges.csv",
+      "rows": 8,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig08/data/radar_profiles.csv",
+      "rows": 96,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig08/data/reference_radar_profiles.csv",
+      "rows": 96,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig08/data/strategy_metrics_per_catchment.csv",
+      "rows": 3024,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig08/data/strategy_summary.csv",
+      "rows": 9,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig09/data/case_metrics.csv",
+      "rows": 36,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig09/data/case_selection.csv",
+      "rows": 3,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig09/data/coverage_by_water_year.csv",
+      "rows": 15,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig09/data/daily_nine_instances.csv",
+      "rows": 5116,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig09/data/daily_predictions.csv",
+      "rows": 5116,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig09/data/D_by_catchment.csv",
+      "rows": 214,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig09/data/early_instance_scores.csv",
+      "rows": 60,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig09/data/fdc_nine_instances.csv",
+      "rows": 25580,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig09/data/flow_duration_curves.csv",
+      "rows": 25580,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig09/data/independent_instance_scores.csv",
+      "rows": 27,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/Fig09/data/raw_score_validation.csv",
+      "rows": 120,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/FigS1/data/catchment_attributes.csv",
+      "rows": 477,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/FigS1/data/contrast_endpoints.csv",
+      "rows": 12,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/FigS1/data/covariate_balance.csv",
+      "rows": 21,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/FigS1/data/group_endpoints.csv",
+      "rows": 24,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/FigS1/data/matching_pairs.csv",
+      "rows": 178,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/FigS1/data/per_catchment_outcomes.csv",
+      "rows": 954,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/FigS1/data/score_ecdfs.csv",
+      "rows": 833,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/FigS2/data/all_catchment_selection_D.csv",
+      "rows": 107,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/FigS2/data/all_seed_pairs.csv",
+      "rows": 3600,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/FigS2/data/catchment_selection.csv",
+      "rows": 6,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/FigS2/data/mean_endpoints.csv",
+      "rows": 108,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/FigS2/data/source_contributions.csv",
+      "rows": 1080,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/FigS3/data/curve_endpoints.csv",
+      "rows": 50,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "figures/FigS3/data/power_fits.csv",
+      "rows": 2,
+      "max_absolute_difference": 0.0
+    }
+  ],
+  "figure_input_array_checks": [
+    {
+      "file": "figures/Fig04/data/bootstrap_draws.npz",
+      "arrays": 16
+    },
+    {
+      "file": "figures/Fig07/data/bootstrap_draws.npz",
+      "arrays": 60
+    },
+    {
+      "file": "figures/Fig07/data/bootstrap_weights.npz",
+      "arrays": 6
+    },
+    {
+      "file": "figures/Fig07/data/forest_distributions.npz",
+      "arrays": 25
+    },
+    {
+      "file": "figures/FigS1/data/bootstrap_draws.npz",
+      "arrays": 36
+    },
+    {
+      "file": "figures/FigS1/data/bootstrap_weights.npz",
+      "arrays": 5
+    }
+  ],
+  "figures": [
+    {
+      "figure": "1",
+      "pixels": [
+        4488,
+        3259
+      ],
+      "raster_dpi": 600,
+      "pixel_match_from_included_data": true,
+      "pixel_match_from_rebuilt_data": true,
+      "publication_formats": 4
+    },
+    {
+      "figure": "2",
+      "pixels": [
+        4488,
+        2834
+      ],
+      "raster_dpi": 600,
+      "pixel_match_from_included_data": true,
+      "pixel_match_from_rebuilt_data": true,
+      "publication_formats": 4
+    },
+    {
+      "figure": "3",
+      "pixels": [
+        4488,
+        3141
+      ],
+      "raster_dpi": 600,
+      "pixel_match_from_included_data": true,
+      "pixel_match_from_rebuilt_data": true,
+      "publication_formats": 4
+    },
+    {
+      "figure": "4",
+      "pixels": [
+        4488,
+        2055
+      ],
+      "raster_dpi": 600,
+      "pixel_match_from_included_data": true,
+      "pixel_match_from_rebuilt_data": true,
+      "publication_formats": 4
+    },
+    {
+      "figure": "5",
+      "pixels": [
+        4488,
+        3236
+      ],
+      "raster_dpi": 600,
+      "pixel_match_from_included_data": true,
+      "pixel_match_from_rebuilt_data": true,
+      "publication_formats": 4
+    },
+    {
+      "figure": "6",
+      "pixels": [
+        4488,
+        2598
+      ],
+      "raster_dpi": 600,
+      "pixel_match_from_included_data": true,
+      "pixel_match_from_rebuilt_data": true,
+      "publication_formats": 4
+    },
+    {
+      "figure": "7",
+      "pixels": [
+        4488,
+        3968
+      ],
+      "raster_dpi": 600,
+      "pixel_match_from_included_data": true,
+      "pixel_match_from_rebuilt_data": true,
+      "publication_formats": 4
+    },
+    {
+      "figure": "8",
+      "pixels": [
+        4488,
+        3165
+      ],
+      "raster_dpi": 600,
+      "pixel_match_from_included_data": true,
+      "pixel_match_from_rebuilt_data": true,
+      "publication_formats": 4
+    },
+    {
+      "figure": "9",
+      "pixels": [
+        4488,
+        3566
+      ],
+      "raster_dpi": 600,
+      "pixel_match_from_included_data": true,
+      "pixel_match_from_rebuilt_data": true,
+      "publication_formats": 4
+    },
+    {
+      "figure": "S1",
+      "pixels": [
+        4488,
+        2173
+      ],
+      "raster_dpi": 600,
+      "pixel_match_from_included_data": true,
+      "pixel_match_from_rebuilt_data": true,
+      "publication_formats": 4
+    },
+    {
+      "figure": "S2",
+      "pixels": [
+        4488,
+        5787
+      ],
+      "raster_dpi": 600,
+      "pixel_match_from_included_data": true,
+      "pixel_match_from_rebuilt_data": true,
+      "publication_formats": 4
+    },
+    {
+      "figure": "S3",
+      "pixels": [
+        4488,
+        1889
+      ],
+      "raster_dpi": 600,
+      "pixel_match_from_included_data": true,
+      "pixel_match_from_rebuilt_data": true,
+      "publication_formats": 4
+    }
+  ],
+  "selected_checkpoints": 30,
+  "daily_test_prediction_files": 150,
+  "training_cache_hash_dependencies": 14,
+  "bundle_checks": [
+    {
+      "bundle": "ea_extension_bundle.json",
+      "verified_dependencies": 39
+    },
+    {
+      "bundle": "confirmation_evaluation_bundle.json",
+      "verified_dependencies": 26
+    },
+    {
+      "bundle": "ea_evaluation_bundle_20261101.json",
+      "verified_dependencies": 42
+    }
+  ],
+  "release_text_files_scanned": 397,
+  "attachment_text_members_scanned": 462,
+  "publication_language": "English",
+  "credential_or_home_path_findings": [],
+  "gpu_training_rerun": false
+}

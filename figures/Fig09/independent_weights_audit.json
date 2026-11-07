@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "independent_count": 9,
+  "source_excluded": true,
+  "source_files": [
+    {
+      "file": "runs\\ea_evaluation_20261101\\later\\EA\\seed_1009\\predictions_test.npz",
+      "sha256": "c3dc50f6c3f9208c32211d500de7549b3f4bd6a8751f8bbcad974529d20b1f3b"
+    },
+    {
+      "file": "runs\\ea_evaluation_20261101\\later\\EA\\seed_1021\\predictions_test.npz",
+      "sha256": "065078ccbd1371a0809340cdc9dd0f79af49d4643bb62ee9bdbc23aaace95881"
+    },
+    {
+      "file": "runs\\ea_evaluation_20261101\\later\\EA\\seed_1033\\predictions_test.npz",
+      "sha256": "d046c383fec75a1610afd6ae5e9c63fc8be9df77cb6f488a27e1a77837e5257e"
+    },
+    {
+      "file": "runs\\ea_evaluation_20261101\\later\\EA\\seed_1051\\predictions_test.npz",
+      "sha256": "d8fc87547c68d3ecad04f85e47fb7445bdf164cee378f6c8e715f5ce08bbe0ab"
+    },
+    {
+      "file": "runs\\ea_evaluation_20261101\\later\\EA\\seed_1063\\predictions_test.npz",
+      "sha256": "21ee128308239f5f326a06f2b7b5e181a3993777463eab17bb12d77cebaa7f85"
+    },
+    {
+      "file": "runs\\ea_evaluation_20261101\\later\\EA\\seed_1087\\predictions_test.npz",
+      "sha256": "4ef4dec2af9ce367a9f1400d938d048825d4ccdb7aed04f5298bd546bafea525"
+    },
+    {
+      "file": "runs\\ea_evaluation_20261101\\later\\EA\\seed_1097\\predictions_test.npz",
+      "sha256": "8b8cbf0647493b4bae3dcaa3385b898d0e24a85a54e68c6cd57a9889a062e05e"
+    },
+    {
+      "file": "runs\\ea_evaluation_20261101\\later\\EA\\seed_1109\\predictions_test.npz",
+      "sha256": "5ec563ec5cd063d721113e82ced793cce71d206dfbe0cfc86c70efc8789fc506"
+    },
+    {
+      "file": "runs\\ea_evaluation_20261101\\later\\EA\\seed_1123\\predictions_test.npz",
+      "sha256": "8d21feb9c2769e30931659170f056c21b94c293c3aaf2c8825b8752d7c58831f"
+    },
+    {
+      "file": "runs\\ea_evaluation_20261101\\later\\EA\\seed_1151\\predictions_test.npz",
+      "sha256": "666a2bf25449e84abbd12b8ae0be36ba38c5e05ad06b37edf72f2931551fc5a5"
+    }
+  ],
+  "daily_band": "25th–75th percentile of independent daily predictions",
+  "fdc_band": "25th–75th percentile of nine individually sorted flow-duration curves",
+  "aggregate": "Mean of nine trajectories; endpoint scores are still averaged individually"
+}

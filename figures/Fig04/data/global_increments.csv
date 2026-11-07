@@ -1,0 +1,5 @@
+group,comparison,endpoint,estimate,low95,high95,n_catchments,n_seeds,n_bootstrap,bootstrap_scheme,bootstrap_key
+Held-out,M1/B0,incremental_same,0.039094669976421068,0.012333657854972842,0.15507146873886499,107,10,2000,seed_HUC2,increment__M1__incremental_same
+Held-out,M1/B0,incremental_other,0.0038933684071563394,-0.02230151778299045,0.044149700349682158,107,10,2000,seed_HUC2,increment__M1__incremental_other
+Held-out,EA/B0,incremental_same,0.044562588105200855,0.0081815705058779359,0.1259693334624831,107,10,2000,seed_HUC2,increment__EA__incremental_same
+Held-out,EA/B0,incremental_other,0.013352513216268045,-0.020067648614875765,0.047015705098957757,107,10,2000,seed_HUC2,increment__EA__incremental_other

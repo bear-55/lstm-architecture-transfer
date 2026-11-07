@@ -1,0 +1,219 @@
+{
+  "status": "PASS",
+  "no_synthetic_data": true,
+  "new_training": false,
+  "n_catchments": 107,
+  "n_seeds_per_architecture": 10,
+  "selection_metric": "NSE",
+  "selection_period": "WY2000-2003",
+  "evaluation_period": "WY2004-2008",
+  "mean_same_seed_pairs": 10,
+  "mean_distinct_seed_pairs": 90,
+  "metric_transform_before_averaging": true,
+  "fixed_choice_for_all_metrics": true,
+  "structural_zero_policy": "D_b = 0 exactly whenever all source seeds select the same architecture",
+  "uncertainty": "No uncertainty bands in Figure 6; quartiles show between-catchment dispersion",
+  "validation": [
+    {
+      "comparison": "M1/B0",
+      "metric": "NSE_star",
+      "catchments": 107,
+      "explicit_distinct_pairs": 90,
+      "covariance_identity": "PASS",
+      "stored_results_max_abs_difference": 0.0
+    },
+    {
+      "comparison": "M1/B0",
+      "metric": "KGE",
+      "catchments": 107,
+      "explicit_distinct_pairs": 90,
+      "covariance_identity": "PASS",
+      "stored_results_max_abs_difference": 0.0
+    },
+    {
+      "comparison": "M1/B0",
+      "metric": "abs_FHV",
+      "catchments": 107,
+      "explicit_distinct_pairs": 90,
+      "covariance_identity": "PASS",
+      "stored_results_max_abs_difference": 0.0
+    },
+    {
+      "comparison": "M1/B0",
+      "metric": "nMAE_high",
+      "catchments": 107,
+      "explicit_distinct_pairs": 90,
+      "covariance_identity": "PASS",
+      "stored_results_max_abs_difference": 0.0
+    },
+    {
+      "comparison": "M1/B0",
+      "metric": "nMAE_low",
+      "catchments": 107,
+      "explicit_distinct_pairs": 90,
+      "covariance_identity": "PASS",
+      "stored_results_max_abs_difference": 0.0
+    },
+    {
+      "comparison": "EA/B0",
+      "metric": "NSE_star",
+      "catchments": 107,
+      "explicit_distinct_pairs": 90,
+      "covariance_identity": "PASS",
+      "stored_results_max_abs_difference": 0.0
+    },
+    {
+      "comparison": "EA/B0",
+      "metric": "KGE",
+      "catchments": 107,
+      "explicit_distinct_pairs": 90,
+      "covariance_identity": "PASS",
+      "stored_results_max_abs_difference": 1.3877787807814457e-17
+    },
+    {
+      "comparison": "EA/B0",
+      "metric": "abs_FHV",
+      "catchments": 107,
+      "explicit_distinct_pairs": 90,
+      "covariance_identity": "PASS",
+      "stored_results_max_abs_difference": 0.0
+    },
+    {
+      "comparison": "EA/B0",
+      "metric": "nMAE_high",
+      "catchments": 107,
+      "explicit_distinct_pairs": 90,
+      "covariance_identity": "PASS",
+      "stored_results_max_abs_difference": 0.0
+    },
+    {
+      "comparison": "EA/B0",
+      "metric": "nMAE_low",
+      "catchments": 107,
+      "explicit_distinct_pairs": 90,
+      "covariance_identity": "PASS",
+      "stored_results_max_abs_difference": 0.0
+    }
+  ],
+  "structural_zero_audit": [
+    {
+      "comparison": "M1/B0",
+      "metric": "NSE_star",
+      "constant_choice_basins": [],
+      "raw_formula_positive_count": 95,
+      "stored_positive_count": 95,
+      "exact_identity_positive_count": 95,
+      "max_roundoff_removed": 0.0
+    },
+    {
+      "comparison": "M1/B0",
+      "metric": "KGE",
+      "constant_choice_basins": [],
+      "raw_formula_positive_count": 82,
+      "stored_positive_count": 82,
+      "exact_identity_positive_count": 82,
+      "max_roundoff_removed": 0.0
+    },
+    {
+      "comparison": "M1/B0",
+      "metric": "abs_FHV",
+      "constant_choice_basins": [],
+      "raw_formula_positive_count": 70,
+      "stored_positive_count": 70,
+      "exact_identity_positive_count": 70,
+      "max_roundoff_removed": 0.0
+    },
+    {
+      "comparison": "M1/B0",
+      "metric": "nMAE_high",
+      "constant_choice_basins": [],
+      "raw_formula_positive_count": 87,
+      "stored_positive_count": 87,
+      "exact_identity_positive_count": 87,
+      "max_roundoff_removed": 0.0
+    },
+    {
+      "comparison": "M1/B0",
+      "metric": "nMAE_low",
+      "constant_choice_basins": [],
+      "raw_formula_positive_count": 59,
+      "stored_positive_count": 59,
+      "exact_identity_positive_count": 59,
+      "max_roundoff_removed": 0.0
+    },
+    {
+      "comparison": "EA/B0",
+      "metric": "NSE_star",
+      "constant_choice_basins": [
+        "04127997",
+        "07060710"
+      ],
+      "raw_formula_positive_count": 88,
+      "stored_positive_count": 88,
+      "exact_identity_positive_count": 88,
+      "max_roundoff_removed": 0.0
+    },
+    {
+      "comparison": "EA/B0",
+      "metric": "KGE",
+      "constant_choice_basins": [
+        "04127997",
+        "07060710"
+      ],
+      "raw_formula_positive_count": 93,
+      "stored_positive_count": 93,
+      "exact_identity_positive_count": 92,
+      "max_roundoff_removed": 1.3877787807814457e-17
+    },
+    {
+      "comparison": "EA/B0",
+      "metric": "abs_FHV",
+      "constant_choice_basins": [
+        "04127997",
+        "07060710"
+      ],
+      "raw_formula_positive_count": 74,
+      "stored_positive_count": 74,
+      "exact_identity_positive_count": 74,
+      "max_roundoff_removed": 0.0
+    },
+    {
+      "comparison": "EA/B0",
+      "metric": "nMAE_high",
+      "constant_choice_basins": [
+        "04127997",
+        "07060710"
+      ],
+      "raw_formula_positive_count": 81,
+      "stored_positive_count": 81,
+      "exact_identity_positive_count": 81,
+      "max_roundoff_removed": 0.0
+    },
+    {
+      "comparison": "EA/B0",
+      "metric": "nMAE_low",
+      "constant_choice_basins": [
+        "04127997",
+        "07060710"
+      ],
+      "raw_formula_positive_count": 62,
+      "stored_positive_count": 62,
+      "exact_identity_positive_count": 62,
+      "max_roundoff_removed": 0.0
+    }
+  ],
+  "input_hashes": {
+    "deliverables\\data_request_20261103\\01_scores_long.csv": "ed2d0a3e517b020e9ed522cad9708053c9f6a62829c5ae56092672fe23d9a790",
+    "outputs\\training_domain_followup_20261102\\unseen_aligned\\metric_arrays.npz": "afa5d1b17a0d88c51aeee4f9d727f9bb88fdcdf8d92cced8da351cc7507fcce7",
+    "outputs\\multimetric_transfer_20261102\\transfer_per_basin.csv": "d7767b1a63c4ba7bb81c46ef27f3f751f58591187158b8bfe205a5ce6a96365d",
+    "outputs\\multimetric_transfer_20261102\\transfer_endpoints.csv": "88edb54da74df654936f802cc84eb85c05d54a0f9caed9de71a4cec5109775de",
+    "outputs\\multimetric_transfer_20261102\\observation_normalizers.csv": "7efb8a138ea22189f51c9cb731524e1865a9b8b948bd736f578e1dae06f77d6e",
+    "figures\\figure_templates_v5_all.zip": "6b6bec143a727b8cd152be9498b786fc8b1c0892a54d438b79b06a12def7afd7"
+  },
+  "data_hashes": {
+    "per_catchment_gains.csv": "4d42d4526249f81fa8c87134caa119e93681cb2ba00649236318039e3f6d09df",
+    "metric_summary.csv": "123759274dcaac2b0113ddb3ef27435c57ce2abf9a663fe2bad2decd9a6c9f9c",
+    "distribution_statistics.csv": "ae37e3081fff9c85ec949db9ac978a3968f7a258f9cddf5f094e5676eb52e85f",
+    "historical_choices.csv": "4809e821e7b542ecf5194388fc1216a1cbae5b96a643936a8a1b74a4dc6f71a4"
+  }
+}

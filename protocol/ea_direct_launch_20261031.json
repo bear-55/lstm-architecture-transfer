@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-31",
+  "change": "Remove completed development-seed training as a prerequisite for the formal EA queue",
+  "reason": "User requests direct formal training. Formula, gradient, resume and actual-shape cloud GPU checks already passed. A full excluded development run is not required before the fixed-budget comparison.",
+  "supersedes": "Only the development-before-formal workflow in configs/ea_extension_20261031.json and docs/ea_extension_single_gpu.md",
+  "unchanged": "EA architecture, initialization, optimizer, data, sampling, validation early stopping, formal ten seeds, original provenance and analysis endpoints",
+  "development_seed": 2027,
+  "development_handling": "Stop only the recognized development queue/worker in this project. Preserve its logs and checkpoints; exclude it from formal results. Do not relabel it as a formal seed.",
+  "formal_seeds": [1009,1021,1033,1051,1063,1087,1097,1109,1123,1151],
+  "existing_preflight": "Reuse passed cloud EA preflight only if frozen training code/data/environment still match",
+  "test_evaluation": "Unchanged: separate after ten completed formal runs; this amendment is made before EA Test evaluation"
+}

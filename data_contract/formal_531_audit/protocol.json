@@ -1,0 +1,47 @@
+{
+  "authorization": "2026-09-15: Confirm how many catchments meet the availability criteria.",
+  "purpose": "coverage-only feasibility; no model predictions, scores, Q export or fitted statistics",
+  "candidate_list": "Kratzert multiple_forcing 531_basin_list.txt, verified against local dPLHBV list",
+  "candidate_sha256": "c3fb069f9fe644ed3102edca456989393ce28ee4864283c1fe37d5db6562bddf",
+  "periods": {
+    "train": [
+      "1989-10-01",
+      "1999-09-30"
+    ],
+    "val": [
+      "1999-10-01",
+      "2003-09-30"
+    ],
+    "test": [
+      "2003-10-01",
+      "2008-09-30"
+    ]
+  },
+  "sequence_length": 365,
+  "primary_joint_window_fraction": 0.8,
+  "primary_fraction_rationale": "Study-specific pragmatic coverage floor, not a literature standard. Retain at least four-fifths of each period, without requiring perfect records.",
+  "minimum_valid_days": 365,
+  "climate_reference": [
+    "1980-10-01",
+    "1989-09-30"
+  ],
+  "climate_fraction": 0.95,
+  "climate_min_calendar_month_fraction": 0.8,
+  "climate_rules": "P statistics use valid P; T uses finite non-sentinel ordered Tmin/Tmax; cold-precipitation uses their intersection; reject zero precipitation total. Coverage by actual required variables.",
+  "dynamic_rules": "Keep original values; reject nonfinite, negative P/srad/vp, temperature sentinel, Tmax<Tmin; skip affected 365-day windows. No interpolation or swapping.",
+  "q_rules": "Only 1989-10-01..2008-09-30 values parsed. Missing M/negative/nonfinite invalid; zero valid; A and P qualifiers accepted as pilot; unknown flag requires review. No imputation. NSE-definedness boolean only.",
+  "static_rules": "Use existing 16 land fields. geol_porosity missing allowed with train-only median and indicator later; other missing/invalid numeric values require review.",
+  "area_rules": "Use published 531 membership; finite positive forcing-header area for conversion; other area differences reported, not automatic additional exclusions.",
+  "primary_pool": "Meets all three period requirements, permitting subsequent role assignment. Role-specific eligibility also reported; unsuitable for primary pool does not mean unusable for every study.",
+  "sensitivity_fractions": [
+    0.5,
+    0.7,
+    0.8,
+    0.9,
+    0.95
+  ],
+  "pilot": "No changes to current pilot configuration, splits, models or results. Pilot test Q is included in this explicitly authorized quality-only access and must not be described as never read afterward.",
+  "declared_at_utc": "2026-09-15T07:56:25.999448+00:00",
+  "code_sha256": "305a14d3e4b640153e7f58134cbd066a7657cd1ee17c1a54d8aaf0569e87e4f8",
+  "input_manifest_sha256": "4bdf1b7b84428a1eb541c131248391e9278dd5c38ea15f24a615dd25010ef1bc"
+}

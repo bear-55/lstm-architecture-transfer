@@ -1,0 +1,303 @@
+{
+  "status": "PASS",
+  "no_synthetic_data": true,
+  "groups": [
+    {
+      "group": "Held-out",
+      "comparison": "M1/B0",
+      "n_catchments": 107,
+      "n_seeds": 10,
+      "seeds": [
+        1009,
+        1021,
+        1033,
+        1051,
+        1063,
+        1087,
+        1097,
+        1109,
+        1123,
+        1151
+      ]
+    },
+    {
+      "group": "Held-out",
+      "comparison": "EA/B0",
+      "n_catchments": 107,
+      "n_seeds": 10,
+      "seeds": [
+        1009,
+        1021,
+        1033,
+        1051,
+        1063,
+        1087,
+        1097,
+        1109,
+        1123,
+        1151
+      ]
+    },
+    {
+      "group": "Training",
+      "comparison": "M1/B0",
+      "n_catchments": 370,
+      "n_seeds": 10,
+      "seeds": [
+        1009,
+        1021,
+        1033,
+        1051,
+        1063,
+        1087,
+        1097,
+        1109,
+        1123,
+        1151
+      ]
+    },
+    {
+      "group": "Training",
+      "comparison": "EA/B0",
+      "n_catchments": 370,
+      "n_seeds": 10,
+      "seeds": [
+        1009,
+        1021,
+        1033,
+        1051,
+        1063,
+        1087,
+        1097,
+        1109,
+        1123,
+        1151
+      ]
+    },
+    {
+      "group": "External",
+      "comparison": "EA/B0",
+      "n_catchments": 531,
+      "n_seeds": 8,
+      "seeds": [
+        111,
+        222,
+        333,
+        444,
+        555,
+        666,
+        777,
+        888
+      ]
+    }
+  ],
+  "gains": 10,
+  "increments": 4,
+  "window_estimates": 14,
+  "decade_references": 2,
+  "ratios": 2,
+  "bootstrap_interval_checks": 16,
+  "bootstrap_draws_per_interval": 2000,
+  "saved_draws_exclude_point_estimates": true,
+  "primary_intervals": "Existing synchronized seed/HUC2 bootstrap; global choices reselected within each resample for panel b",
+  "training_intervals": "Existing multimetric seed/HUC2 draws, synchronized with the local held-out results",
+  "external_intervals": "Existing external NSE-loss archive, eight seeds, 531 catchments, seed/HUC2 draws",
+  "ratio_intervals": "Ratios of paired retrained/retained bootstrap gains; no nonpositive denominators",
+  "point_checks": "Explicit source/evaluation seed pairs and covariance identity checked; points and interval bounds match stored results",
+  "selection_period": "WY2000-2003",
+  "evaluation_period": "WY2004-2008",
+  "external_eligibility": {
+    "protocol_sha256": "36c7cd152a0a244a8cb40248d55fcd82c2cd249de6228984d07e41686ef7932b",
+    "test_period": [
+      "1989-10-01",
+      "1999-09-30"
+    ],
+    "training_period": [
+      "1999-10-01",
+      "2008-09-30"
+    ],
+    "selection_period": [
+      "1989-10-01",
+      "1994-09-30"
+    ],
+    "evaluation_period": [
+      "1994-10-01",
+      "1999-09-30"
+    ],
+    "interpretation": "Retrospective out-of-calibration temporal validation; these test years precede training years.",
+    "hyperparameters": "Original paper Appendix B tuned on calibration-period basin cross-validation.",
+    "pairing": "Original matching seed IDs; no claim of identical initialization or minibatch stream between architectures.",
+    "models": "B0=concat_static; EA=static input gate; dynamic=no_static",
+    "source": "https://doi.org/10.4211/hs.83ea5312635e44dc824eeb99eda12f06",
+    "license": "CC BY 4.0"
+  },
+  "window_precision": [
+    {
+      "comparison": "M1/B0",
+      "selection_window": "WY1990-1993",
+      "plotted_float64_D": 0.06948756546869264,
+      "legacy_float32_D": 0.06948756546869264,
+      "choice_changes": 0
+    },
+    {
+      "comparison": "M1/B0",
+      "selection_window": "WY1991-1994",
+      "plotted_float64_D": 0.06967044307268257,
+      "legacy_float32_D": 0.06967044307268257,
+      "choice_changes": 0
+    },
+    {
+      "comparison": "M1/B0",
+      "selection_window": "WY1992-1995",
+      "plotted_float64_D": 0.06628907025068229,
+      "legacy_float32_D": 0.06628907025068229,
+      "choice_changes": 0
+    },
+    {
+      "comparison": "M1/B0",
+      "selection_window": "WY1993-1996",
+      "plotted_float64_D": 0.0627309398588499,
+      "legacy_float32_D": 0.0627309398588499,
+      "choice_changes": 0
+    },
+    {
+      "comparison": "M1/B0",
+      "selection_window": "WY1994-1997",
+      "plotted_float64_D": 0.06095545044381856,
+      "legacy_float32_D": 0.06095545044381856,
+      "choice_changes": 0
+    },
+    {
+      "comparison": "M1/B0",
+      "selection_window": "WY1995-1998",
+      "plotted_float64_D": 0.06462031486077002,
+      "legacy_float32_D": 0.06462031486077002,
+      "choice_changes": 0
+    },
+    {
+      "comparison": "M1/B0",
+      "selection_window": "WY1996-1999",
+      "plotted_float64_D": 0.06845354564660588,
+      "legacy_float32_D": 0.06845354564660588,
+      "choice_changes": 0
+    },
+    {
+      "comparison": "EA/B0",
+      "selection_window": "WY1990-1993",
+      "plotted_float64_D": 0.045826920811269406,
+      "legacy_float32_D": 0.045826920811269406,
+      "choice_changes": 0
+    },
+    {
+      "comparison": "EA/B0",
+      "selection_window": "WY1991-1994",
+      "plotted_float64_D": 0.044441360165446045,
+      "legacy_float32_D": 0.044441360165446045,
+      "choice_changes": 0
+    },
+    {
+      "comparison": "EA/B0",
+      "selection_window": "WY1992-1995",
+      "plotted_float64_D": 0.0581756409346359,
+      "legacy_float32_D": 0.0581756409346359,
+      "choice_changes": 0
+    },
+    {
+      "comparison": "EA/B0",
+      "selection_window": "WY1993-1996",
+      "plotted_float64_D": 0.05451116249939332,
+      "legacy_float32_D": 0.05451116249939332,
+      "choice_changes": 0
+    },
+    {
+      "comparison": "EA/B0",
+      "selection_window": "WY1994-1997",
+      "plotted_float64_D": 0.05217446516773333,
+      "legacy_float32_D": 0.05217446516773333,
+      "choice_changes": 0
+    },
+    {
+      "comparison": "EA/B0",
+      "selection_window": "WY1995-1998",
+      "plotted_float64_D": 0.05415797837334688,
+      "legacy_float32_D": 0.05415797837334688,
+      "choice_changes": 0
+    },
+    {
+      "comparison": "EA/B0",
+      "selection_window": "WY1996-1999",
+      "plotted_float64_D": 0.049696447666765044,
+      "legacy_float32_D": 0.049696447666765044,
+      "choice_changes": 0
+    }
+  ],
+  "display_notes": "Panel c shows point estimates; overlapping windows are not independent replicates",
+  "sources": {
+    "scores": {
+      "path": "deliverables/data_request_20261103/01_scores_long.csv",
+      "sha256": "ed2d0a3e517b020e9ed522cad9708053c9f6a62829c5ae56092672fe23d9a790"
+    },
+    "main": {
+      "path": "outputs/jh_predraft_audit_20261102/main_NSE_endpoints.csv",
+      "sha256": "39022147b2d14614f9d52d6a9e888c35d6c15cf3ff5c6f5ef0a3d65fcfc1e045"
+    },
+    "main_draws": {
+      "path": "outputs/jh_predraft_audit_20261102/baseline_bootstrap_draws.npz",
+      "sha256": "fe374ac271bb60713943d057f480ac30a2ead372eeb6e1ee55b9dcd2ed2105e9"
+    },
+    "multimetric": {
+      "path": "outputs/multimetric_transfer_20261102/transfer_endpoints.csv",
+      "sha256": "88edb54da74df654936f802cc84eb85c05d54a0f9caed9de71a4cec5109775de"
+    },
+    "multimetric_draws": {
+      "path": "outputs/multimetric_transfer_20261102/bootstrap_draws.npz",
+      "sha256": "e1d5a6641ab50e8994b91ba1da4b56cfc54e22fa8abbbe1a0b62f97f5b257e0f"
+    },
+    "ratios": {
+      "path": "outputs/evaluation_framing_20261102/descriptive_transfer_ratios.csv",
+      "sha256": "5d3eb92b66c0541dee0200f63fb7c78aff7f72a3aa408a562f2254300acded8e"
+    },
+    "external_scores": {
+      "path": "outputs/weakness_resolution_20261102/external_NSE/individual_metrics.csv",
+      "sha256": "7a7b68ad12b04ef7a7a95ffc4f762f3e0fc1968f96726e055c92c48d30835980"
+    },
+    "external_arrays": {
+      "path": "outputs/weakness_resolution_20261102/external_NSE/metric_arrays.npz",
+      "sha256": "8c84e2d24766f55ad6374ceecc1e28d21c4eb96f92f96891f0f7c50a11e7cda5"
+    },
+    "external_endpoints": {
+      "path": "outputs/weakness_resolution_20261102/external_NSE/selection_endpoints.csv",
+      "sha256": "0495fbd41703832f5d32ad73e761ce845384bb627954191df98ce8ab3454ba53"
+    },
+    "external_draws": {
+      "path": "outputs/weakness_resolution_20261102/external_NSE/selection_bootstrap_EA.csv",
+      "sha256": "082267902ab8a3bcad127ae574d83983f7262b552e012362e02377dddc51b637"
+    },
+    "external_eligibility": {
+      "path": "outputs/weakness_resolution_20261102/external/eligibility.json",
+      "sha256": "1facccc2d6b6301832325466cd4b921f454cd094b3967eb650d7dc845c277d07"
+    },
+    "windows": {
+      "path": "outputs/training_domain_followup_20261102/historical_four_year_windows.csv",
+      "sha256": "224fe8b6292438aecb0ad7b8d4b3fa9232d30e0b615aea0552c9c5b053339a6e"
+    },
+    "decade": {
+      "path": "outputs/weakness_resolution_20261102/local_heldout/selection_endpoints.csv",
+      "sha256": "5e37a2f35fa3f80ce335054b589448e40be2a4ad4c5591a57ad09031e20a789e"
+    },
+    "template": {
+      "path": "figures/figure_templates_v5_all.zip",
+      "sha256": "6b6bec143a727b8cd152be9498b786fc8b1c0892a54d438b79b06a12def7afd7"
+    }
+  },
+  "data_hashes": {
+    "bootstrap_draws.npz": "14466aaaddecec1e2cff9f4f147b23fa7b5815d2acdec56e41dc68c2a85b9267",
+    "gains.csv": "0d53267537ed354732d35cdf8d1ae2b138250705326997a0c0a321dfb01e7a68",
+    "global_increments.csv": "ca9c8b4a3921798076d9ae57e05796015848375ab4517da8f174bffef5108555",
+    "per_catchment_gains.csv": "5f2de2817617070074d6bf93f96be25472a42abcad2ce9d62a12d3f0213c02af",
+    "transfer_ratios.csv": "fb7c741ac25c176e4d7f9f8eccd1c5b19f54206df1d2380a445ad2d2b23300e8",
+    "window_losses.csv": "4599d4507593e028e1d640a787b33415502a2a92335da09503364daed4bdd25d",
+    "window_precision_check.csv": "86048053c580f20a74bf7db8fd3c600263354299f21a8da12ba1af43e4f1d1db",
+    "window_references.csv": "053eda611ff6e0cbeb86a58a2de3dd4abe3e9c7bc1f3ef12fc7d0a5dc53264d8"
+  }
+}

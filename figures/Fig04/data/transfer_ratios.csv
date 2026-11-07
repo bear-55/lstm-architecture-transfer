@@ -1,0 +1,3 @@
+group,comparison,endpoint,estimate,low95,high95,n_catchments,n_seeds,n_bootstrap,bootstrap_scheme,bootstrap_key,nonpositive_bootstrap_denominators
+Held-out,M1/B0,transfer_ratio,-0.20129291136441721,-1.4677204906318495,0.35936615096182561,107,10,2000,seed_HUC2,ratio__M1,0
+Held-out,EA/B0,transfer_ratio,0.37498163542386681,-0.50414940560951682,0.69785223981692024,107,10,2000,seed_HUC2,ratio__EA,0

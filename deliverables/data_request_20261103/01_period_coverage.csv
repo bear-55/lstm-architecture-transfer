@@ -1,0 +1,14 @@
+﻿scenario,period,period_start,period_end,period_kind,basins,models,seeds_per_model,rows
+heldout107,WY1990-1999,1989-10-01,1999-09-30,full_period,107,3,10,3210
+heldout107,WY1990-1993,1989-10-01,1993-09-30,overlapping_four_year,107,3,10,3210
+heldout107,WY1991-1994,1990-10-01,1994-09-30,overlapping_four_year,107,3,10,3210
+heldout107,WY1992-1995,1991-10-01,1995-09-30,overlapping_four_year,107,3,10,3210
+heldout107,WY1993-1996,1992-10-01,1996-09-30,overlapping_four_year,107,3,10,3210
+heldout107,WY1994-1997,1993-10-01,1997-09-30,overlapping_four_year,107,3,10,3210
+heldout107,WY1995-1998,1994-10-01,1998-09-30,overlapping_four_year,107,3,10,3210
+heldout107,WY1996-1999,1995-10-01,1999-09-30,overlapping_four_year,107,3,10,3210
+heldout107,WY2000-2003,1999-10-01,2003-09-30,full_period,107,3,10,3210
+heldout107,WY2004-2008,2003-10-01,2008-09-30,full_period,107,3,10,3210
+trained370,WY2000-2003,1999-10-01,2003-09-30,full_period,370,3,10,11100
+trained370,WY2004-2008,2003-10-01,2008-09-30,full_period,370,3,10,11100
+validation50,WY2000-2003,1999-10-01,2003-09-30,full_period,50,3,10,1500

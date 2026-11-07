@@ -1,0 +1,17 @@
+scenario,comparison,policy,early_risk,n_basins,mean_later_gain,median_later_gain
+local_heldout,EA-B0,library_local,False,103,-0.005129598971775778,0.0011991044311343
+local_heldout,EA-B0,library_local,True,4,0.7917366756634968,0.820741420176861
+local_heldout,EA-B0,select_arch_then_ensemble,False,103,0.008273509126169356,0.0025520865124133
+local_heldout,EA-B0,select_arch_then_ensemble,True,4,0.28692162024628776,0.3208707541859105
+local_heldout,M1-B0,library_local,False,103,0.01574308332995026,-0.0022031953874065
+local_heldout,M1-B0,library_local,True,4,0.9328286378372488,1.0099221422642237
+local_heldout,M1-B0,select_arch_then_ensemble,False,103,0.007563868909368509,0.0014016679914218
+local_heldout,M1-B0,select_arch_then_ensemble,True,4,0.14433940999387612,0.17226650571017935
+unseen_aligned,EA-B0,library_local,False,100,0.002881492694065963,-0.0022214407992011
+unseen_aligned,EA-B0,library_local,True,7,0.44700165116624396,0.0697029853585191
+unseen_aligned,EA-B0,select_arch_then_ensemble,False,100,0.0072546547973389,0.00302763030990285
+unseen_aligned,EA-B0,select_arch_then_ensemble,True,7,0.2241272510941321,0.0811816513402486
+unseen_aligned,M1-B0,library_local,False,101,0.016461610316057116,0.0003825351198259
+unseen_aligned,M1-B0,library_local,True,6,0.5866509391784749,0.4695486588366972
+unseen_aligned,M1-B0,select_arch_then_ensemble,False,101,0.005479258224401228,-0.0002853176498956
+unseen_aligned,M1-B0,select_arch_then_ensemble,True,6,0.10345557981478394,0.0216879194565996

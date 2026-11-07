@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-16",
+  "scope": "formal_random_pub_527",
+  "active_seeds": [
+    11,
+    29,
+    47
+  ],
+  "active_run_count": 9,
+  "cache_source_hash_revisions": {
+    "configs/formal.json": {
+      "before": "482b95223549a528070b6a29524c2890ed021268bb58a29c98d676e59c6f66ca",
+      "after": "91da804b8d9e9e11216996d449f650a4e9a288eae32a8a227669928d87d72231"
+    },
+    "scripts/build_formal_dataset.py": {
+      "before": "f274f3697ffc647cbab0417f6bebf00e2ef6327cc8be74fca5699d41d29d997a",
+      "after": "34a7fc71e065f3916693dfbe37c7adbe64ddeaab80324cd0bd693d82f1e8a27e"
+    }
+  }
+}

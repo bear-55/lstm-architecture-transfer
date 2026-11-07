@@ -1,0 +1,39 @@
+[
+  {
+    "file": "census_states_5m_2024.geojson",
+    "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/Generalized_ACS2024/State_County/MapServer/8/query?where=STATE+NOT+IN+%28%2702%27%2C%2715%27%2C%2760%27%2C%2766%27%2C%2769%27%2C%2772%27%2C%2778%27%29&outFields=STATE%2CNAME&outSR=4326&returnGeometry=true&geometryPrecision=5&f=geojson",
+    "metadata_url": "https://tigerweb.geo.census.gov/arcgis/rest/services/Generalized_ACS2024/State_County/MapServer/8",
+    "downloaded_at_utc": "2026-11-04T05:41:40.822682+00:00",
+    "feature_count": 49,
+    "bytes": 1663203,
+    "sha256": "fe35f04ee1dbf46f3d5d1efcfe83dc13501ee53e0e7879982c90041b7a6a6f0e",
+    "crs": "EPSG:4326 (longitude, latitude)",
+    "parameters": {
+      "where": "STATE NOT IN ('02','15','60','66','69','72','78')",
+      "outFields": "STATE,NAME",
+      "outSR": 4326,
+      "returnGeometry": "true",
+      "geometryPrecision": 5,
+      "f": "geojson"
+    }
+  },
+  {
+    "file": "usgs_huc2_regions.geojson",
+    "url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/1/query?where=huc2+%3E%3D+%2701%27+AND+huc2+%3C%3D+%2718%27&outFields=huc2%2Cname&outSR=4326&returnGeometry=true&maxAllowableOffset=0.01&geometryPrecision=5&f=geojson",
+    "metadata_url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/1",
+    "downloaded_at_utc": "2026-11-04T05:41:42.508232+00:00",
+    "feature_count": 18,
+    "bytes": 438859,
+    "sha256": "662f01ecbefb58898bbd2decdd8042d5f5c61f4c4637766ece4c1fb7120e6d16",
+    "crs": "EPSG:4326 (longitude, latitude)",
+    "parameters": {
+      "where": "huc2 >= '01' AND huc2 <= '18'",
+      "outFields": "huc2,name",
+      "outSR": 4326,
+      "returnGeometry": "true",
+      "maxAllowableOffset": 0.01,
+      "geometryPrecision": 5,
+      "f": "geojson"
+    }
+  }
+]

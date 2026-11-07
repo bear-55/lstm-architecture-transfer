@@ -1,0 +1,49 @@
+{
+  "rules": {
+    "counts": {
+      "train": 370,
+      "val": 50,
+      "test": 107
+    },
+    "base_split_seed": 20260915,
+    "maximum_attempts": 10,
+    "stratification": "P terciles across all 527; cold-precip median within each P tercile. Numeric quantiles, linear interpolation; equal-to-threshold goes to lower bin.",
+    "climate_scope": "1980-10-01..1989-09-30; all 527 permitted forcing covariates; no Q-derived features",
+    "land_role": "Diagnostics only; no land or geographic distances in optimizer objective; no strict distribution matching",
+    "assignment": "Whole overlap groups; enforce audited allowed roles and prior pilot train/val exclusion from test; exact total counts; each stratum-role count within 3 basins of proportional target.",
+    "objective": "Two solver stages: minimize climate-cell absolute count deviations; constrain this optimum and minimize seeded random group-role costs. No performance/land objective.",
+    "severe_diagnostic_rules": {
+      "fields": [
+        "area_geospa_fabric",
+        "elev_mean",
+        "slope_mean",
+        "frac_forest",
+        "soil_depth_pelletier",
+        "soil_depth_statsgo",
+        "soil_porosity",
+        "geol_permeability"
+      ],
+      "ecdf_gap": 0.5,
+      "outside_train_range_fraction": 0.2,
+      "outside_train_range_min_count": 10,
+      "huc2_share_gap": 0.3,
+      "definition": "Compare Val and Test separately to Train. Trigger if any key field has ECDF maximum gap >=0.50, or >=20% and >=10 evaluation basins outside observed Train min/max; or any HUC2 share differs >=0.30. These are pragmatic gross-imbalance guards, not p-values or universal standards. Finite values only; missingness separately reported."
+    },
+    "retry_policy": "Only severe diagnostic failure triggers next predeclared SeedSequence([base, attempt]) attempt. Keep every candidate and its metrics; accept first passing candidate, never best-looking or best-scoring. If 10 fail, stop without freeze.",
+    "fit_policy": "No scaler/imputer fitted here. Later fit on 370 Train only. Global quantile edges/histogram bins here are design/diagnostic objects, never model normalization.",
+    "interpretation": "Six sampling strata, not six hydrologic types; no dry/wet or warm/cold classification claim; rare/isolated extrapolations are permitted."
+  },
+  "code_sha256": "c6bc85e5116c0031ebdb9cd0fdc47631a7d0ae329d089b8852741340b361cdc2",
+  "input_hashes": {
+    "data_contract\\formal_531_audit\\selected_527_basins.txt": "c91be96273069c8d961a8de9dafc88f4b102fff20f27545ecdfcb5601d358882",
+    "data_contract\\formal_531_audit\\selected_basin_details.csv": "dc6b0d7b8af32ad280a29b4f98200b25df0b5c0b6537b9bf6cb44a742e27daf1",
+    "data_contract\\formal_531_audit\\design_group_roles.json": "99fd10911b7a010d26cd927a384bb2221f0bdaeb39e8ad8f44fb2d6641f1a846",
+    "data_contract\\formal_531_audit\\protocol.json": "f555c4d994e2d1c9ed9528dfd581447acfe318808e86736c4c0ae1109051f534",
+    "data_contract\\formal_531_audit\\source_hashes.json": "ae4dd869f7c7a22c32c82e7c81fc7ca2e33ac7ff9ca511022a2298c80666fbca",
+    "data_contract\\formal_531_audit\\geometry_review.json": "88750fa6cdb8ad8229292d57b9037738ec64ca2bb71ac96275d9b3aa9293e19c",
+    "data_contract\\feature_manifest.csv": "58fb0541e1df6ecd57e146451d5a72e063eaff2b19106d6ea06d7eadbcd64297",
+    "data_contract\\basin_qc.csv": "bf1208aa81cbddd96c205aa0a72b8e70e6fada0bac3ebd50334892e0fcb9cfa5",
+    "data\\manifests\\source_files.csv": "4bdf1b7b84428a1eb541c131248391e9278dd5c38ea15f24a615dd25010ef1bc"
+  },
+  "declared_at_utc": "2026-09-15T08:21:05.749241+00:00"
+}

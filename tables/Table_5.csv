@@ -1,0 +1,4 @@
+Strategy,Mean NSE,Median NSE,Median KGE,NSE < 0
+One instance per catchment,0.6444,0.7057,0.6900,1
+"Architecture choice, then ten-member ensemble",0.6339,0.7061,0.6626,3
+Pooled 20-member ensemble,0.6124,0.7079,0.6696,3

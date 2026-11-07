@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Please cite this software and the data sources listed in DATA_SOURCES.md."
+type: software
+title: "Retained-weight evaluation overstates the transferability of catchment-wise architecture choices in regional LSTM rainfall–runoff models: reproducibility materials"
+version: 1.0.0
+license: MIT
+authors:
+  - family-names: Wu
+    given-names: Xiong
+  - family-names: Fu
+    given-names: Xiaoran
+  - family-names: Jiang
+    given-names: Jinlun
+  - family-names: Zhang
+    given-names: Haijia
+  - family-names: Sun
+    given-names: Hongquan
+  - family-names: Wang
+    given-names: Zhonggen
+keywords:
+  - hydrology
+  - CAMELS-US
+  - regional LSTM
+  - model selection
+  - random initialization
+  - reproducibility

@@ -1,0 +1,10 @@
+metric,source_metric,utility_transform,unit
+NSE,nse,identity,NSE
+NSE_star,nse,bounded,NSE*
+KGE,kge,identity,KGE
+abs_FHV,fhv,negative_absolute,percentage points
+MAE_low,mae_low,negative,mm/day
+MAE_high,mae_high,negative,mm/day
+nMAE_low,mae_low,negative_normalized,dimensionless
+nMAE_high,mae_high,negative_normalized,dimensionless
+abs_Q98_bias,peak_day_bias_pct,negative_absolute,percentage points

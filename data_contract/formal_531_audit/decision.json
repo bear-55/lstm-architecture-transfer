@@ -1,0 +1,40 @@
+{
+  "decision": "Use 527 data-eligible basins, subject to explicit role restrictions; no active train/val/test split created.",
+  "reason": "A basin only needs adequate coverage in its assigned role. Requiring all three periods would unnecessarily exclude 18 usable basins. This uses predeclared role eligibility, without changing thresholds after the scan.",
+  "candidate_count": 531,
+  "selected_count": 527,
+  "all_periods_eligible": 509,
+  "period_restricted": 18,
+  "excluded_all_roles": 4,
+  "all_selected_have_feasible_group_role": true,
+  "spatial_groups": 504,
+  "max_group_size": 3,
+  "prior_pilot_train_or_val_in_selected": 44,
+  "new_test_restriction": "Prior pilot train/val basins and their overlap groups cannot enter final test.",
+  "sensitivity_fixed_climate_rules": {
+    "0.5": {
+      "any_role": 527,
+      "all_roles": 522
+    },
+    "0.7": {
+      "any_role": 527,
+      "all_roles": 509
+    },
+    "0.8": {
+      "any_role": 527,
+      "all_roles": 509
+    },
+    "0.9": {
+      "any_role": 525,
+      "all_roles": 499
+    },
+    "0.95": {
+      "any_role": 521,
+      "all_roles": 488
+    }
+  },
+  "list_sha256": "c91be96273069c8d961a8de9dafc88f4b102fff20f27545ecdfcb5601d358882",
+  "clarification": "summary.json usable_count=509 and usable_basins.txt are the all-periods common pool, not the final maximum role-eligible population. selected_527_basins.txt is the chosen population.",
+  "labels": "Q read for QC including former pilot test, no scores/predictions produced; access logged.",
+  "implementation_remaining": "Formal cache/scalers and split have not been created. Pilot preprocessing rejects partial climate references; formal builder must implement protocol.json before training."
+}

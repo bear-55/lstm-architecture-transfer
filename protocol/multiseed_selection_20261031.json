@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-31",
+  "status": "exploratory_application_fixed_before_computing_curve",
+  "source": "outputs/retraining_confirmation_analysis_20261031/primary_arrays.npz",
+  "models": ["B0", "M1"],
+  "selection_members": [1, 3, 5, 9],
+  "rule": "Leave target seed out. Enumerate all m-subsets of the other nine seeds. Select M1 iff arithmetic mean of their earlier-period NSE(M1)-NSE(B0) is strictly positive. Ties select B0.",
+  "deployment": "Use one independently trained target seed's later-period prediction; no prediction ensemble.",
+  "aggregation": "Equal subsets within target, equal target seeds, equal basins. Report gains against fixed B0 and fixed M1, basin medians, per-target and per-basin distributions and selection probabilities.",
+  "audit": "m=1 must reproduce original other_vs_B0 and other_vs_M1. Independent direct enumeration must match vectorized results. Entire input/output artifacts hashed.",
+  "uncertainty": "Descriptive finite-pool cross-evaluation. No new p-values or confidence intervals from overlapping subsets; target/region summaries are dependent sensitivity descriptions, not independent replicates.",
+  "interpretation": "Report all four m values. Do not select a winning m from later Test scores. Selection stability alone is not evidence of improved predictive value. This analysis does not redefine the confirmed primary endpoint."
+}

@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-11-03T16:32:56.636529+00:00",
+  "status": "Exploratory extension",
+  "selection_period": "WY2000-2003",
+  "evaluation_period": "WY2004-2008",
+  "scenario": "107 held-out gauged catchments",
+  "source_budgets": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "target_budget": 5,
+  "choice": "Mean source individual early NSE, catchment-wise versus same-information global architecture",
+  "evaluation": "Arithmetic mean of five target individual scores, not NSE of mean discharge",
+  "enumeration": "Every C(10,m) source subset and every C(10-m,5) disjoint target subset; both orientations at m=5",
+  "compression": "Mean over all five-member target subsets is the mean of all non-source instances; verified explicitly",
+  "bootstrap": "HUC2 cluster percentile intervals conditional on the fitted library; all source/target subsets kept together; global rule reselected",
+  "bootstrap_draws": 20000,
+  "bootstrap_seed": 20261104,
+  "upper_bound": "One-sided 95% percentile upper bound = bootstrap 0.95 quantile, distinct from two-sided 97.5% endpoint",
+  "score_sensitivity": "Evaluate NSE* with early raw-NSE choice fixed; transform individual scores before averaging",
+  "metric_arrays_sha256": "afa5d1b17a0d88c51aeee4f9d727f9bb88fdcdf8d92cced8da351cc7507fcce7",
+  "existing_bootstrap_sha256": "f70fcd1cb71778f34ca7602481b1d5d71a257c7b456ed617613626994280d509",
+  "script_sha256": "a5b4748e67522f80437f6882e9636242648966158b502046637e657245ef27f2"
+}

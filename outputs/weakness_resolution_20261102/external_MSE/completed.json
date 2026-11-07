@@ -1,0 +1,22 @@
+{
+  "name": "external_MSE",
+  "models": [
+    "B0",
+    "EA",
+    "LSTM_dynamic"
+  ],
+  "seeds": [
+    111,
+    222,
+    333,
+    444,
+    555,
+    666,
+    777,
+    888
+  ],
+  "basins": 531,
+  "bootstrap_repetitions": 2000,
+  "status": "completed",
+  "training": false
+}

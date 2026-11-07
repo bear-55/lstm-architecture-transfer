@@ -1,0 +1,293 @@
+{
+  "status": "PASS",
+  "panels": [
+    {
+      "panel": "a",
+      "comparison": "M1/B0",
+      "group": "Held-out",
+      "n_seed": 10,
+      "n_catchments": 107,
+      "seeds": [
+        1009,
+        1021,
+        1033,
+        1051,
+        1063,
+        1087,
+        1097,
+        1109,
+        1123,
+        1151
+      ],
+      "historical_period": "WY2000–2003",
+      "late_period": "WY2004–2008",
+      "example_seed": 1009,
+      "example_min": -0.6272242454181614,
+      "example_max": 0.2855796176373811,
+      "example_curves_outside_display": 14,
+      "example_values_below_display": [
+        7,
+        5,
+        0
+      ],
+      "example_values_above_display": [
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "panel": "b",
+      "comparison": "M1/B0",
+      "group": "Training",
+      "n_seed": 10,
+      "n_catchments": 370,
+      "seeds": [
+        1009,
+        1021,
+        1033,
+        1051,
+        1063,
+        1087,
+        1097,
+        1109,
+        1123,
+        1151
+      ],
+      "historical_period": "WY2000–2003",
+      "late_period": "WY2004–2008",
+      "example_seed": 1009,
+      "example_min": -0.543307446828476,
+      "example_max": 0.5531333490550681,
+      "example_curves_outside_display": 16,
+      "example_values_below_display": [
+        8,
+        3,
+        0
+      ],
+      "example_values_above_display": [
+        2,
+        5,
+        0
+      ]
+    },
+    {
+      "panel": "d",
+      "comparison": "EA/B0",
+      "group": "Held-out",
+      "n_seed": 10,
+      "n_catchments": 107,
+      "seeds": [
+        1009,
+        1021,
+        1033,
+        1051,
+        1063,
+        1087,
+        1097,
+        1109,
+        1123,
+        1151
+      ],
+      "historical_period": "WY2000–2003",
+      "late_period": "WY2004–2008",
+      "example_seed": 1009,
+      "example_min": -0.706201803124712,
+      "example_max": 0.6356946298918008,
+      "example_curves_outside_display": 25,
+      "example_values_below_display": [
+        12,
+        11,
+        2
+      ],
+      "example_values_above_display": [
+        4,
+        4,
+        3
+      ]
+    },
+    {
+      "panel": "e",
+      "comparison": "EA/B0",
+      "group": "Training",
+      "n_seed": 10,
+      "n_catchments": 370,
+      "seeds": [
+        1009,
+        1021,
+        1033,
+        1051,
+        1063,
+        1087,
+        1097,
+        1109,
+        1123,
+        1151
+      ],
+      "historical_period": "WY2000–2003",
+      "late_period": "WY2004–2008",
+      "example_seed": 1009,
+      "example_min": -0.5878407800730181,
+      "example_max": 0.6313828572176594,
+      "example_curves_outside_display": 33,
+      "example_values_below_display": [
+        12,
+        11,
+        1
+      ],
+      "example_values_above_display": [
+        8,
+        5,
+        0
+      ]
+    },
+    {
+      "panel": "f",
+      "comparison": "EA/B0",
+      "group": "External",
+      "n_seed": 8,
+      "n_catchments": 531,
+      "seeds": [
+        111,
+        222,
+        333,
+        444,
+        555,
+        666,
+        777,
+        888
+      ],
+      "historical_period": "WY1990–1994",
+      "late_period": "WY1995–1999",
+      "example_seed": 111,
+      "example_min": -0.7651155854723017,
+      "example_max": 0.8380831364108228,
+      "example_curves_outside_display": 39,
+      "example_values_below_display": [
+        10,
+        18,
+        4
+      ],
+      "example_values_above_display": [
+        9,
+        2,
+        0
+      ]
+    }
+  ],
+  "correlation_summary": [
+    {
+      "panel": "a",
+      "comparison": "M1/B0",
+      "group": "Held-out",
+      "rho_retained": 0.5634985011461824,
+      "rho_retrained": -0.047978016810674186,
+      "n_source_seeds": 10,
+      "n_catchments": 107
+    },
+    {
+      "panel": "b",
+      "comparison": "M1/B0",
+      "group": "Training",
+      "rho_retained": 0.31850608349457865,
+      "rho_retrained": 0.017752657660619002,
+      "n_source_seeds": 10,
+      "n_catchments": 370
+    },
+    {
+      "panel": "d",
+      "comparison": "EA/B0",
+      "group": "Held-out",
+      "rho_retained": 0.5710731009620094,
+      "rho_retrained": 0.10605811242383276,
+      "n_source_seeds": 10,
+      "n_catchments": 107
+    },
+    {
+      "panel": "e",
+      "comparison": "EA/B0",
+      "group": "Training",
+      "rho_retained": 0.2994819420038012,
+      "rho_retrained": 0.08722931069916803,
+      "n_source_seeds": 10,
+      "n_catchments": 370
+    },
+    {
+      "panel": "f",
+      "comparison": "EA/B0",
+      "group": "External",
+      "rho_retained": 0.21662796461893458,
+      "rho_retrained": 0.1767788715472724,
+      "n_source_seeds": 8,
+      "n_catchments": 531
+    }
+  ],
+  "trajectory_rows": 13788,
+  "summary_rows": 75,
+  "summary_definition": "Within each source seed, group catchments by historical delta NSE* quintile. Compute each group's q25, median and q75 at each stage; average each statistic over source seeds.",
+  "retrained_definition": "Arithmetic mean of late individual delta NSE* over all other seeds (nine local, seven external); not a discharge ensemble score.",
+  "correlation_definition": "Mean of per-source-seed Spearman correlations between historical delta NSE* and each late branch, across catchments.",
+  "external_source": {
+    "protocol_sha256": "36c7cd152a0a244a8cb40248d55fcd82c2cd249de6228984d07e41686ef7932b",
+    "test_period": [
+      "1989-10-01",
+      "1999-09-30"
+    ],
+    "training_period": [
+      "1999-10-01",
+      "2008-09-30"
+    ],
+    "selection_period": [
+      "1989-10-01",
+      "1994-09-30"
+    ],
+    "evaluation_period": [
+      "1994-10-01",
+      "1999-09-30"
+    ],
+    "interpretation": "Retrospective out-of-calibration temporal validation; these test years precede training years.",
+    "hyperparameters": "Original paper Appendix B tuned on calibration-period basin cross-validation.",
+    "pairing": "Original matching seed IDs; no claim of identical initialization or minibatch stream between architectures.",
+    "models": "B0=concat_static; EA=static input gate; dynamic=no_static",
+    "source": "https://doi.org/10.4211/hs.83ea5312635e44dc824eeb99eda12f06",
+    "license": "CC BY 4.0"
+  },
+  "no_synthetic_data": true,
+  "display_ylim": [
+    -0.22,
+    0.22
+  ],
+  "source_hashes": {
+    "local_scores": {
+      "path": "deliverables\\data_request_20261103\\01_scores_long.csv",
+      "sha256": "ed2d0a3e517b020e9ed522cad9708053c9f6a62829c5ae56092672fe23d9a790"
+    },
+    "external_scores": {
+      "path": "outputs\\weakness_resolution_20261102\\external_NSE\\individual_metrics.csv",
+      "sha256": "7a7b68ad12b04ef7a7a95ffc4f762f3e0fc1968f96726e055c92c48d30835980"
+    },
+    "external_arrays": {
+      "path": "outputs\\weakness_resolution_20261102\\external_NSE\\metric_arrays.npz",
+      "sha256": "8c84e2d24766f55ad6374ceecc1e28d21c4eb96f92f96891f0f7c50a11e7cda5"
+    },
+    "external_eligibility": {
+      "path": "outputs\\weakness_resolution_20261102\\external\\eligibility.json",
+      "sha256": "1facccc2d6b6301832325466cd4b921f454cd094b3967eb650d7dc845c277d07"
+    },
+    "external_runs": {
+      "path": "outputs\\weakness_resolution_20261102\\external_NSE\\source_runs.json",
+      "sha256": "7ad734384c4eff3daeef43d0f9713c332d259b8f15d6f465ee3e581ecfe07708"
+    },
+    "template_zip": {
+      "path": "figures\\figure_templates_v5_all.zip",
+      "sha256": "6b6bec143a727b8cd152be9498b786fc8b1c0892a54d438b79b06a12def7afd7"
+    }
+  },
+  "data_hashes": {
+    "trajectories.csv": "356a8b67da616cfe1c0023c8b6d3637ad72fdafb7dd6c2e9adfd953edd017304",
+    "correlations_by_seed.csv": "b8e6fdfe0e728bffd2a540027c604cca73935a9e156dce73d735024411709b32",
+    "quintiles_by_seed.csv": "09a6fbeda41540e2463051689029cde65cc765d926bab9c6a52519f96b044424",
+    "quintile_summary.csv": "6eaf098dae928ba99f629b8b0c5180926bcf6d8fc94f2cd4e6da63f21743e9bf",
+    "correlation_summary.csv": "347de10257d624656c31d2b3ce8b7939296d7f1704c0998324c850a6ae787133"
+  }
+}

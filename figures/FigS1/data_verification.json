@@ -1,0 +1,160 @@
+{
+  "status": "PASS",
+  "no_synthetic_data": true,
+  "new_training": false,
+  "n_heldout": 107,
+  "n_training": 370,
+  "n_seeds_per_architecture": 10,
+  "selection_period": "WY2000-2003",
+  "evaluation_period": "WY2004-2008",
+  "matched_samples": {
+    "across_HUC2": 101,
+    "within_HUC2": 77
+  },
+  "matching_covariate": "f(mean_seed NSE_B0_early), f(x)=x/(2-x)",
+  "matching_caliper": 0.0512962692500297,
+  "matching_checks": [
+    {
+      "scheme": "within_HUC2",
+      "n_pairs": 77,
+      "unique_without_replacement": true,
+      "caliper_verified": true,
+      "original_assignment_reproduced": true
+    },
+    {
+      "scheme": "across_HUC2",
+      "n_pairs": 101,
+      "unique_without_replacement": true,
+      "caliper_verified": true,
+      "original_assignment_reproduced": true
+    }
+  ],
+  "smd_definition": "(heldout mean - training mean) / sqrt((full-heldout variance + full-training variance)/2), sample variances with ddof=1",
+  "area_definition": "Natural log of CAMELS area_geospa_fabric (km^2)",
+  "other_covariates": "CAMELS aridity, frac_snow, baseflow_index, p_mean, elev_mean; descriptive balance checks, not additional matching variables",
+  "matching_scores_not_mean_transformed_scores": true,
+  "outcome_scale": "NSE* transformed per instance before averaging",
+  "verified_balance_cells": 21,
+  "ecdf_curves": 6,
+  "ecdf_observations": 833,
+  "interval_estimates_verified": 36,
+  "original_contrast_bootstrap_values_verified": 24000,
+  "n_boot": 2000,
+  "rng_seed": 20261102,
+  "bootstrap_full_and_within": "synchronized seed/HUC2 region bootstrap",
+  "bootstrap_across": "synchronized seed and matched-pair bootstrap",
+  "matches_fixed_in_bootstrap": true,
+  "validation": [
+    {
+      "matching": "unmatched",
+      "comparison": "M1/B0",
+      "endpoint": "D",
+      "estimates_and_intervals": "PASS",
+      "saved_bootstrap_draws": 2000
+    },
+    {
+      "matching": "unmatched",
+      "comparison": "M1/B0",
+      "endpoint": "G_same",
+      "estimates_and_intervals": "PASS",
+      "saved_bootstrap_draws": 2000
+    },
+    {
+      "matching": "unmatched",
+      "comparison": "EA/B0",
+      "endpoint": "D",
+      "estimates_and_intervals": "PASS",
+      "saved_bootstrap_draws": 2000
+    },
+    {
+      "matching": "unmatched",
+      "comparison": "EA/B0",
+      "endpoint": "G_same",
+      "estimates_and_intervals": "PASS",
+      "saved_bootstrap_draws": 2000
+    },
+    {
+      "matching": "across_HUC2",
+      "comparison": "M1/B0",
+      "endpoint": "D",
+      "estimates_and_intervals": "PASS",
+      "saved_bootstrap_draws": 2000
+    },
+    {
+      "matching": "across_HUC2",
+      "comparison": "M1/B0",
+      "endpoint": "G_same",
+      "estimates_and_intervals": "PASS",
+      "saved_bootstrap_draws": 2000
+    },
+    {
+      "matching": "across_HUC2",
+      "comparison": "EA/B0",
+      "endpoint": "D",
+      "estimates_and_intervals": "PASS",
+      "saved_bootstrap_draws": 2000
+    },
+    {
+      "matching": "across_HUC2",
+      "comparison": "EA/B0",
+      "endpoint": "G_same",
+      "estimates_and_intervals": "PASS",
+      "saved_bootstrap_draws": 2000
+    },
+    {
+      "matching": "within_HUC2",
+      "comparison": "M1/B0",
+      "endpoint": "D",
+      "estimates_and_intervals": "PASS",
+      "saved_bootstrap_draws": 2000
+    },
+    {
+      "matching": "within_HUC2",
+      "comparison": "M1/B0",
+      "endpoint": "G_same",
+      "estimates_and_intervals": "PASS",
+      "saved_bootstrap_draws": 2000
+    },
+    {
+      "matching": "within_HUC2",
+      "comparison": "EA/B0",
+      "endpoint": "D",
+      "estimates_and_intervals": "PASS",
+      "saved_bootstrap_draws": 2000
+    },
+    {
+      "matching": "within_HUC2",
+      "comparison": "EA/B0",
+      "endpoint": "G_same",
+      "estimates_and_intervals": "PASS",
+      "saved_bootstrap_draws": 2000
+    }
+  ],
+  "input_hashes": {
+    ".\\deliverables\\data_request_20261103\\01_scores_long.csv": "ed2d0a3e517b020e9ed522cad9708053c9f6a62829c5ae56092672fe23d9a790",
+    ".\\deliverables\\data_request_20261103\\03_basin_metadata_531.csv": "27174441aaeb25a039bbd9526c4b5f03892274f7f6cc4d4d22a8f70c3c024d05",
+    ".\\outputs\\training_domain_followup_20261102\\unseen_aligned\\metric_arrays.npz": "afa5d1b17a0d88c51aeee4f9d727f9bb88fdcdf8d92cced8da351cc7507fcce7",
+    ".\\outputs\\weakness_resolution_20261102\\local_internal\\metric_arrays.npz": "035d08351094ff3739d4693f2e96ff27cd59624e6eb186c6a4a13f9f039445d6",
+    ".\\outputs\\selection_transfer_P1_20261102\\matching_pairs.csv": "1f68e77a3a0b0da7a1d7c594351d970d618a75cecd2d414f54e378ce7e01698a",
+    ".\\outputs\\selection_transfer_P1_20261102\\matching_balance.csv": "125b1725f51c41784bcbbd6c528ff2f2ec9872de131ed23fc8af7c88ce08eb13",
+    ".\\outputs\\selection_transfer_P1_20261102\\matching_coverage.csv": "78c825690fa25c57114f6c57da919765e89e080e56b2e47abfed8d2203ae8d64",
+    ".\\outputs\\selection_transfer_P1_20261102\\P1_per_basin.csv": "1726f7e90ce4b5ceacbeeac684233c7befe6857c0ef153587886046b84bd0e9b",
+    ".\\outputs\\selection_transfer_P1_20261102\\P1_endpoints.csv": "63645d715b6cb6a9f7929feba269273da8240deb8758c474bc0cbd0f38185ecf",
+    ".\\outputs\\selection_transfer_P1_20261102\\P1_contrast_draws.npz": "0e9522d5c7de5f4e76a81c2d47ee76ac416eec927944e5f45c3d5a30b7f7f3ef",
+    ".\\figures\\figure_templates_v5_all.zip": "6b6bec143a727b8cd152be9498b786fc8b1c0892a54d438b79b06a12def7afd7",
+    ".\\paper\\Manuscript_revised_EMS_v4.docx": "2a86e1b24f58883ea32c6435248f7a8fc8ec0daa72b3104e3c272a913baa3c7f",
+    "data/attributes/camels_attributes_v2.0.feather": "5c73f4e3e39ffcadf055b827c0bf7d9de707e4ebb0af86592f49912b521f4782",
+    "data/attributes/static_attributes.csv": "423fdb9a9a22c76b018e18702332a993c7c2377eec8efae9e1d8b1efcc30473c"
+  },
+  "data_hashes": {
+    "bootstrap_draws.npz": "24b04005979a41898130283c1339e39dcdcc26dd2a6b2e3ef880f3761d26697b",
+    "bootstrap_weights.npz": "a11fa605aa532aaef155d412f5a40a986efa83d29708f7b09d4d56f6681bb189",
+    "catchment_attributes.csv": "13096cfa7532b48eaea7c2e93b7c68d221ae42282699d0d67775cae0c40470df",
+    "contrast_endpoints.csv": "9bb7cc594746a72e6aa49986e6fa37bbd54bcd3a878309fa2304f89a3d138de3",
+    "covariate_balance.csv": "9927ed0b92a139c3554b64727743ec07a45daa7b28f61b1d5fdfddcbb8ea9be5",
+    "group_endpoints.csv": "11d4bc34ac423d1cdba3c267a14fe9834538af0a038ce9246601591785a74d13",
+    "matching_pairs.csv": "1f68e77a3a0b0da7a1d7c594351d970d618a75cecd2d414f54e378ce7e01698a",
+    "per_catchment_outcomes.csv": "3df94ba5c3582ed1b1b963b4f6442becbea35ee77cf247b93641ecf0ed708b55",
+    "score_ecdfs.csv": "4e0909d7285f687edf71b94b7c127df871a71ac2f2b5bc2bd8ba6879089adda0"
+  }
+}

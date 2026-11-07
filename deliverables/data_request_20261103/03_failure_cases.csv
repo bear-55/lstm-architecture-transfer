@@ -1,0 +1,4 @@
+﻿basin_id,role,huc2,climate_stratum,spatial_group,gauge_lat,gauge_lon,in_standard531,in_local527,is_top3_net_gain_case,EA_library_selected_nse,EA_library_mixed_nse,EA_library_gain,EA_library_rescued,EA_library_new_failure
+04127997,test,04,1,G226,45.274459999999998,-84.600030000000004,True,True,True,0.39110266527284671,-0.86300585761246373,1.2541085228853104,True,False
+07301410,test,11,0,G333,35.473100000000002,-100.12094999999999,True,True,True,-0.62848092514563447,-1.4736052353910649,0.84512431024543044,False,False
+08324000,test,13,1,G379,35.66169,-106.74337,True,True,True,0.30979487952331869,-0.91927737433061685,1.2290722538539356,True,False

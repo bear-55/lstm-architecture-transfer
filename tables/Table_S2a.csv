@@ -1,0 +1,25 @@
+Group,Contrast,Metric,Catchment,Seed,Seed × catchment,Period × catchment,Period × seed × catchment,Other period terms
+Held-out,EA/B0,NSE,14.93,0.32,43.01,10.04,31.34,0.36
+Held-out,EA/B0,NSE*,19.56,1.13,62.73,3.22,13.14,0.23
+Held-out,EA/B0,KGE,18.73,0.93,61.47,2.71,16.02,0.13
+Held-out,EA/B0,|FHV|,13.38,0.32,59.47,7.52,18.99,0.31
+Held-out,EA/B0,nMAE high,10.25,0.73,49.74,3.98,34.92,0.38
+Held-out,EA/B0,nMAE low,25.50,1.41,58.44,6.41,8.01,0.23
+Held-out,M1/B0,NSE,4.02,0.53,53.15,3.31,38.73,0.26
+Held-out,M1/B0,NSE*,6.85,3.26,75.02,1.77,12.77,0.34
+Held-out,M1/B0,KGE,10.32,2.12,68.57,2.65,16.15,0.19
+Held-out,M1/B0,|FHV|,7.36,0.62,65.52,3.78,22.41,0.31
+Held-out,M1/B0,nMAE high,6.31,0.40,59.98,4.76,28.02,0.52
+Held-out,M1/B0,nMAE low,7.98,3.80,76.25,0.55,11.22,0.20
+Training,EA/B0,NSE,6.02,0.42,47.65,1.61,44.16,0.14
+Training,EA/B0,NSE*,9.28,3.16,53.35,3.55,30.54,0.11
+Training,EA/B0,KGE,14.74,2.00,55.56,3.22,24.40,0.08
+Training,EA/B0,|FHV|,10.25,2.60,50.37,5.10,31.62,0.06
+Training,EA/B0,nMAE high,8.20,0.95,50.74,5.54,34.42,0.16
+Training,EA/B0,nMAE low,14.26,2.87,68.95,2.95,10.94,0.04
+Training,M1/B0,NSE,3.91,0.74,46.74,3.01,45.45,0.15
+Training,M1/B0,NSE*,5.42,7.56,56.31,2.36,28.11,0.25
+Training,M1/B0,KGE,7.27,6.95,55.30,4.19,26.12,0.16
+Training,M1/B0,|FHV|,7.43,3.52,54.94,5.10,28.85,0.16
+Training,M1/B0,nMAE high,11.31,1.07,51.16,9.22,26.96,0.27
+Training,M1/B0,nMAE low,5.09,7.36,72.35,1.06,14.11,0.04

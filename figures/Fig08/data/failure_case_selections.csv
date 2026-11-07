@@ -1,0 +1,4 @@
+basin_id,group,selected_model,selected_seed,ensemble_architecture,instances_per_architecture,library_size
+07301410,heldout,B0,1033,EA,10,20
+08324000,heldout,B0,1151,B0,10,20
+04127997,heldout,EA,1063,EA,10,20

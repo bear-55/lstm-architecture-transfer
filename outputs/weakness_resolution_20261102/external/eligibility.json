@@ -1,0 +1,25 @@
+{
+  "protocol_sha256": "36c7cd152a0a244a8cb40248d55fcd82c2cd249de6228984d07e41686ef7932b",
+  "test_period": [
+    "1989-10-01",
+    "1999-09-30"
+  ],
+  "training_period": [
+    "1999-10-01",
+    "2008-09-30"
+  ],
+  "selection_period": [
+    "1989-10-01",
+    "1994-09-30"
+  ],
+  "evaluation_period": [
+    "1994-10-01",
+    "1999-09-30"
+  ],
+  "interpretation": "Retrospective out-of-calibration temporal validation; these test years precede training years.",
+  "hyperparameters": "Original paper Appendix B tuned on calibration-period basin cross-validation.",
+  "pairing": "Original matching seed IDs; no claim of identical initialization or minibatch stream between architectures.",
+  "models": "B0=concat_static; EA=static input gate; dynamic=no_static",
+  "source": "https://doi.org/10.4211/hs.83ea5312635e44dc824eeb99eda12f06",
+  "license": "CC BY 4.0"
+}

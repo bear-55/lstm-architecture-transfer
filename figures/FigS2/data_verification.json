@@ -1,0 +1,397 @@
+{
+  "status": "PASS",
+  "no_synthetic_data": true,
+  "new_training": false,
+  "layout": "6 catchments x 3 metrics",
+  "panels": 18,
+  "mean_bars": 108,
+  "source_values": 1080,
+  "seed_pair_values": 3600,
+  "metrics": [
+    "NSE_star",
+    "KGE",
+    "nMAE_high"
+  ],
+  "comparisons": [
+    "M1/B0",
+    "EA/B0"
+  ],
+  "seeds": [
+    1009,
+    1021,
+    1033,
+    1051,
+    1063,
+    1087,
+    1097,
+    1109,
+    1123,
+    1151
+  ],
+  "selected_catchments": [
+    {
+      "row": 1,
+      "basin_id": "09447800",
+      "rule": "Nearest P10",
+      "quantile_target": 0.1,
+      "target_D": -0.004562596707696059,
+      "EA_NSE_star_D": -0.0031217424394758943
+    },
+    {
+      "row": 2,
+      "basin_id": "01591400",
+      "rule": "Nearest P25",
+      "quantile_target": 0.25,
+      "target_D": 0.005017423007404557,
+      "EA_NSE_star_D": 0.006215376623810382
+    },
+    {
+      "row": 3,
+      "basin_id": "12092000",
+      "rule": "Nearest P50",
+      "quantile_target": 0.5,
+      "target_D": 0.01976567829370207,
+      "EA_NSE_star_D": 0.01976567829370207
+    },
+    {
+      "row": 4,
+      "basin_id": "02349900",
+      "rule": "Nearest P75",
+      "quantile_target": 0.75,
+      "target_D": 0.051738723040555455,
+      "EA_NSE_star_D": 0.05248554717989431
+    },
+    {
+      "row": 5,
+      "basin_id": "07083000",
+      "rule": "Nearest P90",
+      "quantile_target": 0.9,
+      "target_D": 0.08281684730403202,
+      "EA_NSE_star_D": 0.08230761448851463
+    },
+    {
+      "row": 6,
+      "basin_id": "08324000",
+      "rule": "Largest D among the three leading library-gain cases",
+      "quantile_target": null,
+      "target_D": null,
+      "EA_NSE_star_D": 0.11262337712609302
+    }
+  ],
+  "case_selection_basis": "EA/B0 D_b on NSE* over all 107 held-out catchments; ties within 1e-12 broken by basin ID",
+  "selection_period": "WY2000-2003",
+  "evaluation_period": "WY2004-2008",
+  "fixed_selection_metric": "NSE",
+  "error_metric_sign": "Negated nMAE_high before computing gain: positive G means an error reduction",
+  "source_value_definitions": {
+    "G_same": "I_s * Delta_s",
+    "G_new": "I_s * mean(Delta_t, t != s)",
+    "D_b": "Source contribution d_s = I_s * (Delta_s - mean(Delta_t, t != s)); mean(d_s) = D_b"
+  },
+  "summary_rule": "Arithmetic mean over all 10 sources, retaining choices of B0 as zero contributions",
+  "new_weight_rule": "Each source averages nine distinct evaluation seeds; all-source mean equals the mean of 90 ordered pairs",
+  "confidence_intervals": false,
+  "checks": [
+    {
+      "basin_id": "09447800",
+      "metric": "NSE_star",
+      "comparison": "M1/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "09447800",
+      "metric": "NSE_star",
+      "comparison": "EA/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "09447800",
+      "metric": "KGE",
+      "comparison": "M1/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "09447800",
+      "metric": "KGE",
+      "comparison": "EA/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "09447800",
+      "metric": "nMAE_high",
+      "comparison": "M1/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "09447800",
+      "metric": "nMAE_high",
+      "comparison": "EA/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "01591400",
+      "metric": "NSE_star",
+      "comparison": "M1/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "01591400",
+      "metric": "NSE_star",
+      "comparison": "EA/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "01591400",
+      "metric": "KGE",
+      "comparison": "M1/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "01591400",
+      "metric": "KGE",
+      "comparison": "EA/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "01591400",
+      "metric": "nMAE_high",
+      "comparison": "M1/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "01591400",
+      "metric": "nMAE_high",
+      "comparison": "EA/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "12092000",
+      "metric": "NSE_star",
+      "comparison": "M1/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "12092000",
+      "metric": "NSE_star",
+      "comparison": "EA/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "12092000",
+      "metric": "KGE",
+      "comparison": "M1/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "12092000",
+      "metric": "KGE",
+      "comparison": "EA/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "12092000",
+      "metric": "nMAE_high",
+      "comparison": "M1/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "12092000",
+      "metric": "nMAE_high",
+      "comparison": "EA/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "02349900",
+      "metric": "NSE_star",
+      "comparison": "M1/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "02349900",
+      "metric": "NSE_star",
+      "comparison": "EA/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "02349900",
+      "metric": "KGE",
+      "comparison": "M1/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "02349900",
+      "metric": "KGE",
+      "comparison": "EA/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "02349900",
+      "metric": "nMAE_high",
+      "comparison": "M1/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "02349900",
+      "metric": "nMAE_high",
+      "comparison": "EA/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "07083000",
+      "metric": "NSE_star",
+      "comparison": "M1/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "07083000",
+      "metric": "NSE_star",
+      "comparison": "EA/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "07083000",
+      "metric": "KGE",
+      "comparison": "M1/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "07083000",
+      "metric": "KGE",
+      "comparison": "EA/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "07083000",
+      "metric": "nMAE_high",
+      "comparison": "M1/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "07083000",
+      "metric": "nMAE_high",
+      "comparison": "EA/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "08324000",
+      "metric": "NSE_star",
+      "comparison": "M1/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "08324000",
+      "metric": "NSE_star",
+      "comparison": "EA/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "08324000",
+      "metric": "KGE",
+      "comparison": "M1/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "08324000",
+      "metric": "KGE",
+      "comparison": "EA/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "08324000",
+      "metric": "nMAE_high",
+      "comparison": "M1/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    },
+    {
+      "basin_id": "08324000",
+      "metric": "nMAE_high",
+      "comparison": "EA/B0",
+      "stored_results": "PASS",
+      "distinct_pair_average": "PASS",
+      "covariance_identity": "PASS"
+    }
+  ],
+  "input_hashes": {
+    ".\\deliverables\\data_request_20261103\\01_scores_long.csv": "ed2d0a3e517b020e9ed522cad9708053c9f6a62829c5ae56092672fe23d9a790",
+    ".\\outputs\\training_domain_followup_20261102\\unseen_aligned\\metric_arrays.npz": "afa5d1b17a0d88c51aeee4f9d727f9bb88fdcdf8d92cced8da351cc7507fcce7",
+    ".\\outputs\\multimetric_transfer_20261102\\transfer_per_basin.csv": "d7767b1a63c4ba7bb81c46ef27f3f751f58591187158b8bfe205a5ce6a96365d",
+    ".\\deliverables\\data_request_20261103\\03_failure_cases.csv": "48ec9fd8151bdc97dec1ee568d16141d95ea1b200aa13bb230a603bd6e04459b"
+  },
+  "data_hashes": {
+    "catchment_selection.csv": "c0ba5995cc9a967b8b3c8ff52ce1355503bff497e02d99a65c8af002dd9b6c09",
+    "mean_endpoints.csv": "7def316c9ad6f815aeb9060a6f9515e5c63297fdfef6795147a8baf86963430f",
+    "source_contributions.csv": "3135035ce65398f82ff6ba8fa3d0d5a7a7a59bdf39c83d1d58e81cec832ba7b1",
+    "all_seed_pairs.csv": "66c4a8f30eeff694cf5ea94efa6cd29e1547ab9c84e75e2f2bf9142d3abfacc2",
+    "all_catchment_selection_D.csv": "007f1fd6ba2fe80be39cd09e996496bc526455725dfb0914a917486883484720"
+  }
+}

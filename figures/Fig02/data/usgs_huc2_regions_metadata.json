@@ -1,0 +1,353 @@
+{
+ "currentVersion": 11.3,
+ "cimVersion": "3.3.0",
+ "id": 1,
+ "name": "2-digit HU (Region)",
+ "type": "Feature Layer",
+ "description": "Abstract: This file contains Hydrologic Unit (HU) polygon boundaries for the United States, Puerto Rico, and the U.S. Virgin Islands. The data is a seamless National representation of HU boundaries from 2 to 14 digits compiled from U.S. Geological Survey (USGS) National Hydrography Dataset (NHD) and U.S. Department of Agriculture (USDA) National Resources Conservation Service (NRCS) Watershed Boundary Dataset (WBD) sources. Purpose: This data is intended primarily for geographic display and analysis of regional and national data, and can also be used for illustration purposes at intermediate or small scales (1:250,000 to 1:2,000,000).",
+ "geometryType": "esriGeometryPolygon",
+ "sourceSpatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857,
+  "xyTolerance": 0.001,
+  "zTolerance": 2.0E-4,
+  "mTolerance": 0.002,
+  "falseX": -20037700,
+  "falseY": -30241100,
+  "xyUnits": 10000,
+  "falseZ": -10000,
+  "zUnits": 40000,
+  "falseM": 0,
+  "mUnits": 99999.99999999999
+ },
+ "copyrightText": "U.S. Geological Survey",
+ "parentLayer": null,
+ "subLayers": [],
+ "minScale": 110000000,
+ "maxScale": 0,
+ "referenceScale": 0.0,
+ "drawingInfo": {
+  "renderer": {
+   "type": "simple",
+   "symbol": {
+    "type": "esriSFS",
+    "style": "esriSFSSolid",
+    "color": [
+     0,
+     0,
+     0,
+     255
+    ],
+    "outline": {
+     "type": "esriSLS",
+     "style": "esriSLSSolid",
+     "color": [
+      132,
+      0,
+      168,
+      255
+     ],
+     "width": 2
+    }
+   }
+  },
+  "scaleSymbols": true,
+  "transparency": 50,
+  "labelingInfo": [
+   {
+    "labelExpression": "\"HUC 2-\" CONCAT [HUC2]",
+    "labelPlacement": "esriServerPolygonPlacementAlwaysHorizontal",
+    "removeDuplicates": "all",
+    "removeDuplicatesDistance": 216,
+    "multiPart": "labelLargest",
+    "deconflictionStrategy": "static",
+    "repeatLabel": false,
+    "allowOverrun": true,
+    "stackLabel": false,
+    "useCodedValues": true,
+    "maxScale": 13866974,
+    "minScale": 55000000,
+    "name": "Default",
+    "priority": 8,
+    "symbol": {
+     "type": "esriTS",
+     "color": [
+      120,
+      94,
+      138,
+      255
+     ],
+     "backgroundColor": null,
+     "borderLineColor": null,
+     "borderLineSize": null,
+     "verticalAlignment": "baseline",
+     "horizontalAlignment": "left",
+     "rightToLeft": false,
+     "angle": 0,
+     "xoffset": 0,
+     "yoffset": 0,
+     "kerning": true,
+     "haloColor": [
+      214,
+      199,
+      199,
+      255
+     ],
+     "haloSize": 1,
+     "font": {
+      "family": "Times New Roman",
+      "size": 12,
+      "style": "normal",
+      "weight": "bold",
+      "decoration": "none"
+     }
+    }
+   }
+  ]
+ },
+ "defaultVisibility": true,
+ "extent": {
+  "xmin": -1.9951755682E7,
+  "ymin": -1644316.000599999,
+  "xmax": 2.00215517474E7,
+  "ymax": 1.1554273612599999E7,
+  "spatialReference": {
+   "wkid": 102100,
+   "latestWkid": 3857,
+   "xyTolerance": 0.001,
+   "zTolerance": 0.001,
+   "mTolerance": 0.001,
+   "falseX": -2.195042105347E7,
+   "falseY": -30241100,
+   "xyUnits": 1.4435789167875016E8,
+   "falseZ": -100000,
+   "zUnits": 10000,
+   "falseM": -100000,
+   "mUnits": 10000
+  }
+ },
+ "hasAttachments": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeNone",
+ "displayField": "Name",
+ "typeIdField": null,
+ "subtypeFieldName": null,
+ "subtypeField": null,
+ "defaultSubtypeCode": null,
+ "fields": [
+  {
+   "name": "objectid",
+   "type": "esriFieldTypeOID",
+   "alias": "ObjectID",
+   "domain": null
+  },
+  {
+   "name": "tnmid",
+   "type": "esriFieldTypeString",
+   "alias": "TNMID",
+   "length": 40,
+   "domain": null
+  },
+  {
+   "name": "metasourceid",
+   "type": "esriFieldTypeString",
+   "alias": "MetaSourceID",
+   "length": 40,
+   "domain": null
+  },
+  {
+   "name": "sourcedatadesc",
+   "type": "esriFieldTypeString",
+   "alias": "SourceDataDesc",
+   "length": 100,
+   "domain": null
+  },
+  {
+   "name": "sourceoriginator",
+   "type": "esriFieldTypeString",
+   "alias": "SourceOriginator",
+   "length": 130,
+   "domain": null
+  },
+  {
+   "name": "sourcefeatureid",
+   "type": "esriFieldTypeString",
+   "alias": "SourceFeatureID",
+   "length": 40,
+   "domain": null
+  },
+  {
+   "name": "loaddate",
+   "type": "esriFieldTypeDate",
+   "alias": "LoadDate",
+   "length": 8,
+   "domain": null
+  },
+  {
+   "name": "referencegnis_ids",
+   "type": "esriFieldTypeString",
+   "alias": "ReferenceGNIS_IDs",
+   "length": 50,
+   "domain": null
+  },
+  {
+   "name": "areaacres",
+   "type": "esriFieldTypeDouble",
+   "alias": "AreaAcres",
+   "domain": null
+  },
+  {
+   "name": "areasqkm",
+   "type": "esriFieldTypeDouble",
+   "alias": "AreaSqKm",
+   "domain": null
+  },
+  {
+   "name": "states",
+   "type": "esriFieldTypeString",
+   "alias": "States",
+   "length": 50,
+   "domain": null
+  },
+  {
+   "name": "huc2",
+   "type": "esriFieldTypeString",
+   "alias": "HUC2",
+   "length": 2,
+   "domain": null
+  },
+  {
+   "name": "name",
+   "type": "esriFieldTypeString",
+   "alias": "Name",
+   "length": 120,
+   "domain": null
+  },
+  {
+   "name": "shape",
+   "type": "esriFieldTypeGeometry",
+   "alias": "Shape",
+   "domain": null
+  },
+  {
+   "name": "globalid",
+   "type": "esriFieldTypeGlobalID",
+   "alias": "globalid",
+   "length": 38,
+   "domain": null
+  },
+  {
+   "name": "shape_Length",
+   "type": "esriFieldTypeDouble",
+   "alias": "shape_Length",
+   "domain": null
+  },
+  {
+   "name": "shape_Area",
+   "type": "esriFieldTypeDouble",
+   "alias": "shape_Area",
+   "domain": null
+  }
+ ],
+ "geometryField": {
+  "name": "shape",
+  "type": "esriFieldTypeGeometry",
+  "alias": "Shape"
+ },
+ "indexes": [
+  {
+   "name": "FDO_objectid",
+   "fields": "objectid",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  },
+  {
+   "name": "FDO_shape",
+   "fields": "shape",
+   "isAscending": true,
+   "isUnique": false,
+   "description": ""
+  },
+  {
+   "name": "FDO_globalid",
+   "fields": "globalid",
+   "isAscending": true,
+   "isUnique": false,
+   "description": ""
+  },
+  {
+   "name": "I34tnmid",
+   "fields": "tnmid",
+   "isAscending": true,
+   "isUnique": false,
+   "description": ""
+  }
+ ],
+ "subtypes": [],
+ "relationships": [],
+ "canModifyLayer": true,
+ "canScaleSymbols": false,
+ "hasLabels": true,
+ "capabilities": "Map,Query,Data",
+ "maxRecordCount": 2000,
+ "supportsStatistics": true,
+ "supportsExceedsLimitStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "isDataVersioned": false,
+ "ownershipBasedAccessControlForFeatures": {"allowOthersToQuery": true},
+ "useStandardizedQueries": true,
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelRelation"
+ ],
+ "advancedQueryCapabilities": {
+  "useStandardizedQueries": true,
+  "supportsStatistics": true,
+  "supportsPercentileStatistics": true,
+  "supportsHavingClause": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsCountDistinct": true,
+  "supportsAdvancedQueryRelated": true,
+  "supportsQueryRelatedPagination": true,
+  "supportsPagination": true,
+  "supportsLod": false,
+  "supportsQueryWithLodSR": false,
+  "supportsTrueCurve": true,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsReturningQueryExtent": true,
+  "supportsQueryWithDistance": true,
+  "supportsSqlExpression": true,
+  "supportsTimeRelation": true,
+  "supportsSqlFormat": false,
+  "supportsQueryAnalytic": false,
+  "supportsCurrentUserQueries": true
+ },
+ "supportsDatumTransformation": true,
+ "dateFieldsTimeReference": null,
+ "preferredTimeReference": null,
+ "datesInUnknownTimezone": false,
+ "hasGeometryProperties": true,
+ "geometryProperties": {
+  "shapeAreaFieldName": "shape_Area",
+  "shapeLengthFieldName": "shape_Length",
+  "units": "esriMeters",
+  "mapUnits": {"uwkid": 9001}
+ },
+ "hasMetadata": true,
+ "isDataArchived": false,
+ "archivingInfo": {
+  "supportsQueryWithHistoricMoment": false,
+  "startArchivingMoment": -1
+ },
+ "supportsCoordinatesQuantization": true,
+ "supportsDynamicLegends": true
+}
