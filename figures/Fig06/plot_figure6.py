@@ -110,7 +110,7 @@ def main():
 
     legend = fig.legend([Patch(facecolor="#808080", edgecolor=INK, lw=.65),
                          Patch(facecolor="#D0D0D0", edgecolor=INK, lw=.65)],
-                        [r"Left: retained weights ($G_{same,b}$)", r"Right: new weights ($G_{new,b}$)"],
+                        [r"Left: retained gain ($G_{same,b}$)", r"Right: transferred gain ($G_{new,b}$)"],
                         loc="upper center", bbox_to_anchor=(.54, .997), ncol=2,
                         fontsize=7.5, handlelength=1.7, columnspacing=2.5, handletextpad=.6)
 

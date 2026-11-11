@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "extract_at": "repository root",
   "assets": [
     {
@@ -3442,7 +3442,8 @@
           "bytes": 203,
           "sha256": "84619c877668ec8154b9a173a001b8928709e02fa1dd1977fa78b1cec5e01316"
         }
-      ]
+      ],
+      "download_url": "https://github.com/bear-55/lstm-architecture-transfer/releases/download/v1.0.0/model-artifacts-v1.0.0.zip"
     },
     {
       "name": "training-cache-v1.0.0.zip",
@@ -3479,12 +3480,13 @@
           "bytes": 22812,
           "sha256": "83aafae8a03bd43aa628a75aa8061a3185cfff44f4b06dcf8cfc667fb700aadf"
         }
-      ]
+      ],
+      "download_url": "https://github.com/bear-55/lstm-architecture-transfer/releases/download/v1.0.0/training-cache-v1.0.0.zip"
     },
     {
-      "name": "publication-figures-v1.0.0.zip",
-      "bytes": 38745354,
-      "sha256": "9a13af5e1226fec16ad00a465fa817c614b5abb41f94c4ccb6fe287fd5a6b3ab",
+      "name": "publication-figures-v1.1.0.zip",
+      "bytes": 42484282,
+      "sha256": "846a044116986d4f617f5774f87951b10ada31c4d9a401c111d611bb6cfbcf22",
       "files": [
         {
           "path": "figures/Fig01/fig1.pdf",
@@ -3588,43 +3590,43 @@
         },
         {
           "path": "figures/Fig06/fig6.pdf",
-          "bytes": 143810,
-          "sha256": "3fd30b068dbf2fc6248a855aeb88228578bd66e28d7d8823fc8dc37333c130f0"
+          "bytes": 142901,
+          "sha256": "274c949104a63a3b43e5dee4c1f8de157d803291c0a54a1a88af19269751f76c"
         },
         {
           "path": "figures/Fig06/fig6.png",
-          "bytes": 482989,
-          "sha256": "68db583050f8d3db002d01afef7dc363012b6a4c182ad7e573e3aa5f4630df66"
+          "bytes": 482372,
+          "sha256": "c50a38189fa54a7ad7f8580a00f0c6958c5fd8e45cc81b2328ac0c1b18d69191"
         },
         {
           "path": "figures/Fig06/fig6.svg",
-          "bytes": 405237,
-          "sha256": "60b1aebc038131bac39571f3f8399bb84de05d02e6e54b0fc9ff08ed6ea1dd48"
+          "bytes": 405449,
+          "sha256": "a85f535ed7a6c7877190b0959afc3929425034114683c9d8471ccf6b7a785104"
         },
         {
           "path": "figures/Fig06/fig6.tif",
-          "bytes": 758276,
-          "sha256": "c16ebd138478697dcf9f9166f7a2eb816c4d824916a9042beb4207e6c1e0cf09"
+          "bytes": 758130,
+          "sha256": "d1e52d64859f3fb8420fa54e925473b844b0e6c40c29a7af3e7a6217d37bd8d5"
         },
         {
           "path": "figures/Fig07/fig7.pdf",
-          "bytes": 165080,
-          "sha256": "4051c8c0011e3fe06205a3938f48b96a4c898946096a4c6683377aefe04f2fb3"
+          "bytes": 165067,
+          "sha256": "7f218d29a8acc98c8eb87fd94b7e37ef890243f52801344995add5a63192609d"
         },
         {
           "path": "figures/Fig07/fig7.png",
-          "bytes": 1059626,
-          "sha256": "60ae175cb93218cb873e3b8d7a450e608145b3e0649323451233e784a49c4274"
+          "bytes": 1058419,
+          "sha256": "e05425f89f71a98ec636ea42952f0af816b18fa568e1abec5a5fae4ebd8de8e2"
         },
         {
           "path": "figures/Fig07/fig7.svg",
-          "bytes": 344323,
-          "sha256": "7d04f44cd4354d1751d071207e53512802eb5822b96abc68f8a2d293308692d3"
+          "bytes": 344321,
+          "sha256": "51e27c6db7488e3ba4431e48d86bd16cbc47ae1061220e8a0cc7ec6c6116684c"
         },
         {
           "path": "figures/Fig07/fig7.tif",
-          "bytes": 1545958,
-          "sha256": "ac4fdc45c8e5b95c9feaf1c89cfca7b0ed4cd4fd5c7cb24dff5fbd5c10c6aa73"
+          "bytes": 1544938,
+          "sha256": "38fd7410956a9dbd891bd8b2862ed621a3f1d0e43958e95e2efbd30644e917d3"
         },
         {
           "path": "figures/Fig08/fig8.pdf",
@@ -3665,6 +3667,26 @@
           "path": "figures/Fig09/fig9.tif",
           "bytes": 1639198,
           "sha256": "ad472b2dd1afbda2783744cec8a58dd9955cac4b8da87af1424d35983ea30e4b"
+        },
+        {
+          "path": "figures/Fig10/fig10.pdf",
+          "bytes": 248877,
+          "sha256": "69faf06a6fb0993d0f955e3bab29611a1055b36e91f55df248885c00f99b4173"
+        },
+        {
+          "path": "figures/Fig10/fig10.png",
+          "bytes": 1127194,
+          "sha256": "55eee0d2a885504e9d3dede6b983698b55ce6e7778ed729e588a4ee5aea784c9"
+        },
+        {
+          "path": "figures/Fig10/fig10.svg",
+          "bytes": 1086101,
+          "sha256": "08e11514a8f4ffdb802d4e2c510111d7cdf5f4c60b972ca6db52539acd0f27ec"
+        },
+        {
+          "path": "figures/Fig10/fig10.tif",
+          "bytes": 2615914,
+          "sha256": "9143dd286fcb5fcc212113f188f7df6a217ded89d65a4838dbf72c47f532ae83"
         },
         {
           "path": "figures/FigS1/figS1.pdf",
@@ -3726,7 +3748,8 @@
           "bytes": 474888,
           "sha256": "18dc0fcaa180d5d87fcc08b39c48dbaa3bfd703bb7af432e349ef1322d7e575e"
         }
-      ]
+      ],
+      "download_url": "https://github.com/bear-55/lstm-architecture-transfer/releases/download/v1.1.0/publication-figures-v1.1.0.zip"
     }
   ]
 }

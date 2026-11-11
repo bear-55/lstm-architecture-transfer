@@ -2,6 +2,8 @@
 
 ## CAMELS-US
 
+Download the original time series and attributes from the [NCAR CAMELS dataset page](https://ral.ucar.edu/dataset/camels-catchment-attributes-and-meteorology-large-sample-studies-dataset-downloads).
+
 Time series: Newman, A., Sampson, K., Clark, M. P., Bock, A., Viger, R. J. and Blodgett, D. (2014), *A large-sample watershed-scale hydrometeorological dataset for the contiguous USA*, UCAR/NCAR. [DOI: 10.5065/D6MW2F4D](https://doi.org/10.5065/D6MW2F4D).
 
 Attributes: Addor, N., Newman, A. J., Mizukami, N. and Clark, M. P. (2017), *Catchment attributes for large-sample studies*, UCAR/NCAR. [DOI: 10.5065/D6G73C3Q](https://doi.org/10.5065/D6G73C3Q).
@@ -18,6 +20,8 @@ Associated papers:
 Kratzert, F. (2021), *Pretrained models + simulations for “Towards learning universal, regional, and local hydrological behaviors via machine learning applied to large-sample datasets”*, HydroShare. [DOI: 10.4211/hs.83ea5312635e44dc824eeb99eda12f06](https://doi.org/10.4211/hs.83ea5312635e44dc824eeb99eda12f06).
 
 The [resource](https://www.hydroshare.org/resource/83ea5312635e44dc824eeb99eda12f06/) is distributed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). This repository redistributes derived catchment/seed/period score arrays and plotting summaries. They are recalculated transformations of the authors' simulations. Source archive/run identifiers, checksums and the transformation code are included. The original model archive is retrieved from HydroShare by the optional download script.
+
+The eight-seed EA and standard-LSTM score table and Eq. (7) results are in [the external analysis directory](outputs/external_eq7_check_20261111/).
 
 Associated paper: Kratzert et al. (2019), *Towards learning universal, regional, and local hydrological behaviors via machine learning applied to large-sample datasets*. [https://doi.org/10.5194/hess-23-5089-2019](https://doi.org/10.5194/hess-23-5089-2019).
 

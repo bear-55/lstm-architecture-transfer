@@ -583,5 +583,94 @@
   "attachment_text_members_scanned": 462,
   "publication_language": "English",
   "credential_or_home_path_findings": [],
-  "gpu_training_rerun": false
+  "gpu_training_rerun": false,
+  "v1_1_0": {
+    "version": "1.1.0",
+    "analysis_tables": [
+      {
+        "file": "outputs/selection_transfer_P1_20261102/P1_endpoints.csv",
+        "rows": 288,
+        "max_absolute_difference": 0.0
+      },
+      {
+        "file": "outputs/selection_transfer_P1_20261102/matching_pairs.csv",
+        "rows": 178,
+        "max_absolute_difference": 0.0
+      },
+      {
+        "file": "outputs/multimetric_transfer_20261102/transfer_endpoints.csv",
+        "rows": 1296,
+        "max_absolute_difference": 0.0
+      },
+      {
+        "file": "outputs/multimetric_transfer_20261102/transfer_per_basin.csv",
+        "rows": 17172,
+        "max_absolute_difference": 0.0
+      },
+      {
+        "file": "outputs/jh_predraft_audit_20261102/main_NSE_endpoints.csv",
+        "rows": 18,
+        "max_absolute_difference": 0.0
+      },
+      {
+        "file": "outputs/multiseed_budget_curve_20261104/budget_curve_endpoints.csv",
+        "rows": 160,
+        "max_absolute_difference": 0.0
+      },
+      {
+        "file": "outputs/multiseed_budget_curve_20261104/source_subset_results.csv",
+        "rows": 2548,
+        "max_absolute_difference": 0.0
+      },
+      {
+        "file": "outputs/multiseed_budget_curve_20261104/paired_budget_changes.csv",
+        "rows": 60,
+        "max_absolute_difference": 0.0
+      },
+      {
+        "file": "tables/Table_S3.csv",
+        "rows": 36,
+        "max_absolute_difference": 0.0
+      },
+      {
+        "file": "outputs/external_eq7_check_20261111/eq7_summary.csv",
+        "rows": 4,
+        "max_absolute_difference": 0.0
+      },
+      {
+        "file": "outputs/external_eq7_check_20261111/eq7_basins.csv",
+        "rows": 2124,
+        "max_absolute_difference": 0.0
+      },
+      {
+        "file": "figures/Fig10/data/catchment_components.csv",
+        "rows": 2016,
+        "max_absolute_difference": 0.0
+      }
+    ],
+    "external_score_rows_checked_against_archived_arrays": 33984,
+    "rebuilt_figures": {
+      "6": {
+        "pixels": [
+          4488,
+          2598
+        ],
+        "pixel_identical_to_manuscript_artwork": true
+      },
+      "7": {
+        "pixels": [
+          4488,
+          3968
+        ],
+        "pixel_identical_to_manuscript_artwork": true
+      },
+      "10": {
+        "pixels": [
+          4488,
+          3543
+        ],
+        "pixel_identical_to_manuscript_artwork": true
+      }
+    }
+  }
 }

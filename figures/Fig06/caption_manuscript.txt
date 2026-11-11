@@ -1,1 +1,1 @@
-Fig. 6. Catchment-level gains with retained weights (left halves) and independent weights (right halves). Dots and segments mark medians and interquartile ranges; densities display the 1st–99th percentile range. Panel labels give mean retraining loss and the share of catchments with positive Db.
+Fig. 6. Catchment-level retained gains (left halves) and transferred gains (right halves). Dots and segments mark medians and interquartile ranges; densities display the 1st–99th percentile range. Panel labels give mean retraining loss and the share of catchments with positive Db.

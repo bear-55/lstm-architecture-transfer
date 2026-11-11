@@ -28,7 +28,7 @@ The model attachment retains the original run layout. `predictions_test.npz` con
 
 ## Figure inputs and published tables
 
-Figure data and English captions are in `figures/Fig01` through `Fig09` and `FigS1` through `FigS3`. [The table index](tables/README.md) maps Tables 1–5 and the 13 supplementary tables to their numerical sources.
+Figure data and English captions are in `figures/Fig01` through `Fig10` and `FigS1` through `FigS3`. [The table index](tables/README.md) maps Tables 1–5 and the 13 supplementary tables to their numerical sources.
 
 For Figure 7, `forest_endpoints.csv` identifies the interval or range for each row. The arrays in `forest_distributions.npz` use keys such as `M1__main` and `EA__k5`. The 21 densities use the same draws that define the corresponding intervals. Ordinary bootstrap and permutation rows use 2,000 draws, the WY1990–1999 rows use 5,000, and the five-source rows use 20,000 HUC2 draws. Each window is shown individually in panels a and b. Panel d uses their arithmetic mean. External-archive rows show point estimates and intervals.
 

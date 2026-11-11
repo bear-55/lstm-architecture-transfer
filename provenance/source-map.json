@@ -10,7 +10,7 @@
     {
       "path": "README.md",
       "source_sha256": "e3e7980143328249faa0a909afbfa98e1daefabc9ef17086418d971cce43c4a3",
-      "release_sha256": "511dad0dceccd269c501fb593d9661527d9684161143cf337905999cca4255f5",
+      "release_sha256": "d1e43e7a4d6aa4778d4371418f43844b0ea3a2b057bb324b79cd11d68bb3ea6b",
       "copied_unchanged": false
     },
     {
@@ -544,7 +544,7 @@
     {
       "path": "figures/Fig06/caption_manuscript.txt",
       "source_sha256": "002f4201c88c73b004e9fb01860df9e6239a26cb795fd69018a1a40ef37b506d",
-      "release_sha256": "f5fb15b80cdaa8de774aefae1acaad1c66e1271c758dc36adf2bfea12371e8bd",
+      "release_sha256": "fe1796960f66774180237607a01817d866d880a6f997de99b68b0e1e77ea0337",
       "copied_unchanged": false
     },
     {
@@ -586,7 +586,7 @@
     {
       "path": "figures/Fig06/plot_figure6.py",
       "source_sha256": "8571a752ba67b4d4fc9645a4739865052d041b9bf5c5da7ead05d188540e24f8",
-      "release_sha256": "15b856c7e1be1e575c274cd50216a7a5fef7ed06ea9def106e6c32b3e30cfbca",
+      "release_sha256": "fb6fedd04efbcac8c8771edff4f77815a5c3ce14417449569c860a6a0d79faf8",
       "copied_unchanged": false
     },
     {
@@ -676,8 +676,8 @@
     {
       "path": "figures/Fig07/plot_figure7.py",
       "source_sha256": "d8d74029dad0862f9c0ab0f12c37fe20d68f0117949af6477308ab7ddbfa8adf",
-      "release_sha256": "d8d74029dad0862f9c0ab0f12c37fe20d68f0117949af6477308ab7ddbfa8adf",
-      "copied_unchanged": true
+      "release_sha256": "90f44fae3ded0fa12c3efdbd29a6031e3c6f1eac227b9d0d097c128506740f18",
+      "copied_unchanged": false
     },
     {
       "path": "figures/Fig07/prepare_figure7_data.py",
@@ -2451,6 +2451,54 @@
       "source_sha256": "113cb1870990f1b0b9d97ac6560956a993e26c69ffcb4ecb31f4450793699082",
       "copied_unchanged": true,
       "release_sha256": "113cb1870990f1b0b9d97ac6560956a993e26c69ffcb4ecb31f4450793699082"
+    },
+    {
+      "path": "analysis/eq7_external.py",
+      "source_sha256": "e3275fa8f1521ec8016138cbaa900b6400fe92254ed97c5ba3b38c0a9970aaef",
+      "release_sha256": "f76c37d2f06475bd4f0cabac19b968a59ddf819bd476776fad5256bfe270cec7",
+      "copied_unchanged": false
+    },
+    {
+      "path": "figures/Fig10/caption_manuscript.txt",
+      "source_sha256": "3771d15df99b09ac6d5a0aa9a765c4678946d8dcc39555a5072bec276f1675f6",
+      "release_sha256": "b5af09e3999712e9cbfb76d520ab6eb7e04448eda2dae3100a381d79ccecccd9",
+      "copied_unchanged": false
+    },
+    {
+      "path": "figures/Fig10/data/catchment_components.csv",
+      "source_sha256": "563ac35d6d77a62d9dec6b9b4ce2b52d4f3dc406e677e6caf137c16041d520c2",
+      "release_sha256": "563ac35d6d77a62d9dec6b9b4ce2b52d4f3dc406e677e6caf137c16041d520c2",
+      "copied_unchanged": true
+    },
+    {
+      "path": "figures/Fig10/plot_figure10.py",
+      "source_sha256": "fc55a457acffdc37ef0e88196d58dc3f97eb5a54c3b8b530fd4315067f8d7d4c",
+      "release_sha256": "762dbe05f99daac18ef8f43b58c4f66714461f310a3229bff4a1e8fe19e91414",
+      "copied_unchanged": false
+    },
+    {
+      "path": "figures/Fig10/prepare_figure10_data.py",
+      "source_sha256": "56cec3ce5cff317b49ee9435dc0c392090c5061210b39bb2bf28cd16dcb9d5be",
+      "release_sha256": "58d64ae47735ae2403e2b4b99af98fcb5a55f2a0e5cdc167b960e6600c67f5d2",
+      "copied_unchanged": false
+    },
+    {
+      "path": "outputs/external_eq7_check_20261111/eq7_basins.csv",
+      "source_sha256": "67caa6b460f5ed705be2b0755ecde364fd65de38764696f3a51f6733fb99d45e",
+      "release_sha256": "67caa6b460f5ed705be2b0755ecde364fd65de38764696f3a51f6733fb99d45e",
+      "copied_unchanged": true
+    },
+    {
+      "path": "outputs/external_eq7_check_20261111/eq7_summary.csv",
+      "source_sha256": "ae1639f03cfafada0e5296f8baffbc78e3f8aa9894dd689fab349afbe2e1c4f1",
+      "release_sha256": "ae1639f03cfafada0e5296f8baffbc78e3f8aa9894dd689fab349afbe2e1c4f1",
+      "copied_unchanged": true
+    },
+    {
+      "path": "outputs/external_eq7_check_20261111/external_scores_long.csv",
+      "source_sha256": "b6ddf4a0c087c2a716d7dcdecdefa7fe8fe0f24f6eff4057e9115710f5557ef9",
+      "release_sha256": "b6ddf4a0c087c2a716d7dcdecdefa7fe8fe0f24f6eff4057e9115710f5557ef9",
+      "copied_unchanged": true
     }
   ],
   "adaptations": [
@@ -2473,5 +2521,11 @@
     "original_feature_manifest_sha256": "58fb0541e1df6ecd57e146451d5a72e063eaff2b19106d6ea06d7eadbcd64297",
     "english_feature_manifest_sha256": "644b57c5fdb8a825abcd51b41a6646aef58af4c5e7a4d0d95e0412f936467f62",
     "checked": "All 28 rows and all feature fields except the notes were identical. Only the metadata member of the training cache changed."
+  },
+  "v1_1_0": {
+    "section": "4.2",
+    "external_archive": "10.4211/hs.83ea5312635e44dc824eeb99eda12f06",
+    "plot_data": "figures/Fig10/data/catchment_components.csv",
+    "analysis": "outputs/external_eq7_check_20261111"
   }
 }

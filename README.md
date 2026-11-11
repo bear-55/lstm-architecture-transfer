@@ -20,7 +20,7 @@ python reproduce.py results
 python reproduce.py figures
 ```
 
-`verify` checks file hashes, the frozen training implementation, catchment membership, ten-seed identities, figure inputs and independently enumerated main point estimates. `results` recomputes the main intervals, multi-metric results, sensitivity and matching results, the source-budget curves and Table S3, comparing them with the archived reference tables. `figures` draws the nine main figures and three supplementary figures from the included figure data. These three commands use the included score tables and run on CPU.
+`verify` checks file hashes, the frozen training implementation, catchment membership, ten-seed identities, figure inputs and independently enumerated main point estimates. `results` recomputes the main intervals, multi-metric results, sensitivity and matching results, the source-budget curves and Table S3, comparing them with the archived reference tables. `figures` draws the ten main figures and three supplementary figures from the included figure data. These three commands use the included score tables and run on CPU.
 
 Recomputed results are written to `work/analysis/`; figures under `work/figures/figures/` with the same main and supplementary IDs as the paper. Each figure is exported as **600-dpi PNG and TIFF**, plus **vector SVG and PDF**. Times New Roman is used when installed, with open-font fallbacks. To redraw Figure 7 and Supplementary Figure S1:
 
@@ -45,6 +45,8 @@ The retained-weight gain is `G_same`; the gain transferred to a different instan
 
 The dated analysis records distinguish the original selection analysis from the exploratory extensions. Ordinary main intervals resample seeds and HUC2 regions. Source-budget intervals resample HUC2 regions conditional on the ten-instance library; source subsets remain together, and the global rule is reselected within each resample. Details and command mapping are in [REPRODUCING.md](REPRODUCING.md).
 
+Figure 10 compares observed and estimated retraining losses under Eq. (7) for the 64-unit local runs and the 256-unit external archive. The [external results](outputs/external_eq7_check_20261111/eq7_summary.csv) cover eight seeds and 531 catchments for each training objective. To recompute from scores and render the figure, run `python reproduce.py prepare-figures --figures 10`.
+
 ## Repository contents
 
 | Path | Contents |
@@ -55,7 +57,7 @@ The dated analysis records distinguish the original selection analysis from the 
 | `deliverables/data_request_20261103/` | Seed-specific score tables, metadata and run summaries |
 | `outputs/` | Numerical reference results and bootstrap draws |
 | [tables/](tables/) | Tables 1–5 and all 13 supplementary tables, with their source data |
-| `figures/Fig01`–`Fig09` and `figures/FigS1`–`FigS3` | Plotting code, numerical plot inputs and concise English captions |
+| `figures/Fig01`–`Fig10` and `figures/FigS1`–`FigS3` | Plotting code, numerical plot inputs and concise English captions |
 | `protocol/`, `provenance/` | Dated analysis records, source hashes and release validation |
 | `release-assets.json` | SHA256 and per-file inventories for the three release attachments |
 
@@ -63,11 +65,11 @@ Historical directory names in the numerical archive are stable identifiers. The 
 
 ## Release attachments
 
-Download these attachments from the matching GitHub release into a sibling `release-assets` directory:
+Download the three linked ZIP files into a sibling `release-assets` directory. The model and training archives retain their original version and checksums.
 
-- `model-artifacts-v1.0.0.zip`: all 30 selected checkpoints, final/resume checkpoints, histories, run metadata and seed-specific daily predictions.
-- `training-cache-v1.0.0.zip`: the frozen training/validation cache, scalers, metadata and held-out observation arrays.
-- `publication-figures-v1.0.0.zip`: the 48 final figure files used for the manuscript, four formats for each of Figures 1–9 and S1–S3.
+- [model-artifacts-v1.0.0.zip](https://github.com/bear-55/lstm-architecture-transfer/releases/download/v1.0.0/model-artifacts-v1.0.0.zip): all 30 selected checkpoints, final/resume checkpoints, histories, run metadata and seed-specific daily predictions.
+- [training-cache-v1.0.0.zip](https://github.com/bear-55/lstm-architecture-transfer/releases/download/v1.0.0/training-cache-v1.0.0.zip): the frozen training/validation cache, scalers, metadata and held-out observation arrays.
+- [publication-figures-v1.1.0.zip](https://github.com/bear-55/lstm-architecture-transfer/releases/download/v1.1.0/publication-figures-v1.1.0.zip): the 52 final figure files used for the manuscript, four formats for each of Figures 1–10 and S1–S3.
 
 Verify the ZIPs and optionally extract them at repository root:
 
@@ -86,4 +88,4 @@ The original external EA-LSTM simulations are available from their authors throu
 
 ## Citation and licence
 
-Software citation metadata are in [CITATION.cff](CITATION.cff). Code is released under the [MIT licence](LICENSE). CAMELS-US and the external simulations retain their source licences and citations; see [DATA_SOURCES.md](DATA_SOURCES.md). The repository URL and archival DOI can be added to the citation metadata after publication.
+Software citation metadata are in [CITATION.cff](CITATION.cff). Code is released under the [MIT licence](LICENSE). CAMELS-US and the external simulations retain their source licences and citations; see [DATA_SOURCES.md](DATA_SOURCES.md).

@@ -12,7 +12,7 @@ import sys
 import zipfile
 
 ROOT = Path(__file__).resolve().parent
-FIGURES = tuple(str(i) for i in range(1, 10)) + ('S1', 'S2', 'S3')
+FIGURES = tuple(str(i) for i in range(1, 11)) + ('S1', 'S2', 'S3')
 
 
 def figure_id(value):
@@ -227,6 +227,12 @@ def results(assets=None):
         stage_daily_predictions(workspace, assets, prediction_names(('B0','M1','EA'), ('later',)))
         run_script(workspace, 'scripts/flv_valid_subset.py')
         names.append('outputs/metric_evidence_plan_20261102/flv_valid103_endpoints.csv')
+    run_script(workspace, 'figures/Fig10/prepare_figure10_data.py')
+    names.extend([
+        'outputs/external_eq7_check_20261111/eq7_summary.csv',
+        'outputs/external_eq7_check_20261111/eq7_basins.csv',
+        'figures/Fig10/data/catchment_components.csv',
+    ])
     checks = [compare_table(ROOT/name, workspace/name) for name in names]
     import numpy as np
     sensitivity_file = Path('outputs/selection_sensitivity/estimates.json')
@@ -254,7 +260,7 @@ def figures(numbers, prepare=False, assets=None):
             required.update(('4','5','S1'))
         if 'S3' in required:
             required.add('5')
-        for number in ('1','2','3','4','5','6','S1','7','8','9','S2','S3'):
+        for number in ('1','2','3','4','5','6','S1','7','8','9','10','S2','S3'):
             if number not in required:
                 continue
             folder = figure_folder(number)

@@ -21,7 +21,7 @@ The command copies the required numerical inputs and code into `work/analysis/`,
 3. `scripts/jh_predraft_baseline_audit.py`: main NSE intervals with the global architecture reselected within the bootstrap.
 4. `scripts/multiseed_budget_curve_20261104.py`: all source budgets from one to five, disjoint evaluation pools, 20,000 regional bootstrap draws and paired budget changes.
 
-The command also runs `scripts/selection_sensitivity.py` to reconstruct the seed-only and permutation results and Table S3. The report in `work/analysis/comparison.json` compares nine tables with the archived values. Supplying `--assets ../release-assets` also rebuilds the 103-catchment FLV sensitivity results for Table S7 from individual daily predictions. Figure-data preparation also rebuilds variance decompositions, trajectories, robustness matrices, matching summaries, fixed-library comparisons and seed contribution panels.
+The command also runs `scripts/selection_sensitivity.py` to reconstruct the seed-only and permutation results and Table S3. The report in `work/analysis/comparison.json` compares the existing tables and the three Eq. (7) outputs with their archived values. Supplying `--assets ../release-assets` also rebuilds the 103-catchment FLV sensitivity results for Table S7 from individual daily predictions. Figure-data preparation also rebuilds variance decompositions, trajectories, robustness matrices, matching summaries, fixed-library comparisons and seed contribution panels.
 
 | Quantity | Reference file |
 |---|---|
@@ -56,6 +56,7 @@ The first command uses the plot data in the repository. The second rebuilds nume
 | 7 | Forest estimates and resampling densities, seven individual selection windows, regional matching and shares of the main estimate |
 | 8 | Four fixed-library radar profiles, cumulative NSE gains and the three largest contributors |
 | 9 | Daily hydrographs and flow-duration curves, including the mean and interquartile range of nine independent EA instances |
+| 10 | Eq. (7) across the local 64-unit and external 256-unit settings. Rebuild the catchment components and external raw and bounded NSE results with `python reproduce.py prepare-figures --figures 10`. |
 | S1 | Matching balance and early baseline skill distributions |
 | S2 | Catchment-level gain decompositions across all seeds |
 | S3 | Empirical power-law fits on linear plotting axes over the observed budgets |

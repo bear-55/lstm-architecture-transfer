@@ -23,7 +23,7 @@ GROUPS = (
     ("Main estimate", (("main", "Seed + HUC2 bootstrap"), ("seed_only", "Seed-only bootstrap"))),
     ("Catchment influence", (("median", "Catchment median"), ("omit3", "Omit 3 largest losses"),
                              ("omit7", "Omit 7 largest losses"), ("omitlib", "Omit 7 largest library gains"))),
-    ("Selection period", (("prespec", "WY1990–1999 (pre-specified)"), ("windows", "Seven four-year windows"))),
+    ("Selection period", (("prespec", "WY1990–1999 (alternative)"), ("windows", "Seven four-year windows"))),
     ("Seed pairing", (("perm", "Permuted B0 seed labels"),)),
     ("Selection budget", (("k5", "Five source instances"),)),
     ("Evaluation setting", (("train_mean", "Training catchments: mean"), ("train_median", "Training catchments: median"),
