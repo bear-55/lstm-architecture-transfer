@@ -1,37 +1,9 @@
 {
   "status": "PASS",
-  "source_hashes": {
-    "scores": {
-      "path": "deliverables\\data_request_20261103\\01_scores_long.csv",
-      "sha256": "ed2d0a3e517b020e9ed522cad9708053c9f6a62829c5ae56092672fe23d9a790"
-    },
-    "metadata": {
-      "path": "deliverables\\data_request_20261103\\03_basin_metadata_531.csv",
-      "sha256": "27174441aaeb25a039bbd9526c4b5f03892274f7f6cc4d4d22a8f70c3c024d05"
-    },
-    "assignment": {
-      "path": "splits\\formal_pub_527\\basin_assignment.csv",
-      "sha256": "b58c8b73d253ccc84ff00110566215ac3ad91cf2c50bc525c28cd0b51cb09a3c"
-    },
-    "reference_losses": {
-      "path": "outputs\\selection_transfer_P1_20261102\\P1_per_basin.csv",
-      "sha256": "1726f7e90ce4b5ceacbeeac684233c7befe6857c0ef153587886046b84bd0e9b"
-    },
-    "early_risk": {
-      "path": "outputs\\training_domain_followup_20261102\\early_defined_risk_per_basin.csv",
-      "sha256": "996df49c71970e9061bb871e56237ea9b36b26b85eed93f683c8c2f52c2bdcd8"
-    },
-    "library_gains": {
-      "path": "outputs\\training_domain_followup_20261102\\unseen_aligned_basin_gains.csv",
-      "sha256": "4547d2e31d62b832408f5b25b7bb69842f5a4e66fe237982518a0d5b65e09279"
-    },
-    "template_zip": {
-      "path": "figures\\figure_templates_v5_all.zip",
-      "sha256": "6b6bec143a727b8cd152be9498b786fc8b1c0892a54d438b79b06a12def7afd7"
-    }
-  },
-  "selection_period": "WY2000-2003",
-  "evaluation_period": "WY2004-2008",
+  "basins": 527,
+  "stratum_agreement": 527,
+  "period_climate": "WY1981\u20131989",
+  "period_scores": "WY2000\u20132003",
   "seeds": [
     1009,
     1021,
@@ -44,59 +16,76 @@
     1123,
     1151
   ],
-  "roles": {
-    "train": 370,
-    "test": 107,
-    "val": 50
-  },
-  "early_risk_ids": [
-    "04127997",
-    "06431500",
-    "06803530",
-    "07142300",
-    "07301410",
-    "08324000",
-    "09378170"
+  "precipitation_terciles_mm_per_year": [
+    992.5291869485853,
+    1265.3680848798297
   ],
-  "top3_library_gain_ids": [
-    "04127997",
-    "08324000",
-    "07301410"
+  "cold_day_medians_within_precipitation_terciles": [
+    0.1243643816474285,
+    0.06768899357555118,
+    0.03616544830686567
   ],
-  "panel_b_definition": "transform of mean individual B0 NSE: mean_NSE / (2 - mean_NSE)",
-  "panel_b_range": [
-    -0.9334795909273362,
-    0.8388895095571851
-  ],
-  "loss_statistics": {
-    "M1": {
-      "n": 107,
-      "positive": 95,
-      "positive_percent": 88.78504672897196,
-      "mean": 0.033152691105363626,
-      "median": 0.02160324266891846,
-      "minimum": -0.03158095966144239,
-      "maximum": 0.32122341486646105,
-      "above_template_colour_limit": 4,
-      "below_template_colour_limit": 0,
-      "above_template_size_limit": 2,
-      "max_difference_vs_P1": 1.0755285551056204e-16
+  "tie_rule": "less-than-or-equal goes to lower bin; do not split equal values by basin ID",
+  "stratum_counts": {
+    "0": {
+      "train": 62,
+      "val": 8,
+      "test": 18
     },
-    "EA": {
-      "n": 107,
-      "positive": 88,
-      "positive_percent": 82.2429906542056,
-      "mean": 0.029784435810562265,
-      "median": 0.019765678293702064,
-      "minimum": -0.05282065014587752,
-      "maximum": 0.15545168094668355,
-      "above_template_colour_limit": 2,
-      "below_template_colour_limit": 0,
-      "above_template_size_limit": 1,
-      "max_difference_vs_P1": 1.3877787807814457e-16
+    "1": {
+      "train": 61,
+      "val": 9,
+      "test": 18
+    },
+    "2": {
+      "train": 62,
+      "val": 8,
+      "test": 18
+    },
+    "3": {
+      "train": 61,
+      "val": 9,
+      "test": 17
+    },
+    "4": {
+      "train": 62,
+      "val": 8,
+      "test": 18
+    },
+    "5": {
+      "train": 62,
+      "val": 8,
+      "test": 18
     }
   },
-  "ordered_distinct_seed_pairs": 90,
-  "geometry": "CAMELS gauge longitude and latitude, preserved from the assignment table; no synthetic locations",
-  "data_file_sha256": "6259d4ec468a63915514cb7bede1becb41acc819d45f5f97f9990ab53afcff91"
+  "heldout_minus_full_pp": {
+    "0": 0.12413768642820244,
+    "1": 0.12413768642820244,
+    "2": 0.12413768642820244,
+    "3": -0.6206884321410246,
+    "4": 0.12413768642820244,
+    "5": 0.12413768642820244
+  },
+  "max_absolute_heldout_minus_full_pp": 0.6206884321410246,
+  "role_medians_NSEstar": {
+    "test": 0.43672641558411485,
+    "train": 0.5743970624094252,
+    "val": 0.4526063804400318
+  },
+  "role_negative_counts": {
+    "test": 10,
+    "train": 9,
+    "val": 7
+  },
+  "baseline_definition": "Transform of the ten-instance mean raw B0 NSE within each basin.",
+  "comparison_to_unmatched_S1_basins": 477,
+  "data_file_sha256": "c11131ff9cd0bb36ef1329248fab2eec900f773a1863e34a5563637312844053",
+  "source_sha256": {
+    "splits/formal_pub_527/basin_assignment.csv": "b58c8b73d253ccc84ff00110566215ac3ad91cf2c50bc525c28cd0b51cb09a3c",
+    "splits/formal_pub_527/climate_thresholds.json": "9da9eb596cb40087b577588e717cd85deed348c7f5972dbfe1120307f9c8cf58",
+    "splits/formal_pub_527/climate_stratum_counts.csv": "137d8f099598ae43551b27a85d4005449269a85fbfaa920c77fb4e9e744b8f18",
+    "deliverables/data_request_20261103/03_basin_metadata_531.csv": "27174441aaeb25a039bbd9526c4b5f03892274f7f6cc4d4d22a8f70c3c024d05",
+    "deliverables/data_request_20261103/01_scores_long.csv": "ed2d0a3e517b020e9ed522cad9708053c9f6a62829c5ae56092672fe23d9a790",
+    "figures/FigS1/data/score_ecdfs.csv": "4e0909d7285f687edf71b94b7c127df871a71ac2f2b5bc2bd8ba6879089adda0"
+  }
 }

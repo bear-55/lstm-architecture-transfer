@@ -12,7 +12,7 @@ import sys
 import zipfile
 
 ROOT = Path(__file__).resolve().parent
-FIGURES = tuple(str(i) for i in range(1, 11)) + ('S1', 'S2', 'S3')
+FIGURES = tuple(str(i) for i in range(1, 10)) + ('S1', 'S2', 'S3', 'S4')
 
 
 def figure_id(value):
@@ -95,14 +95,14 @@ def verify(assets=None):
             continue
         report = json.loads((folder/'data_verification.json').read_text(encoding='utf-8'))
         assert report['status'].upper() == 'PASS'
-        hashes = report.get('data_hashes', {'figure2_catchments.csv':report.get('data_file_sha256')})
+        hashes = report.get('data_hashes', {'figure2_strata_skill.csv':report.get('data_file_sha256')})
         for name, expected in hashes.items():
             assert digest(folder/'data'/name) == expected, f'Figure {number}: {name}'
-    figure7 = ROOT / figure_folder('7')
-    forest = json.loads((figure7/'enhanced_data_verification.json').read_text(encoding='utf-8'))
+    figure8 = ROOT / figure_folder('8')
+    forest = json.loads((figure8/'enhanced_data_verification.json').read_text(encoding='utf-8'))
     for name, expected in forest['input_sha256'].items():
         assert digest(ROOT/name) == expected, name
-    with np.load(figure7/'data/forest_distributions.npz', allow_pickle=False) as draws:
+    with np.load(figure8/'data/forest_distributions.npz', allow_pickle=False) as draws:
         for row in forest['upper_panel']:
             key = row['key']
             values = draws[row['model'] + '__' + key]
@@ -110,7 +110,7 @@ def verify(assets=None):
             assert len(values) == row['n'] == expected_count
             limits = [values.min(), values.max()] if key == 'windows' else np.quantile(values, [.025, .975])
             np.testing.assert_allclose(limits, [row['low'], row['high']], atol=1e-12, rtol=0)
-    table_ids = ('1','2','3','4','5','S2a','S2b','S3','S4a','S4b','S5a','S5b','S6','S7','S8','S9a','S9b','S10')
+    table_ids = ('1','2','3','4','S12','S2a','S2b','S3','S4a','S4b','S5a','S5b','S6','S7','S8','S9a','S9b','S10')
     assert {p.stem for p in (ROOT/'tables').glob('*.csv')} == {'Table_'+s for s in table_ids}
     if assets:
         verify_assets(assets)
@@ -227,11 +227,11 @@ def results(assets=None):
         stage_daily_predictions(workspace, assets, prediction_names(('B0','M1','EA'), ('later',)))
         run_script(workspace, 'scripts/flv_valid_subset.py')
         names.append('outputs/metric_evidence_plan_20261102/flv_valid103_endpoints.csv')
-    run_script(workspace, 'figures/Fig10/prepare_figure10_data.py')
+    run_script(workspace, 'figures/Fig09/prepare_figure9_data.py')
     names.extend([
         'outputs/external_eq7_check_20261111/eq7_summary.csv',
         'outputs/external_eq7_check_20261111/eq7_basins.csv',
-        'figures/Fig10/data/catchment_components.csv',
+        'figures/Fig09/data/catchment_components.csv',
     ])
     checks = [compare_table(ROOT/name, workspace/name) for name in names]
     import numpy as np
@@ -252,21 +252,21 @@ def results(assets=None):
 
 def figures(numbers, prepare=False, assets=None):
     workspace = stage(ROOT / ('work/figure-data' if prepare else 'work/figures'), all_inputs=prepare)
-    if prepare and '9' in numbers:
+    if prepare and '7' in numbers:
         stage_daily_predictions(workspace, assets, prediction_names(('B0','EA'), ('earlier','later')))
     if prepare:
         required = set(numbers)
-        if '7' in required:
+        if '8' in required:
             required.update(('4','5','S1'))
         if 'S3' in required:
             required.add('5')
-        for number in ('1','2','3','4','5','6','S1','7','8','9','10','S2','S3'):
+        for number in ('1','2','3','4','5','6','S1','7','8','9','S4','S2','S3'):
             if number not in required:
                 continue
             folder = figure_folder(number)
-            extra = {'3': ['prepare_variance.py'], '8': ['prepare_radar.py'], '9': ['prepare_independent.py']}
-            if number == '7':
-                builders = ['prepare_influence.py', 'prepare_forest_references.py', 'prepare_figure7_data.py']
+            extra = {'3': ['prepare_variance.py'], 'S4': ['prepare_radar.py'], '7': ['prepare_independent.py']}
+            if number == '8':
+                builders = ['prepare_influence.py', 'prepare_forest_references.py', 'prepare_figure8_data.py']
             elif number == '1':
                 builders = []
             else:

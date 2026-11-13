@@ -8,15 +8,15 @@ The CSV files contain the English table bodies at the precision used in the pape
 | [Table 2](Table_2.csv) | Single-instance gains and retraining loss | [Source](../outputs/jh_predraft_audit_20261102/) |
 | [Table 3](Table_3.csv) | Source budget and local increments | [Source](../outputs/multiseed_budget_curve_20261104/) |
 | [Table 4](Table_4.csv) | Catchment means and medians across metrics | [Source](../outputs/multimetric_transfer_20261102/transfer_endpoints.csv) |
-| [Table 5](Table_5.csv) | Fixed-library deployment | [Source](../figures/Fig08/data/strategy_summary.csv) |
+| [Table S12](Table_S12.csv) | Fixed-library deployment | [Source](../figures/FigS4/data/strategy_summary.csv) |
 | [Table S2a](Table_S2a.csv) | Period, seed and catchment variance shares | [Source](../figures/Fig03/data/variance_shares.csv) |
 | [Table S2b](Table_S2b.csv) | Late-period variance components | [Source](../outputs/training_domain_followup_20261102/unseen_aligned/reml.csv) |
 | [Table S3](Table_S3.csv) | Single-instance resampling schemes | [Source](../outputs/jh_predraft_audit_20261102/global_baseline_interval_reconciliation.csv) |
 | [Table S4a](Table_S4a.csv) | Budget endpoints and bounds | [Source](../figures/Fig05/data/curve_endpoints.csv) |
 | [Table S4b](Table_S4b.csv) | Transfer ratios | [Source](../figures/Fig04/data/transfer_ratios.csv) |
-| [Table S5a](Table_S5a.csv) | Catchment influence | [Source](../figures/Fig07/data/robustness_endpoints.csv) |
+| [Table S5a](Table_S5a.csv) | Catchment influence | [Source](../figures/Fig08/data/robustness_endpoints.csv) |
 | [Table S5b](Table_S5b.csv) | Seven selection windows | [Source](../figures/Fig04/data/window_losses.csv) |
-| [Table S6](Table_S6.csv) | Held-out and training comparisons | [Source](../figures/Fig07/data/matching_contrasts.csv) |
+| [Table S6](Table_S6.csv) | Held-out and training comparisons | [Source](../figures/Fig08/data/matching_contrasts.csv) |
 | [Table S7](Table_S7.csv) | Low-flow volume bias in 103 catchments | [Source](../outputs/metric_evidence_plan_20261102/flv_valid103_endpoints.csv) |
 | [Table S8](Table_S8.csv) | Low-flow-targeted selection | [Source](../outputs/multimetric_transfer_20261102/transfer_endpoints.csv) |
 | [Table S9a](Table_S9a.csv) | 370 training catchments | [Source](../outputs/multimetric_transfer_20261102/transfer_endpoints.csv) |

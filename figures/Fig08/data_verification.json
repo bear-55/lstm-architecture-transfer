@@ -2,197 +2,193 @@
   "status": "PASS",
   "no_synthetic_data": true,
   "new_training": false,
-  "contrast": "EA/B0 fixed fitted library",
-  "selection_rule_single": "Maximum early NSE among all available instances",
-  "selection_rule_architecture": "Maximum mean individual early NSE, followed by daily-discharge ensemble of that architecture",
-  "pooled_rule": "Mean daily discharge over all EA and B0 instances, before scoring",
-  "local_instances_per_architecture": 10,
-  "external_instances_per_architecture": 8,
-  "local_selection_period": "WY2000-2003",
-  "local_evaluation_period": "WY2004-2008",
-  "external_selection_period": "WY1990-1994",
-  "external_evaluation_period": "WY1995-1999",
-  "external_source": "https://doi.org/10.4211/hs.83ea5312635e44dc824eeb99eda12f06",
-  "external_license": "CC BY 4.0",
-  "groups": {
-    "typical_heldout": 100,
-    "early_risk": 7,
-    "training": 370,
-    "external": 531
-  },
-  "early_risk_criterion": "Early EA/B0 pooled-ensemble NSE < 0",
-  "early_risk_ids": [
+  "n_catchments": 107,
+  "n_seeds_per_architecture": 10,
+  "n_metrics": 6,
+  "n_variants": 5,
+  "n_cells": 60,
+  "selection_period": "WY2000-2003",
+  "evaluation_period": "WY2004-2008",
+  "selection_metric": "NSE fixed for all columns",
+  "n_boot": 2000,
+  "rng_seed": 20261102,
+  "bootstrap": "Pointwise percentile seed/HUC2 bootstrap, synchronized with existing main analyses",
+  "spatial_sampling_regions": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18"
+  ],
+  "heldout_regions": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "17",
+    "18"
+  ],
+  "distinct_seed_pair_policy": "Exclude matching original seed identities, including repeated bootstrap copies",
+  "deletion_policy": "Fix full-sample deletion sets within every bootstrap replicate",
+  "shared_EA_library_top7": [
     "04127997",
-    "06431500",
-    "06803530",
-    "07142300",
+    "08324000",
     "07301410",
-    "08324000",
-    "09378170"
+    "09047700",
+    "14137000",
+    "13023000",
+    "01487000"
   ],
-  "radar_summary": "Catchment median of each metric; transforms applied per catchment before medians",
-  "radar_values": 96,
-  "radar_clipping": false,
-  "radar_ranges": [
+  "existing_P1_cells_reproduced": 20,
+  "existing_multimetric_cells_reproduced": 24,
+  "existing_bootstrap_values_checked": 48000,
+  "explicit_seed_pair_witnesses": 60,
+  "all_deletion_sets_match_P1": true,
+  "numerical_zero_policy": "For the equal-weight point estimate only, set D_b = 0 when all ten seeds make the same choice; bootstrap statistics retain the existing original-seed exclusion rule",
+  "validation": [
     {
-      "metric": "nse",
-      "axis_inner": 0,
-      "axis_outer": 0.85,
-      "observed_profile_min": 0.31258937111232366,
-      "observed_profile_max": 0.7581706837931378,
-      "clipping": false
+      "comparison": "M1/B0",
+      "metric": "NSE",
+      "per_catchment_estimates": 107,
+      "bootstrap_draws": 2000,
+      "baseline_results": "PASS",
+      "covariance_and_explicit_pairs": "PASS"
     },
     {
-      "metric": "kge",
-      "axis_inner": 0,
-      "axis_outer": 0.85,
-      "observed_profile_min": 0.014631296850381004,
-      "observed_profile_max": 0.7513020933783456,
-      "clipping": false
+      "comparison": "M1/B0",
+      "metric": "NSE_star",
+      "per_catchment_estimates": 107,
+      "bootstrap_draws": 2000,
+      "baseline_results": "PASS",
+      "covariance_and_explicit_pairs": "PASS"
     },
     {
-      "metric": "r",
-      "axis_inner": 0.6,
-      "axis_outer": 0.95,
-      "observed_profile_min": 0.7171965944743038,
-      "observed_profile_max": 0.8908823768590266,
-      "clipping": false
+      "comparison": "M1/B0",
+      "metric": "KGE",
+      "per_catchment_estimates": 107,
+      "bootstrap_draws": 2000,
+      "baseline_results": "PASS",
+      "covariance_and_explicit_pairs": "PASS"
     },
     {
-      "metric": "alpha_closeness",
-      "axis_inner": 0.5,
-      "axis_outer": 1,
-      "observed_profile_min": 0.7014024952352094,
-      "observed_profile_max": 0.8448185700428399,
-      "clipping": false
+      "comparison": "M1/B0",
+      "metric": "abs_FHV",
+      "per_catchment_estimates": 107,
+      "bootstrap_draws": 2000,
+      "baseline_results": "PASS",
+      "covariance_and_explicit_pairs": "PASS"
     },
     {
-      "metric": "beta_closeness",
-      "axis_inner": 0,
-      "axis_outer": 1,
-      "observed_profile_min": 0.10475337676131335,
-      "observed_profile_max": 0.914587621186545,
-      "clipping": false
+      "comparison": "M1/B0",
+      "metric": "nMAE_high",
+      "per_catchment_estimates": 107,
+      "bootstrap_draws": 2000,
+      "baseline_results": "PASS",
+      "covariance_and_explicit_pairs": "PASS"
     },
     {
-      "metric": "abs_fhv",
-      "axis_inner": 50,
-      "axis_outer": 10,
-      "observed_profile_min": 15.822139924126557,
-      "observed_profile_max": 35.831540514880466,
-      "clipping": false
+      "comparison": "M1/B0",
+      "metric": "nMAE_low",
+      "per_catchment_estimates": 107,
+      "bootstrap_draws": 2000,
+      "baseline_results": "PASS",
+      "covariance_and_explicit_pairs": "PASS"
     },
     {
-      "metric": "mae_high",
-      "axis_inner": 4,
-      "axis_outer": 0,
-      "observed_profile_min": 0.31766538483941037,
-      "observed_profile_max": 3.3047262728214264,
-      "clipping": false
+      "comparison": "EA/B0",
+      "metric": "NSE",
+      "per_catchment_estimates": 107,
+      "bootstrap_draws": 2000,
+      "baseline_results": "PASS",
+      "covariance_and_explicit_pairs": "PASS"
     },
     {
-      "metric": "mae_low",
-      "axis_inner": 0.2,
-      "axis_outer": 0,
-      "observed_profile_min": 0.04826663678924962,
-      "observed_profile_max": 0.13489358427139161,
-      "clipping": false
+      "comparison": "EA/B0",
+      "metric": "NSE_star",
+      "per_catchment_estimates": 107,
+      "bootstrap_draws": 2000,
+      "baseline_results": "PASS",
+      "covariance_and_explicit_pairs": "PASS"
+    },
+    {
+      "comparison": "EA/B0",
+      "metric": "KGE",
+      "per_catchment_estimates": 107,
+      "bootstrap_draws": 2000,
+      "baseline_results": "PASS",
+      "covariance_and_explicit_pairs": "PASS"
+    },
+    {
+      "comparison": "EA/B0",
+      "metric": "abs_FHV",
+      "per_catchment_estimates": 107,
+      "bootstrap_draws": 2000,
+      "baseline_results": "PASS",
+      "covariance_and_explicit_pairs": "PASS"
+    },
+    {
+      "comparison": "EA/B0",
+      "metric": "nMAE_high",
+      "per_catchment_estimates": 107,
+      "bootstrap_draws": 2000,
+      "baseline_results": "PASS",
+      "covariance_and_explicit_pairs": "PASS"
+    },
+    {
+      "comparison": "EA/B0",
+      "metric": "nMAE_low",
+      "per_catchment_estimates": 107,
+      "bootstrap_draws": 2000,
+      "baseline_results": "PASS",
+      "covariance_and_explicit_pairs": "PASS"
     }
   ],
-  "early_risk_share_of_net_gain_pct": 91.5675824479272,
-  "net_gain_mean": 0.03193608250065704,
-  "net_gain_sum": 3.4171608275703034,
-  "top3_ids": [
-    "04127997",
-    "08324000",
-    "07301410"
-  ],
-  "top3_net_gain_share_pct": 97.3997202628357,
-  "cumulative_peak_pct": 183.90995291213613,
-  "cumulative_peak_rank": 54,
-  "cumulative_final_pct": 100.00000000000007,
-  "failure_matrix_cells": 9,
-  "failure_counts": [
-    {
-      "policy": "library_local",
-      "n_catchments": 107,
-      "failures": 1,
-      "rescued_vs_pool": 2,
-      "new_failures_vs_pool": 0
-    },
-    {
-      "policy": "select_arch_then_ensemble",
-      "n_catchments": 107,
-      "failures": 3,
-      "rescued_vs_pool": 0,
-      "new_failures_vs_pool": 0
-    },
-    {
-      "policy": "mixed_ensemble",
-      "n_catchments": 107,
-      "failures": 3,
-      "rescued_vs_pool": 0,
-      "new_failures_vs_pool": 0
-    }
-  ],
-  "source_validation": [
-    {
-      "group": "heldout",
-      "n_catchments": 107,
-      "instances_per_architecture": 10,
-      "selected_individual_all_metrics": "PASS",
-      "selected_architecture_ensemble_all_metrics": "PASS",
-      "stored_summary": "PASS"
-    },
-    {
-      "group": "training",
-      "n_catchments": 370,
-      "instances_per_architecture": 10,
-      "selected_individual_all_metrics": "PASS",
-      "selected_architecture_ensemble_all_metrics": "PASS",
-      "stored_summary": "PASS"
-    },
-    {
-      "group": "external",
-      "n_catchments": 531,
-      "instances_per_architecture": 8,
-      "selected_individual_all_metrics": "PASS",
-      "selected_architecture_ensemble_all_metrics": "PASS",
-      "stored_summary": "PASS"
-    }
-  ],
-  "uncertainty": "Descriptive medians and observed scores; no confidence bands in this figure",
+  "cells_with_ci_above_zero": 50,
+  "cells_with_ci_including_zero": 10,
   "input_hashes": {
-    ".\\outputs\\multimetric_transfer_20261102\\policy_metrics_per_basin.csv": "fedc525a647e7d7068d375ce217bebe113f8dd560674e9205f2d756b05ad3735",
-    ".\\outputs\\multimetric_transfer_20261102\\policy_metric_summary.csv": "57e67ebe24a005d1432c3304be52239b492014fda46b0013a840e4044f0e81bc",
-    ".\\outputs\\training_domain_followup_20261102\\unseen_aligned\\metric_arrays.npz": "afa5d1b17a0d88c51aeee4f9d727f9bb88fdcdf8d92cced8da351cc7507fcce7",
-    ".\\outputs\\training_domain_followup_20261102\\unseen_aligned\\policy_hydrology_per_basin.csv": "21945bc7da7d82b4050438d29a8e4d5cfe9ffdcd4b2f74f07abb028211572026",
-    ".\\outputs\\training_domain_followup_20261102\\unseen_aligned_policy_summary.csv": "4dde7edbcfdb7bec920586bc7669e91c3dcbea08130c1fc1a11a45c344945a95",
-    ".\\outputs\\weakness_resolution_20261102\\local_internal\\metric_arrays.npz": "035d08351094ff3739d4693f2e96ff27cd59624e6eb186c6a4a13f9f039445d6",
-    ".\\outputs\\weakness_resolution_20261102\\local_internal\\policy_hydrology_per_basin.csv": "4ff043d8570f9a6cf7e5d6a4774a1f10175f2759e74ab34cdd96910037bdb37f",
-    ".\\outputs\\training_domain_followup_20261102\\local_internal_policy_summary.csv": "66b9576022c2b132efd735f2b8b2a32009228344f1d2d387ec50d1aeeff12442",
-    ".\\outputs\\weakness_resolution_20261102\\external_NSE\\metric_arrays.npz": "8c84e2d24766f55ad6374ceecc1e28d21c4eb96f92f96891f0f7c50a11e7cda5",
-    ".\\outputs\\weakness_resolution_20261102\\external_NSE\\policy_hydrology_per_basin.csv": "f699e239ee94ff091545821344fadcbe1130185887a64f9cf9493049f62f549f",
-    ".\\outputs\\training_domain_followup_20261102\\external_NSE_policy_summary.csv": "600b4f678e2d1de215b845312463e31cc352c26451a0ec5165d477e14c5df5e5",
-    ".\\outputs\\training_domain_followup_20261102\\early_defined_risk_per_basin.csv": "996df49c71970e9061bb871e56237ea9b36b26b85eed93f683c8c2f52c2bdcd8",
-    ".\\outputs\\training_domain_followup_20261102\\early_defined_risk_summary.csv": "cb949ec9899e84dbbab45346acc1e755e9bfc97c261eba7840c1d6b777fa05b4",
-    ".\\outputs\\training_domain_followup_20261102\\unseen_aligned_gain_concentration.csv": "90b50c77d8c3c930a3d1ec028c7b2b95c42d8007e35df295a762b927ecd4404c",
-    ".\\deliverables\\data_request_20261103\\03_basin_metadata_531.csv": "27174441aaeb25a039bbd9526c4b5f03892274f7f6cc4d4d22a8f70c3c024d05",
-    ".\\outputs\\weakness_resolution_20261102\\external\\eligibility.json": "1facccc2d6b6301832325466cd4b921f454cd094b3967eb650d7dc845c277d07",
-    ".\\outputs\\weakness_resolution_20261102\\external_NSE\\completed.json": "8f7e0a5238cbdb2c14c724ccecf3a2dff4e0afa60ecb41a96eb849f0d64725e1",
-    ".\\figures\\figure_templates_v5_all.zip": "6b6bec143a727b8cd152be9498b786fc8b1c0892a54d438b79b06a12def7afd7",
-    ".\\paper\\Manuscript_revised_EMS_v4.docx": "2a86e1b24f58883ea32c6435248f7a8fc8ec0daa72b3104e3c272a913baa3c7f"
+    "deliverables\\data_request_20261103\\01_scores_long.csv": "ed2d0a3e517b020e9ed522cad9708053c9f6a62829c5ae56092672fe23d9a790",
+    "deliverables\\data_request_20261103\\03_basin_metadata_531.csv": "27174441aaeb25a039bbd9526c4b5f03892274f7f6cc4d4d22a8f70c3c024d05",
+    "outputs\\training_domain_followup_20261102\\unseen_aligned\\metric_arrays.npz": "afa5d1b17a0d88c51aeee4f9d727f9bb88fdcdf8d92cced8da351cc7507fcce7",
+    "outputs\\weakness_resolution_20261102\\local_internal\\metric_arrays.npz": "035d08351094ff3739d4693f2e96ff27cd59624e6eb186c6a4a13f9f039445d6",
+    "outputs\\training_domain_followup_20261102\\unseen_aligned_basin_gains.csv": "4547d2e31d62b832408f5b25b7bb69842f5a4e66fe237982518a0d5b65e09279",
+    "outputs\\multimetric_transfer_20261102\\observation_normalizers.csv": "7efb8a138ea22189f51c9cb731524e1865a9b8b948bd736f578e1dae06f77d6e",
+    "outputs\\multimetric_transfer_20261102\\transfer_endpoints.csv": "88edb54da74df654936f802cc84eb85c05d54a0f9caed9de71a4cec5109775de",
+    "outputs\\multimetric_transfer_20261102\\transfer_per_basin.csv": "d7767b1a63c4ba7bb81c46ef27f3f751f58591187158b8bfe205a5ce6a96365d",
+    "outputs\\multimetric_transfer_20261102\\bootstrap_draws.npz": "e1d5a6641ab50e8994b91ba1da4b56cfc54e22fa8abbbe1a0b62f97f5b257e0f",
+    "outputs\\selection_transfer_P1_20261102\\P1_endpoints.csv": "63645d715b6cb6a9f7929feba269273da8240deb8758c474bc0cbd0f38185ecf",
+    "outputs\\selection_transfer_P1_20261102\\P1_deleted_basins.csv": "4d2ef4dfb87f143941452994213118dd5585dc86f972148b2e3dfd70f458b6fd",
+    "figures\\figure_templates_v5_all.zip": "6b6bec143a727b8cd152be9498b786fc8b1c0892a54d438b79b06a12def7afd7",
+    "paper\\Manuscript_revised_EMS_v4.docx": "2a86e1b24f58883ea32c6435248f7a8fc8ec0daa72b3104e3c272a913baa3c7f"
   },
   "data_hashes": {
-    "early_risk_groups.csv": "bf619c283f668967e472b9300c208c741230952e5535adbfdf08cb902c365c0d",
-    "failure_case_selections.csv": "2a50d456d63771cc08342672efdc75297625b9549f917fb6b45970545dd8c023",
-    "failure_counts.csv": "0d1261daa9ad19db4a7f07edb78dd211042fb25f5a65fddf7523f7185328edfe",
-    "failure_matrix.csv": "79d2caf4ec772adae09b00bdac4f1bf7273f89e15e3ec8cd6270b309bf3269de",
-    "gain_concentration.csv": "9021f34b0f08d64edc1fb8d9b40bfeb9c785cabfefa2effa669f51434b3ec8c4",
-    "historical_selections.csv": "fd0d3822d04c708461afd50680bc743a05fc57e41739ebfe8332718173a61204",
-    "radar_axis_ranges.csv": "942fdc66979847ab77deffb08c1e9e436b7b452c79d622998794b8fdc632a742",
-    "radar_profiles.csv": "5188bc95c3d72cc7c611a2f36076ac1bfd44d4361901a3b9593cc225e59d8fee",
-    "strategy_metrics_per_catchment.csv": "4c79cf9b7ed70aa66ee04f6bc0146bdb1f27e2bb7261d6f5e0984920e00292dd",
-    "strategy_summary.csv": "05ce800d6ef8e71adab458be70bd5fc5ca9d812809fc7b43b5cf9284f31df3d6"
+    "bootstrap_draws.npz": "6cd2288ccd287eb193494b640436d66b0e9ee3759b7015c57e8e7f072ec0742a",
+    "bootstrap_weights.npz": "04d4fb05018945c4ce335b57c877e19ab63fede775c15fe615f544f2810bcaf2",
+    "deleted_catchments.csv": "587a676c07004f1b844a2f0d01b523b924b82506bb2e54732f44851f96e56c07",
+    "EA_library_gain_ranking.csv": "fa1458f7a890a909df98f92970f43dd9c4743d58f32c5b49b0e55797a7f135e9",
+    "per_catchment_losses.csv": "a9ac6d891f5506704df7f8bd7c725e4f4c1513161d161ebfdbb2c6d03bd5e559",
+    "robustness_endpoints.csv": "9a091dcbffbad99a8baa65f8441a67a0b72abf9d44ca7b9593e43fb656569a76"
   }
 }

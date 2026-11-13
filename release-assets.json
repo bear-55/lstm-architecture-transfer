@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "extract_at": "repository root",
   "assets": [
     {
@@ -3484,9 +3484,9 @@
       "download_url": "https://github.com/bear-55/lstm-architecture-transfer/releases/download/v1.0.0/training-cache-v1.0.0.zip"
     },
     {
-      "name": "publication-figures-v1.1.0.zip",
-      "bytes": 42484282,
-      "sha256": "846a044116986d4f617f5774f87951b10ada31c4d9a401c111d611bb6cfbcf22",
+      "name": "publication-figures-v1.2.0.zip",
+      "bytes": 33650889,
+      "sha256": "91c93b0eee725fd8b38e054923fb9de08bcc75c14d36a31c9b4b900fc332611c",
       "files": [
         {
           "path": "figures/Fig01/fig1.pdf",
@@ -3510,23 +3510,23 @@
         },
         {
           "path": "figures/Fig02/fig2.pdf",
-          "bytes": 6017752,
-          "sha256": "724c02c0245c7255286a2dd64bd81a0251221637e55111301ed20f89a65f4100"
+          "bytes": 1667203,
+          "sha256": "d1bb5766cbc7e0147f4eea5dfec5932346f37a9c7a02f8aebc7a4ad0e29555c6"
         },
         {
           "path": "figures/Fig02/fig2.png",
-          "bytes": 1872504,
-          "sha256": "b7cbe0015b7ebbfd3a5ac3ce96931795f47e2d3048c724c22fa57f9515a9b0e1"
+          "bytes": 1606034,
+          "sha256": "3eb34c4ead1dc4153a374aca6c53dc677e50fa73759e196a700df5884c28c3aa"
         },
         {
           "path": "figures/Fig02/fig2.svg",
-          "bytes": 17799884,
-          "sha256": "179ba1a9857d989973d33ab0552bfd0be19be494b73113c60aed3c9e2774beb5"
+          "bytes": 4834508,
+          "sha256": "feec6614960a12dd8367a2a4b39791f0bcbee0c1cbeca52f0c006b9dc23e68be"
         },
         {
           "path": "figures/Fig02/fig2.tif",
-          "bytes": 2098694,
-          "sha256": "e312aef90d665a4f6e2b91f307fb8a9055132a4ff528e1e0d8ca57f819113b5b"
+          "bytes": 2454474,
+          "sha256": "556551db87461608c6e5c7e097fdecee5830edad5fd513ae31cff77b5defe317"
         },
         {
           "path": "figures/Fig03/fig3.pdf",
@@ -3610,81 +3610,61 @@
         },
         {
           "path": "figures/Fig07/fig7.pdf",
-          "bytes": 165067,
-          "sha256": "7f218d29a8acc98c8eb87fd94b7e37ef890243f52801344995add5a63192609d"
-        },
-        {
-          "path": "figures/Fig07/fig7.png",
-          "bytes": 1058419,
-          "sha256": "e05425f89f71a98ec636ea42952f0af816b18fa568e1abec5a5fae4ebd8de8e2"
-        },
-        {
-          "path": "figures/Fig07/fig7.svg",
-          "bytes": 344321,
-          "sha256": "51e27c6db7488e3ba4431e48d86bd16cbc47ae1061220e8a0cc7ec6c6116684c"
-        },
-        {
-          "path": "figures/Fig07/fig7.tif",
-          "bytes": 1544938,
-          "sha256": "38fd7410956a9dbd891bd8b2862ed621a3f1d0e43958e95e2efbd30644e917d3"
-        },
-        {
-          "path": "figures/Fig08/fig8.pdf",
-          "bytes": 62636,
-          "sha256": "a02edfc3b245c6ebd150fb938d459d65ab65a3b477e30620074eb2573051270b"
-        },
-        {
-          "path": "figures/Fig08/fig8.png",
-          "bytes": 818484,
-          "sha256": "8ba0be1a71ac87567ecd46d423ccecb34e544391640fc99f07a00715d88fd24f"
-        },
-        {
-          "path": "figures/Fig08/fig8.svg",
-          "bytes": 74413,
-          "sha256": "84cb00bd21fda168e3352f43eb257a2a2b974df6ee4abb649ee5abc03b39ac1b"
-        },
-        {
-          "path": "figures/Fig08/fig8.tif",
-          "bytes": 1068918,
-          "sha256": "ee93b698b1b4f4143812a610feb09ccff235073c28d55b9fe20b68d97c90d7c2"
-        },
-        {
-          "path": "figures/Fig09/fig9.pdf",
           "bytes": 223625,
           "sha256": "75c1a68018284f05e2e6d7d5c52b0b4b9b2e0d5821c0ab4b21e26707cfe83c9e"
         },
         {
-          "path": "figures/Fig09/fig9.png",
+          "path": "figures/Fig07/fig7.png",
           "bytes": 1230029,
           "sha256": "e314094d62f06c39199163813adfc6b59ba0f01f4f901b5ee61d5196574cb306"
         },
         {
-          "path": "figures/Fig09/fig9.svg",
+          "path": "figures/Fig07/fig7.svg",
           "bytes": 581528,
           "sha256": "3deaccf1e671a8d8761df89c4f1f5b008c0488e2c214eda073e27a0277fb29f8"
         },
         {
-          "path": "figures/Fig09/fig9.tif",
+          "path": "figures/Fig07/fig7.tif",
           "bytes": 1639198,
           "sha256": "ad472b2dd1afbda2783744cec8a58dd9955cac4b8da87af1424d35983ea30e4b"
         },
         {
-          "path": "figures/Fig10/fig10.pdf",
+          "path": "figures/Fig08/fig8.pdf",
+          "bytes": 165067,
+          "sha256": "7f218d29a8acc98c8eb87fd94b7e37ef890243f52801344995add5a63192609d"
+        },
+        {
+          "path": "figures/Fig08/fig8.png",
+          "bytes": 1058419,
+          "sha256": "e05425f89f71a98ec636ea42952f0af816b18fa568e1abec5a5fae4ebd8de8e2"
+        },
+        {
+          "path": "figures/Fig08/fig8.svg",
+          "bytes": 344321,
+          "sha256": "51e27c6db7488e3ba4431e48d86bd16cbc47ae1061220e8a0cc7ec6c6116684c"
+        },
+        {
+          "path": "figures/Fig08/fig8.tif",
+          "bytes": 1544938,
+          "sha256": "38fd7410956a9dbd891bd8b2862ed621a3f1d0e43958e95e2efbd30644e917d3"
+        },
+        {
+          "path": "figures/Fig09/fig9.pdf",
           "bytes": 248877,
           "sha256": "69faf06a6fb0993d0f955e3bab29611a1055b36e91f55df248885c00f99b4173"
         },
         {
-          "path": "figures/Fig10/fig10.png",
+          "path": "figures/Fig09/fig9.png",
           "bytes": 1127194,
           "sha256": "55eee0d2a885504e9d3dede6b983698b55ce6e7778ed729e588a4ee5aea784c9"
         },
         {
-          "path": "figures/Fig10/fig10.svg",
+          "path": "figures/Fig09/fig9.svg",
           "bytes": 1086101,
           "sha256": "08e11514a8f4ffdb802d4e2c510111d7cdf5f4c60b972ca6db52539acd0f27ec"
         },
         {
-          "path": "figures/Fig10/fig10.tif",
+          "path": "figures/Fig09/fig9.tif",
           "bytes": 2615914,
           "sha256": "9143dd286fcb5fcc212113f188f7df6a217ded89d65a4838dbf72c47f532ae83"
         },
@@ -3747,9 +3727,29 @@
           "path": "figures/FigS3/figS3.tif",
           "bytes": 474888,
           "sha256": "18dc0fcaa180d5d87fcc08b39c48dbaa3bfd703bb7af432e349ef1322d7e575e"
+        },
+        {
+          "path": "figures/FigS4/figS4.pdf",
+          "bytes": 62636,
+          "sha256": "a02edfc3b245c6ebd150fb938d459d65ab65a3b477e30620074eb2573051270b"
+        },
+        {
+          "path": "figures/FigS4/figS4.png",
+          "bytes": 818484,
+          "sha256": "8ba0be1a71ac87567ecd46d423ccecb34e544391640fc99f07a00715d88fd24f"
+        },
+        {
+          "path": "figures/FigS4/figS4.svg",
+          "bytes": 74413,
+          "sha256": "84cb00bd21fda168e3352f43eb257a2a2b974df6ee4abb649ee5abc03b39ac1b"
+        },
+        {
+          "path": "figures/FigS4/figS4.tif",
+          "bytes": 1068918,
+          "sha256": "ee93b698b1b4f4143812a610feb09ccff235073c28d55b9fe20b68d97c90d7c2"
         }
       ],
-      "download_url": "https://github.com/bear-55/lstm-architecture-transfer/releases/download/v1.1.0/publication-figures-v1.1.0.zip"
+      "download_url": "https://github.com/bear-55/lstm-architecture-transfer/releases/download/v1.2.0/publication-figures-v1.2.0.zip"
     }
   ]
 }

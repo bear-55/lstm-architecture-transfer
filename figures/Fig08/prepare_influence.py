@@ -1,4 +1,4 @@
-"""Catchment influence estimates in Figure 7 with the original 2,000-draw bootstrap."""
+"""Catchment influence estimates in Figure 8 with the original 2,000-draw bootstrap."""
 from hashlib import sha256
 from pathlib import Path
 import json

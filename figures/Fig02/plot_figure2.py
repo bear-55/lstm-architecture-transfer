@@ -1,240 +1,157 @@
-"""Figure 2: real-data maps, adapted from the user-supplied v5 template.
-
-Run with Python + numpy, pandas, matplotlib and Pillow. All map and experiment
-inputs are local. This script does not change the manuscript or raw results.
+"""Render Figure 2 from the verified catchment strata and early baseline scores.
+Run prepare_figure2_data.py to rebuild the display table from frozen records.
 """
+from pathlib import Path as FilePath
 import hashlib
 import json
-from pathlib import Path
-
+import numpy as np
+import pandas as pd
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib import font_manager
-from matplotlib.collections import LineCollection
-from matplotlib.colors import Normalize, TwoSlopeNorm
-from matplotlib.lines import Line2D
-from matplotlib.path import Path as MplPath
+from matplotlib.path import Path
 from matplotlib.patches import PathPatch
-import numpy as np
-import pandas as pd
+from matplotlib.collections import LineCollection
 from PIL import Image
 
-HERE = Path(__file__).resolve().parent
+HERE = FilePath(__file__).resolve().parent
 DATA = HERE / "data"
-QA = HERE / "qa"
-QA.mkdir(exist_ok=True)
+# ------------------------------------------------------------------ style
 MM = 1 / 25.4
-DPI = 600
-INK, BLUE = "#1A1A1A", "#1F5FA8"
-FONT = font_manager.FontProperties(family=["Times New Roman", "Liberation Serif", "DejaVu Serif"]).get_name()
 plt.rcParams.update({
     "font.family": "serif", "font.serif": ["Times New Roman", "Liberation Serif", "DejaVu Serif"],
-    "mathtext.fontset": "stix", "font.size": 8,
-    "axes.titlesize": 8.5, "axes.titleweight": "bold",
-    "axes.labelsize": 8, "axes.labelweight": "bold",
-    "xtick.labelsize": 7, "ytick.labelsize": 7,
-    "legend.fontsize": 7, "legend.frameon": False,
-    "axes.linewidth": .8, "axes.edgecolor": INK,
-    "xtick.direction": "out", "ytick.direction": "out",
-    "xtick.major.size": 3, "ytick.major.size": 3,
-    "xtick.major.width": .8, "ytick.major.width": .8,
-    "pdf.fonttype": 42, "ps.fonttype": 42, "svg.fonttype": "none",
-    "savefig.dpi": DPI, "figure.facecolor": "white",
-    "savefig.facecolor": "white", "axes.unicode_minus": True,
-})
+    "mathtext.fontset": "stix", "font.size": 8, "axes.titlesize": 9, "axes.labelsize": 8,
+    "xtick.labelsize": 7, "ytick.labelsize": 7, "axes.titleweight": "bold", "axes.labelweight": "bold",
+    "axes.linewidth": 0.8, "xtick.major.size": 3, "ytick.major.size": 3, "svg.fonttype": "none", "pdf.fonttype": 42, "ps.fonttype": 42})
+INK, GR, LG, HI = "#1A1A1A", "#8C8C8C", "#D9D9D9", "#B2182B"
+ROLE = {"train": dict(lab="Training", marker="^", s=7, fc="#99A3AB", ec="none", lw=0, z=2),
+        "val": dict(lab="Validation", marker="D", s=9, fc="#E6AA4F", ec="#614620", lw=0.5, z=3),
+        "test": dict(lab="Held-out", marker="o", s=10, fc="#264C69", ec="none", lw=0, z=4)}
 
 
-def sha(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+def read_geojson(path):
+    with path.open(encoding="utf-8") as handle:
+        features = json.load(handle)["features"]
+    parts = []
+    for feature in features:
+        geo = feature["geometry"]
+        polygons = [geo["coordinates"]] if geo["type"] == "Polygon" else geo["coordinates"]
+        for rings in polygons:
+            for ring in rings:
+                parts.append(np.asarray(ring, float)[:, :2])
+    return parts
+
+STATES = read_geojson(DATA / "census_states_5m_2024.geojson")
+HUC2 = read_geojson(DATA / "usgs_huc2_regions.geojson")
+def basemap(ax):
+    if STATES:
+        verts, codes = [], []
+        for p in STATES:
+            if len(p) < 3: continue
+            verts += list(p); codes += [Path.MOVETO] + [Path.LINETO] * (len(p) - 1)
+        ax.add_patch(PathPatch(Path(verts, codes), fc="#F2F2F2", ec="#A6A6A6", lw=0.35, zorder=0))
+    if HUC2:
+        ax.add_collection(LineCollection(HUC2, colors="#7F7F7F", linewidths=0.45, linestyles=(0, (3, 1.5)), zorder=1))
+    ax.set_xlim(-125.5, -66.0); ax.set_ylim(24.0, 50.0); ax.set_aspect(1.25)
+    ax.set_xticks([-120, -105, -90, -75]); ax.set_xticklabels(["120°W", "105°W", "90°W", "75°W"])
+    ax.set_yticks([30, 40, 50]); ax.set_yticklabels(["30°N", "40°N", "50°N"])
+    ax.tick_params(labelsize=7)
+
+# ------------------------------------------------------------------ data
+
+meta = pd.read_csv(DATA / "figure2_strata_skill.csv", dtype={"basin_id":str}, float_precision="round_trip")
+report = json.loads((HERE / "data_verification.json").read_text(encoding="utf-8"))
+assert hashlib.sha256((DATA / "figure2_strata_skill.csv").read_bytes()).hexdigest() == report["data_file_sha256"]
+NROLE = meta.role.value_counts().to_dict()
+assert NROLE == {"train":370, "val":50, "test":107} and meta.basin_id.is_unique
+t1, t2 = report["precipitation_terciles_mm_per_year"]
+medians = np.asarray(report["cold_day_medians_within_precipitation_terciles"])
+tercile = np.searchsorted([t1, t2], meta.P, side="left")
+np.testing.assert_array_equal(2*tercile + (meta.F.to_numpy() > medians[tercile]), meta.climate_stratum)
+share = pd.crosstab(meta.climate_stratum, meta.role, normalize="columns") * 100
+full = meta.climate_stratum.value_counts(normalize=True).sort_index() * 100
+dev = share["test"] - full
+# ------------------------------------------------------------------ figure
+fig = plt.figure(figsize=(190 * MM, 138 * MM))
+gs = fig.add_gridspec(2, 2, height_ratios=[1, 1.12], hspace=0.22, wspace=0.24,
+                      left=0.065, right=0.905, top=0.965, bottom=0.075)
+
+# (a) roles
+ax = fig.add_subplot(gs[0, 0]); basemap(ax)
+for r in ["train", "val", "test"]:
+    d = meta[meta.role == r]; s = ROLE[r]
+    ax.scatter(d.gauge_lon, d.gauge_lat, marker=s["marker"], s=s["s"], fc=s["fc"], ec=s["ec"], lw=s["lw"],
+               zorder=s["z"] + 2, label=f'{s["lab"]} ({len(d)})')
+ax.legend(loc="lower left", prop={"weight": "bold", "size": 6.8}, frameon=False, handletextpad=0.2, borderaxespad=0.3)
+ax.set_title("(a) Catchment roles")
+
+# (b) early skill map
+ax = fig.add_subplot(gs[0, 1]); basemap(ax)
+o = meta.sort_values("NSEs", ascending=False)
+h = ax.scatter(o.gauge_lon, o.gauge_lat, c=o.NSEs, cmap="YlOrRd_r", vmin=-1, vmax=1, s=9, ec="none", zorder=4)
+cax = ax.inset_axes([1.03, 0.06, 0.035, 0.88]); cb = fig.colorbar(h, cax=cax, ticks=[-1, -0.5, 0, 0.5, 1])
+cb.set_label("Early B0 NSE* (transformed mean)", fontweight="bold", fontsize=7); cb.ax.tick_params(labelsize=6.5)
+ax.set_title("(b) Early-period skill of B0")
+
+# (c) stratification space
+ax = fig.add_subplot(gs[1, 0])
+for r in ["train", "val", "test"]:
+    d = meta[meta.role == r]; s = ROLE[r]
+    ax.scatter(d.P, d.F, marker=s["marker"], s=s["s"] * 1.15, fc=s["fc"], ec=s["ec"], lw=s["lw"], zorder=s["z"])
+xlo, xhi = meta.P.min() / 1.15, meta.P.max() * 1.15
+ax.set_xscale("log"); ax.set_xlim(xlo, xhi)
+ax.set_yscale("function", functions=(lambda v: np.sqrt(np.clip(v, 0, None)), np.square))
+yhi = max(0.9, meta.F.max() * 1.05); ax.set_ylim(0, yhi)
+yt = [t for t in [0, 0.05, 0.1, 0.2, 0.4, 0.6, 0.8] if t <= yhi]; ax.set_yticks(yt); ax.set_yticklabels([f"{t:g}" for t in yt])
+xt = [t for t in [200, 300, 500, 1000, 2000, 4000] if xlo <= t <= xhi]; ax.set_xticks(xt); ax.set_xticklabels([str(t) for t in xt])
+ax.minorticks_off()
+for v in (t1, t2): ax.axvline(v, color=INK, lw=0.7, ls=(0, (4, 2)), zorder=1)
+edges = [xlo, t1, t2, xhi]
+for j, fm in enumerate(medians):
+    ax.hlines(fm, edges[j], edges[j+1], color=INK, lw=0.7, linestyle=(0, (4, 2)), zorder=1)
+xc = [np.sqrt(xlo * t1), np.sqrt(t1 * t2), np.sqrt(t2 * xhi)]
+big = dev.abs().idxmax()
+for s in range(6):
+    xi, hi = divmod(s, 2)
+    fm = medians[xi]
+    y = yhi * 0.96 if hi else fm * 0.93
+    txt = (f"T {share.loc[s, 'train']:.1f}\nV {share.loc[s, 'val']:.0f}\nH {share.loc[s, 'test']:.1f}\n({dev[s]:+.2f})")
+    hl = s == big
+    ax.text(xc[xi], y, txt, ha="center", va="top", fontsize=6.1, linespacing=1.15, zorder=6,
+            color=HI if hl else INK, fontweight="bold" if hl else "normal",
+            bbox=dict(boxstyle="round,pad=0.22", fc="white", ec=HI if hl else LG, lw=0.6, alpha=0.9))
+ax.set_xlabel("Mean annual precipitation (mm yr$^{-1}$, log scale)")
+ax.set_ylabel("Cold-day precipitation fraction (√ scale)")
+ax.set_title("(c) Stratified split in climate space")
+
+# (d) ECDFs
+ax = fig.add_subplot(gs[1, 1])
+LS = {"train": dict(color="#838F98", lw=1.8, ls="-"), "val": dict(color="#A16C19", lw=1.3, ls=(0, (4, 1.6))),
+      "test": dict(color="#264C69", lw=1.4, ls="-")}
+for r in ["train", "val", "test"]:
+    v = np.sort(meta.loc[meta.role == r, "NSEs"].values); y = np.arange(1, len(v) + 1) / len(v); med = np.median(v)
+    ax.step(np.r_[-1, v, 1], np.r_[0, y, 1], where="post", **LS[r], zorder=3 if r == "test" else 2,
+            label=f'{ROLE[r]["lab"]} ({len(v)}), median {med:.2f}')
+    ax.plot([med], [0.5], marker=ROLE[r]["marker"], ms=4.5, mfc=ROLE[r]["fc"], mec=INK if r != "train" else "#9E9E9E",
+            mew=0.7, zorder=5)
+ax.axhline(0.5, color=LG, lw=0.6, zorder=0); ax.axvline(0, color=LG, lw=0.6, zorder=0)
+ax.set_xlim(-1, 1); ax.set_ylim(0, 1)
+ax.set_xticks([-1, -0.5, 0, 0.5, 1])
+ax.set_xlabel("Early B0 NSE* (WY2000–2003)"); ax.set_ylabel("Cumulative fraction of catchments")
+ax.legend(loc="upper left", fontsize=6.8, frameon=False, handlelength=2.2)
+neg = meta.assign(neg=meta.NSEs < 0).groupby("role").neg.sum()
+ax.text(-0.96, 0.33, "NSE* < 0\n" + "\n".join(f'{ROLE[r]["lab"]}: {int(neg[r])} of {NROLE[r]}' for r in ["train", "val", "test"]),
+        fontsize=6.4, va="top")
+ax.grid(True, lw=0.3, color="#EEEEEE"); ax.set_axisbelow(True)
+ax.set_title("(d) Early baseline skill by catchment role")
 
 
-def polygon_parts(feature):
-    g = feature["geometry"]
-    assert g and g["type"] in {"Polygon", "MultiPolygon"}
-    return [g["coordinates"]] if g["type"] == "Polygon" else g["coordinates"]
-
-
-def make_path(features):
-    vertices, codes = [], []
-    for feat in features:
-        for polygon in polygon_parts(feat):
-            for ri, ring in enumerate(polygon):
-                a = np.asarray(ring, dtype=float)[:, :2]
-                assert len(a) >= 4 and np.isfinite(a).all()
-                if not np.array_equal(a[0], a[-1]):
-                    a = np.vstack([a, a[0]])
-                signed_area = np.sum(a[:-1, 0] * a[1:, 1] - a[1:, 0] * a[:-1, 1])
-                # Consistent winding preserves holes in PDF, SVG and Agg.
-                if (ri == 0 and signed_area < 0) or (ri > 0 and signed_area > 0):
-                    a = a[::-1]
-                vertices.extend(a)
-                codes.extend([MplPath.MOVETO] + [MplPath.LINETO] * (len(a) - 2) + [MplPath.CLOSEPOLY])
-    return MplPath(np.asarray(vertices), codes)
-
-
-def size_for_loss(values):
-    return 8 + 250 * np.minimum(np.abs(values), .15)
-
-
-def add_map(ax, state_features, huc_features):
-    land_path = make_path(state_features)
-    # A true cartographic boundary replaces the hand-drawn template outline.
-    land = PathPatch(land_path, facecolor="#F3F3F0", edgecolor="#BEBEBA", linewidth=.34, zorder=0)
-    ax.add_patch(land)
-    lines = [np.asarray(ring)[:, :2] for f in huc_features for p in polygon_parts(f) for ring in p]
-    regions = LineCollection(lines, colors="#8C8C88", linewidths=.38,
-                             linestyles=(0, (2.4, 1.7)), zorder=1)
-    regions.set_clip_path(land_path, ax.transData)
-    ax.add_collection(regions)
-    ax.set_xlim(-126, -66)
-    ax.set_ylim(24, 50.5)
-    # Preserve the template's geographic display/aspect; no distance/area
-    # calculations are performed in longitude/latitude coordinates.
-    ax.set_aspect(1.25)
-    ax.set_xticks([-120, -105, -90, -75], ["120°W", "105°W", "90°W", "75°W"])
-    ax.set_yticks([30, 40, 50], ["30°N", "40°N", "50°N"])
-    ax.tick_params(pad=2)
-
-
-def title(ax, label, text):
-    ax.set_title(f"({label}) {text}", loc="center", pad=5)
-
-
-def main():
-    audit = json.loads((HERE / "data_verification.json").read_text(encoding="utf-8"))
-    assert audit["status"] == "PASS"
-    assert sha(DATA / "figure2_catchments.csv") == audit["data_file_sha256"]
-    frame = pd.read_csv(DATA / "figure2_catchments.csv", dtype={"basin_id": str, "huc2": str})
-    assert len(frame) == 527 and frame.basin_id.nunique() == 527
-    states = json.loads((DATA / "census_states_5m_2024.geojson").read_text(encoding="utf-8"))["features"]
-    hucs = json.loads((DATA / "usgs_huc2_regions.geojson").read_text(encoding="utf-8"))["features"]
-    assert len(states) == 49 and len(hucs) == 18
-    assert len({f["properties"]["STATE"] for f in states}) == 49
-    assert {f["properties"]["huc2"] for f in hucs} == {f"{i:02d}" for i in range(1, 19)}
-
-    fig, axs = plt.subplots(2, 2, figsize=(190 * MM, 120 * MM),
-                           gridspec_kw=dict(left=.06, right=.905, top=.95, bottom=.125,
-                                            wspace=.14, hspace=.29))
-    for ax in axs.flat:
-        add_map(ax, states, hucs)
-
-    # (a) Original role counts and positions, not generated sample locations.
-    ax = axs[0, 0]
-    style = {"train": ("Training", "^", "#9E9E9E", 7),
-             "val": ("Validation", "D", "white", 7),
-             "test": ("Held-out", "o", INK, 10)}
-    for role, (label, marker, colour, size) in style.items():
-        d = frame[frame.role == role]
-        ax.scatter(d.gauge_lon, d.gauge_lat, marker=marker, s=size, c=colour,
-                   edgecolors=INK if role != "train" else "none", linewidths=.4,
-                   label=f"{label} ({len(d)})", zorder=3)
-    ax.legend(loc="lower left", bbox_to_anchor=(.015, .025), borderpad=.1,
-              labelspacing=.35, handletextpad=.3, prop={"weight": "bold", "size": 6.5})
-    title(ax, "a", "Catchment roles")
-
-    # (b) Full bounded range: negative skills are not clipped to zero.
-    ax = axs[0, 1]
-    sc = ax.scatter(frame.gauge_lon, frame.gauge_lat,
-                    c=frame.early_B0_transformed_mean_NSE, cmap="YlOrRd_r",
-                    norm=Normalize(-1, 1), s=9, edgecolors="none", zorder=3)
-    risk = frame[frame.early_risk]
-    assert len(risk) == 7 and (risk.early_EA_B0_pooled_NSE < 0).all()
-    ax.scatter(risk.gauge_lon, risk.gauge_lat, s=36, facecolors="none",
-               edgecolors=BLUE, linewidths=1, zorder=5, label="Early risk catchments (7)")
-    ax.legend(loc="lower left", bbox_to_anchor=(.025, .015), borderpad=.15,
-              handletextpad=.6, prop={"weight": "bold", "size": 6.5})
-    cax = ax.inset_axes([1.025, .1, .031, .8])
-    cb = fig.colorbar(sc, cax=cax, extend="neither", ticks=[-1, -.5, 0, .5, 1])
-    cb.ax.tick_params(labelsize=6.7, length=2, pad=2)
-    cb.set_label("Early B0 NSE* (transformed mean)", fontsize=7, fontweight="bold", labelpad=3)
-    cb.solids.set_rasterized(False)
-    title(ax, "b", "Early-period skill of B0")
-
-    heldout = frame[frame.role == "test"]
-    other = frame[frame.role != "test"]
-    # Keep the reference's common colour normalization and size scale in c/d.
-    norm = TwoSlopeNorm(vmin=-.06, vcenter=0, vmax=.12)
-    for j, model in enumerate(["M1", "EA"]):
-        ax = axs[1, j]
-        ax.scatter(other.gauge_lon, other.gauge_lat, s=3, c="#CFCFCF", edgecolors="none", zorder=2)
-        loss = heldout[f"D_{model}_NSEstar"]
-        # Largest symbols first, allowing small nearby catchments to remain visible.
-        d = heldout.assign(size=size_for_loss(loss)).sort_values("size", ascending=False)
-        sc = ax.scatter(d.gauge_lon, d.gauge_lat, c=d[f"D_{model}_NSEstar"],
-                        cmap="RdBu_r", norm=norm, s=d["size"], edgecolors=INK,
-                        linewidths=.3, zorder=3)
-        top = heldout[heldout.top3_library_gain]
-        assert len(top) == 3
-        ax.scatter(top.gauge_lon, top.gauge_lat, s=90, facecolors="none", edgecolors=INK,
-                   linewidths=1.1, zorder=5)
-        stats = audit["loss_statistics"][model]
-        ax.text(.98, .035, f"positive: {stats['positive_percent']:.0f}%\nmedian $D_b$ = {stats['median']:.3f}",
-                transform=ax.transAxes, ha="right", va="bottom", fontsize=6.5, fontweight="bold")
-        title(ax, "cd"[j], f"Retraining loss $D_b$ (NSE*), {model}/B0")
-    cax = axs[1, 1].inset_axes([1.025, .1, .031, .8])
-    loss_ticks = [-.06, -.03, 0, .03, .06, .09, .12]
-    cb = fig.colorbar(sc, cax=cax, extend="neither", ticks=loss_ticks)
-    # Flat ends match panel b. The upper tick also identifies observations above the colour limit.
-    cb.set_ticks(loss_ticks, labels=["−0.06", "−0.03", "0.00", "0.03", "0.06", "0.09", "≥0.12"])
-    cb.ax.tick_params(labelsize=6.7, length=2, pad=2)
-    cb.set_label("$D_b$ (NSE*)", fontsize=7, fontweight="bold", labelpad=3)
-    cb.solids.set_rasterized(False)
-
-    # Common keys replace the template/proxy footnote.
-    common = [Line2D([], [], marker="o", ls="none", ms=2.5, color="#CFCFCF"),
-              Line2D([], [], marker="o", ls="none", ms=6, mfc="none", mec=INK, mew=1.0),
-              Line2D([], [], color="#BEBEBA", lw=.6),
-              Line2D([], [], color="#8C8C88", lw=.6, ls=(0, (2.4, 1.7)))]
-    fig.legend(common, ["Other catchments (c, d)", "Largest library gains (3)", "State boundary", "HUC2 boundary"],
-               loc="lower center", bbox_to_anchor=(.49, .052), ncol=4,
-               handlelength=1.6, handletextpad=.45, columnspacing=1.3, fontsize=6.6)
-    sizes = [Line2D([], [], marker="o", ls="none", ms=np.sqrt(size_for_loss(v)),
-                    mfc="#EFEFEF", mec=INK, mew=.4) for v in [.02, .08, .15]]
-    fig.legend(sizes, ["0.02", "0.08", "≥0.15"], loc="lower center", bbox_to_anchor=(.60, .011),
-               ncol=3, fontsize=6.6, handlelength=1.6, handletextpad=.5, columnspacing=2)
-    fig.text(.18, .027, "Marker size in (c, d): $|D_b|$", ha="left", va="center", fontsize=6.6)
-
-    fig.canvas.draw()
-    # Save a small QC preview independently of the four publication formats.
-    fig.savefig(QA / "Figure_2_preview.png", dpi=180)
-    basename = HERE / "fig2"
-    for ext in ["png", "svg", "pdf"]:
-        fig.savefig(basename.with_suffix("." + ext), dpi=DPI)
-    # TIFF stores RGB pixels and explicit 600-dpi metadata, with lossless LZW.
-    with Image.open(basename.with_suffix(".png")) as im:
-        im.convert("RGB").save(basename.with_suffix(".tif"), dpi=(DPI, DPI), compression="tiff_lzw")
-
-    renderer = fig.canvas.get_renderer()
-    text_outside = []
-    from matplotlib.text import Text
-    for artist in fig.findobj(match=Text):
-        if artist.get_visible() and artist.get_text():
-            box = artist.get_window_extent(renderer)
-            if box.width > 0 and box.height > 0 and (box.x0 < -1 or box.y0 < -1 or box.x1 > fig.bbox.width + 1 or box.y1 > fig.bbox.height + 1):
-                text_outside.append(artist.get_text())
-    assert not text_outside, text_outside
-    manifest = dict(figure="2", template="figure_templates_v5_all.zip / figures_v5.py: fig02",
-                    width_mm=190, height_mm=120, raster_dpi=DPI, font=FONT,
-                    map_crs="EPSG:4326", display="longitude/latitude axes; aspect 1.25 from supplied template",
-                    source_data_sha256=sha(DATA / "figure2_catchments.csv"),
-                    colour_range_B0=[-1, 1], colour_range_D=[-.06, .12], colour_center_D=0,
-                    colour_extension_B0="neither", colour_extension_D="neither", upper_tick_D="≥0.12",
-                    marker_area_pt2="8 + 250 * min(abs(D_b), 0.15)",
-                    risk_definition="EA/B0 pooled-ensemble NSE < 0 during WY2000-2003",
-                    corrected_template_proxy=True, no_synthetic_data=True,
-                    outside_canvas_text=text_outside,
-                    outputs={ext: dict(filename=basename.with_suffix('.' + ext).name,
-                                      bytes=basename.with_suffix('.' + ext).stat().st_size,
-                                      sha256=sha(basename.with_suffix('.' + ext))) for ext in ['png', 'tif', 'svg', 'pdf']},
-                    versions=dict(python=__import__('sys').version, matplotlib=matplotlib.__version__,
-                                  numpy=np.__version__, pandas=pd.__version__))
-    (HERE / "figure_manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
-    plt.close(fig)
-    print(json.dumps(manifest, ensure_ascii=False, indent=2))
-
-
-if __name__ == "__main__":
-    import sys
-    sys.stdout.reconfigure(encoding="utf-8")
-    main()
+for ext in ("png", "tif", "svg", "pdf"):
+    opts = {"pil_kwargs":{"compression":"tiff_lzw"}} if ext == "tif" else {}
+    fig.savefig(HERE / f"fig2.{ext}", dpi=600, **opts)
+plt.close(fig)
+qa = HERE / "qa"
+qa.mkdir(exist_ok=True)
+with Image.open(HERE / "fig2.png") as image:
+    image.thumbnail((1300,1000))
+    image.save(qa / "Figure_2_preview.png")

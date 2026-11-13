@@ -672,5 +672,109 @@
         "pixel_identical_to_manuscript_artwork": true
       }
     }
+  },
+  "v1_2_0": {
+    "submission_and_redrawn_figures": {
+      "1": {
+        "pixels": [
+          4488,
+          3259
+        ],
+        "matches_embedded_submission_and_redraw": true
+      },
+      "2": {
+        "pixels": [
+          4488,
+          3259
+        ],
+        "matches_embedded_submission_and_redraw": true
+      },
+      "3": {
+        "pixels": [
+          4488,
+          3141
+        ],
+        "matches_embedded_submission_and_redraw": true
+      },
+      "4": {
+        "pixels": [
+          4488,
+          2055
+        ],
+        "matches_embedded_submission_and_redraw": true
+      },
+      "5": {
+        "pixels": [
+          4488,
+          3236
+        ],
+        "matches_embedded_submission_and_redraw": true
+      },
+      "6": {
+        "pixels": [
+          4488,
+          2598
+        ],
+        "matches_embedded_submission_and_redraw": true
+      },
+      "7": {
+        "pixels": [
+          4488,
+          3566
+        ],
+        "matches_embedded_submission_and_redraw": true
+      },
+      "8": {
+        "pixels": [
+          4488,
+          3968
+        ],
+        "matches_embedded_submission_and_redraw": true
+      },
+      "9": {
+        "pixels": [
+          4488,
+          3543
+        ],
+        "matches_embedded_submission_and_redraw": true
+      },
+      "S1": {
+        "pixels": [
+          4488,
+          2173
+        ],
+        "matches_embedded_submission_and_redraw": true
+      },
+      "S2": {
+        "pixels": [
+          4488,
+          5787
+        ],
+        "matches_embedded_submission_and_redraw": true
+      },
+      "S3": {
+        "pixels": [
+          4488,
+          1889
+        ],
+        "matches_embedded_submission_and_redraw": true
+      },
+      "S4": {
+        "pixels": [
+          4488,
+          3165
+        ],
+        "matches_embedded_submission_and_redraw": true
+      }
+    },
+    "rebuilt_inputs_and_redrawn": [
+      "2",
+      "7",
+      "8",
+      "9",
+      "S4"
+    ],
+    "figure_2_original_renderer": "Matplotlib 3.9.2",
+    "figure_attachment_sha256": "91c93b0eee725fd8b38e054923fb9de08bcc75c14d36a31c9b4b900fc332611c"
   }
 }

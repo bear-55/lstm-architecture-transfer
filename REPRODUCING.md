@@ -43,23 +43,25 @@ python reproduce.py figures
 python reproduce.py prepare-figures --assets ../release-assets
 ```
 
-The first command uses the plot data in the repository. The second rebuilds numerical inputs and renders the same figures under `work/figure-data/figures/`. Figure 9 reads the archived daily predictions. The other figures can be prepared from the repository alone. Use `--figures 7` or `--figures S1 S2 S3` to select publication figures.
+The first command uses the plot data in the repository. The second rebuilds numerical inputs and renders the same figures under `work/figure-data/figures/`. Figure 7 reads the archived daily predictions. The other figures can be prepared from the repository alone. Use `--figures 7` or `--figures S1 S2 S3 S4` to select publication figures.
 
 | Figure | Data and display |
 |---|---|
 | 1 | Regional model library, retained and independent weights, disjoint instance pools |
-| 2 | Catchment roles, early B0 skill and catchment-wise retraining loss |
+| 2 | Catchment roles, HUC2 regions, climate strata and early B0 skill distributions |
 | 3 | Spatial persistence, independent-instance transfer and variance shares |
 | 4 | Retained, transferred and global-rule gains |
 | 5 | Source budgets of one to five instances, gain intervals and paired changes |
 | 6 | Catchment-level gains across five hydrological metrics |
-| 7 | Forest estimates and resampling densities, seven individual selection windows, regional matching and shares of the main estimate |
-| 8 | Four fixed-library radar profiles, cumulative NSE gains and the three largest contributors |
-| 9 | Daily hydrographs and flow-duration curves, including the mean and interquartile range of nine independent EA instances |
-| 10 | Eq. (7) across the local 64-unit and external 256-unit settings. Rebuild the catchment components and external raw and bounded NSE results with `python reproduce.py prepare-figures --figures 10`. |
+| 7 | Daily hydrographs and flow-duration curves, including the mean and interquartile range of nine independent EA instances |
+| 8 | Forest estimates and resampling densities, seven individual selection windows, regional matching and shares of the main estimate |
+| 9 | Eq. (7) across the local 64-unit and external 256-unit settings. Rebuild the catchment components and external raw and bounded NSE results with `python reproduce.py prepare-figures --figures 9`. |
 | S1 | Matching balance and early baseline skill distributions |
 | S2 | Catchment-level gain decompositions across all seeds |
 | S3 | Empirical power-law fits on linear plotting axes over the observed budgets |
+| S4 | Four fixed-library radar profiles, cumulative NSE gains and the three largest contributors |
+
+Figure 2 in the submission was rendered with Matplotlib 3.9.2 (NumPy 1.26.4, pandas 2.2.2). The standard analysis environment also draws it from the same data; use the original plotting versions and Times New Roman to match the archived PNG pixel for pixel.
 
 The figure attachment contains the original 600-dpi PNG and TIFF files and the SVG and PDF files. Font substitution can change the appearance of a local render.
 

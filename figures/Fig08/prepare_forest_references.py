@@ -16,7 +16,7 @@ def read(path):
 
 def main():
     primary = read("outputs/jh_predraft_audit_20261102/main_NSE_endpoints.csv")
-    influence = read("figures/Fig07/data/robustness_endpoints.csv")
+    influence = read("figures/Fig08/data/robustness_endpoints.csv")
     training = read("outputs/multimetric_transfer_20261102/transfer_endpoints.csv")
     budgets = read("figures/Fig05/data/curve_endpoints.csv")
     windows = read("figures/Fig04/data/window_losses.csv")

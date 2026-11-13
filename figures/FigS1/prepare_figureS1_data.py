@@ -1,4 +1,4 @@
-"""Compute catchment matching and covariate balance for Figures S1 and 7c."""
+"""Compute catchment matching and covariate balance for Figures S1 and 8c."""
 from hashlib import sha256
 from pathlib import Path
 import json

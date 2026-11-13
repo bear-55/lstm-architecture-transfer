@@ -127,12 +127,40 @@ def fig5():
     finish(fig,5,dict(intervals='Original 20,000 HUC2 resamples, conditional on the fitted library; dotted bounds for transferred gain'))
 
 def fig7():
-    from Fig07.plot_figure7 import render_figure7
-    render_figure7(folder(7), finish)
+    cases=data(7,'case_selection.csv',dtype={'basin_id':str}); daily=data(7,'daily_nine_instances.csv',dtype={'basin_id':str},parse_dates=['date']); fdc=data(7,'fdc_nine_instances.csv',dtype={'basin_id':str})
+    styles={'observed':('Observed',INK,1.0,'-'),'B0_source':('B0',GREY,.7,'-'),'EA_retained':('EA retained',RED,.9,'-'),
+            'EA_new':('EA independent: mean + IQR',BLUE,1,'-'),'pooled_ensemble':('Pooled ensemble',GOLD,.9,'--')}
+    fig=plt.figure(figsize=(190/25.4,151/25.4)); gs=fig.add_gridspec(3,2,left=.10,right=.98,bottom=.065,top=.90,wspace=.28,hspace=.48,width_ratios=[2.5,1])
+    for i,c in enumerate(cases.itertuples()):
+        g=daily[(daily.basin_id==c.basin_id)&daily.in_hydrograph]; f=fdc[fdc.basin_id==c.basin_id]
+        ax=fig.add_subplot(gs[i,0]); ax.fill_between(g.date,g.EA_new_q25,g.EA_new_q75,color=BLUE,alpha=.23,lw=0,zorder=1)
+        for series,(label,col,lw,ls) in styles.items(): ax.plot(g.date,g[series],color=col,lw=lw,ls=ls,zorder=6 if series=='observed' else 3)
+        ax.set_xlim(g.date.min(),g.date.max()); ax.set_ylim(0,1.06*g[list(styles)+['EA_new_q75']].max().max()); ax.yaxis.set_major_locator(MaxNLocator(4))
+        ax.xaxis.set_major_locator(mdates.MonthLocator(bymonth=[10,1,4,7])); ax.xaxis.set_major_formatter(mdates.DateFormatter('%b'))
+        ax.set_ylabel(r'Q (mm d$^{-1}$)'); ax.set_title(f'({"ace"[i]}) {c.basin_id} · WY2004',pad=6)
+        ax=fig.add_subplot(gs[i,1]); new=f[f.series=='EA_new'].sort_values('rank'); ax.fill_between(new.exceedance_pct,new.q25,new.q75,color=BLUE,alpha=.23,lw=0)
+        for series,(label,col,lw,ls) in styles.items():
+            s=f[f.series==series].sort_values('rank'); ax.plot(s.exceedance_pct,s.q_mm_day,color=col,lw=lw,ls=ls,zorder=6 if series=='observed' else 3)
+        ax.axvspan(.05,2,color='#FBE3C8',alpha=.5,lw=0,zorder=0)
+        ax.set_xscale('log'); ax.set_yscale('log'); ax.set_xlim(.05,100)
+        ax.set_ylim(min(f.q_mm_day.min(),new.q25.min())/1.2,max(f.q_mm_day.max(),new.q75.max())*1.18)
+        ax.set_xticks([.1,1,10,100],['0.1','1','10','100']); ax.yaxis.set_major_formatter(LogFormatterMathtext())
+        ax.set_ylabel(r'Q (mm d$^{-1}$)'); ax.set_xlabel('Exceedance (%)' if i==2 else ''); ax.set_title(f'({"bdf"[i]}) Flow duration\nWY2004–2008',pad=6,fontsize=8,linespacing=1.05)
+    fig.legend([Line2D([],[],color=col,lw=lw+.2,ls=ls) for _,col,lw,ls in styles.values()],[s[0] for s in styles.values()],
+               loc='upper center',bbox_to_anchor=(.53,.992),ncol=3,fontsize=8,columnspacing=1.8,handlelength=2)
+    finish(fig,7,dict(independent_EA_instances=9,band='Interquartile range across independent instances; source excluded'))
 
 def fig8():
-    t=data(8,'reference_radar_profiles.csv'); gain=data(8,'gain_concentration.csv',dtype={'basin_id':str})
-    failures=data(8,'failure_matrix.csv',dtype={'basin_id':str}).set_index('basin_id')
+    from Fig08.plot_figure8 import render_figure8
+    render_figure8(folder(8), finish)
+
+def fig9():
+    import runpy
+    runpy.run_path(str(folder(9) / 'plot_figure9.py'), run_name='__main__')
+
+def figS4():
+    t=data('S4','reference_radar_profiles.csv'); gain=data('S4','gain_concentration.csv',dtype={'basin_id':str})
+    failures=data('S4','failure_matrix.csv',dtype={'basin_id':str}).set_index('basin_id')
     metrics=['nse','kge','r','alpha_closeness','beta_closeness','abs_fhv','mae_high','mae_low']
     names=['NSE','KGE','r','1−|α−1|','1−|β−1|','|FHV|','High MAE','Low MAE']
     groups=[('typical_heldout','Typical held-out (100)'),('early_risk','Early risk (7)'),('training','Training (370)'),('external','External (531)')]
@@ -179,33 +207,9 @@ def fig8():
     ax.set_xlim(-.15,2.9); ax.set_ylim(-1.57,.52); ax.set_yticks([-1.5,-1,-.5,0,.5])
     ax.set_xticks([0,1,2],['One\ninstance','Arch. +\nensemble','Pooled\nensemble'],fontsize=7.5,fontweight='bold')
     ax.set_ylabel('Late-period NSE'); ax.set_title('(f) Three dominant catchments',pad=8)
-    finish(fig,8,dict(radar_reference='Radius 0.5 = pooled strategy median; radius differences are oriented so outward is better',
+    finish(fig,'S4',dict(radar_reference='Radius 0.5 = pooled strategy median; radius differences are oriented so outward is better',
                      radar_comparable_ranges='Identical in panels a,c,d; wider in early-risk panel b',radar_clipped_values=0,
                      cumulative_curve='Exact unsmoothed sum of ranked NSE gains',ensemble_size_local=20,ensemble_size_external=16))
-
-def fig9():
-    cases=data(9,'case_selection.csv',dtype={'basin_id':str}); daily=data(9,'daily_nine_instances.csv',dtype={'basin_id':str},parse_dates=['date']); fdc=data(9,'fdc_nine_instances.csv',dtype={'basin_id':str})
-    styles={'observed':('Observed',INK,1.0,'-'),'B0_source':('B0',GREY,.7,'-'),'EA_retained':('EA retained',RED,.9,'-'),
-            'EA_new':('EA independent: mean + IQR',BLUE,1,'-'),'pooled_ensemble':('Pooled ensemble',GOLD,.9,'--')}
-    fig=plt.figure(figsize=(190/25.4,151/25.4)); gs=fig.add_gridspec(3,2,left=.10,right=.98,bottom=.065,top=.90,wspace=.28,hspace=.48,width_ratios=[2.5,1])
-    for i,c in enumerate(cases.itertuples()):
-        g=daily[(daily.basin_id==c.basin_id)&daily.in_hydrograph]; f=fdc[fdc.basin_id==c.basin_id]
-        ax=fig.add_subplot(gs[i,0]); ax.fill_between(g.date,g.EA_new_q25,g.EA_new_q75,color=BLUE,alpha=.23,lw=0,zorder=1)
-        for series,(label,col,lw,ls) in styles.items(): ax.plot(g.date,g[series],color=col,lw=lw,ls=ls,zorder=6 if series=='observed' else 3)
-        ax.set_xlim(g.date.min(),g.date.max()); ax.set_ylim(0,1.06*g[list(styles)+['EA_new_q75']].max().max()); ax.yaxis.set_major_locator(MaxNLocator(4))
-        ax.xaxis.set_major_locator(mdates.MonthLocator(bymonth=[10,1,4,7])); ax.xaxis.set_major_formatter(mdates.DateFormatter('%b'))
-        ax.set_ylabel(r'Q (mm d$^{-1}$)'); ax.set_title(f'({"ace"[i]}) {c.basin_id} · WY2004',pad=6)
-        ax=fig.add_subplot(gs[i,1]); new=f[f.series=='EA_new'].sort_values('rank'); ax.fill_between(new.exceedance_pct,new.q25,new.q75,color=BLUE,alpha=.23,lw=0)
-        for series,(label,col,lw,ls) in styles.items():
-            s=f[f.series==series].sort_values('rank'); ax.plot(s.exceedance_pct,s.q_mm_day,color=col,lw=lw,ls=ls,zorder=6 if series=='observed' else 3)
-        ax.axvspan(.05,2,color='#FBE3C8',alpha=.5,lw=0,zorder=0)
-        ax.set_xscale('log'); ax.set_yscale('log'); ax.set_xlim(.05,100)
-        ax.set_ylim(min(f.q_mm_day.min(),new.q25.min())/1.2,max(f.q_mm_day.max(),new.q75.max())*1.18)
-        ax.set_xticks([.1,1,10,100],['0.1','1','10','100']); ax.yaxis.set_major_formatter(LogFormatterMathtext())
-        ax.set_ylabel(r'Q (mm d$^{-1}$)'); ax.set_xlabel('Exceedance (%)' if i==2 else ''); ax.set_title(f'({"bdf"[i]}) Flow duration\nWY2004–2008',pad=6,fontsize=8,linespacing=1.05)
-    fig.legend([Line2D([],[],color=col,lw=lw+.2,ls=ls) for _,col,lw,ls in styles.values()],[s[0] for s in styles.values()],
-               loc='upper center',bbox_to_anchor=(.53,.992),ncol=3,fontsize=8,columnspacing=1.8,handlelength=2)
-    finish(fig,9,dict(independent_EA_instances=9,band='Interquartile range across independent instances; source excluded'))
 
 def figS1():
     bal=data('S1','covariate_balance.csv'); ecdf=data('S1','score_ecdfs.csv')
@@ -231,7 +235,10 @@ def figS1():
     finish(fig,'S1',dict(ECDF_curves=4,interpolation='Monotone PCHIP through every empirical point'))
 
 def figS3():
-    t=data('S3','curve_endpoints.csv'); fits=data('S3','power_fits.csv')
+    folder('S3').mkdir(exist_ok=True); (folder('S3')/'data').mkdir(exist_ok=True)
+    import shutil
+    for f in ['curve_endpoints.csv','power_fits.csv']: shutil.copy2(folder(5)/'data'/f,folder('S3')/'data'/f)
+    t=data(5,'curve_endpoints.csv'); fits=data(5,'power_fits.csv')
     fig,axs=plt.subplots(1,2,figsize=(190/25.4,80/25.4),gridspec_kw=dict(left=.085,right=.98,bottom=.18,top=.85,wspace=.25))
     for ax,(comp,col) in zip(axs,COL.items()):
         s=t[(t.comparison==comp)&(t.endpoint=='D')]; r=fits[fits.comparison==comp].iloc[0]; x=np.linspace(1,5,101)
@@ -243,4 +250,4 @@ def figS3():
 
 if __name__=='__main__':
     sys.stdout.reconfigure(encoding='utf-8')
-    for n in (sys.argv[1:] or ['4','5','7','8','9','S1','S3']): globals()['fig'+n]()
+    for n in (sys.argv[1:] or ['4','5','7','8','9','S1','S3','S4']): globals()['fig'+n]()
