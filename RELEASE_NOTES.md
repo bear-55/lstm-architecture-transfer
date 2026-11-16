@@ -1,4 +1,4 @@
-# Reproducibility materials v1.2.0
+# Reproducibility materials v1.2.1
 
 This release accompanies *Retained-weight evaluation overstates transferable gains from catchment-wise architecture selection in regional LSTM rainfall–runoff models*.
 
@@ -8,12 +8,14 @@ Section 4.2 and Figure 9 compare observed retraining losses with Eq. (7) across 
 
 Figure 2 now shows the climate strata and early baseline skill distributions for all three catchment groups. The hydrographs, robustness checks and Eq. (7) analysis are Figures 7, 8 and 9. Fixed-library deployment is Figure S4 and Table S12. Captions follow the submission manuscript and supplement.
 
+This patch updates Figure 2 layout: the panel (a) legend uses a smaller font and sits inside the plot frame; panel (c) retains its original annotation boxes. The figure data and all numerical results are unchanged.
+
 ## Downloads
 
 - [model-artifacts-v1.0.0.zip](https://github.com/bear-55/lstm-architecture-transfer/releases/download/v1.0.0/model-artifacts-v1.0.0.zip) — 30 validation-selected checkpoints, resume checkpoints, training histories, run metadata, validation predictions and 150 period-specific evaluation-prediction files.
 - [training-cache-v1.0.0.zip](https://github.com/bear-55/lstm-architecture-transfer/releases/download/v1.0.0/training-cache-v1.0.0.zip) — frozen model input cache, training/validation observations, scalers, metadata and held-out observation arrays.
-- [publication-figures-v1.2.0.zip](https://github.com/bear-55/lstm-architecture-transfer/releases/download/v1.2.0/publication-figures-v1.2.0.zip) — Figures 1–9 and S1–S4 in 600-dpi PNG/TIFF and vector SVG/PDF: 52 files.
-- [SHA256SUMS.txt](https://github.com/bear-55/lstm-architecture-transfer/releases/download/v1.2.0/SHA256SUMS.txt) — attachment checksums.
+- [publication-figures-v1.2.1.zip](https://github.com/bear-55/lstm-architecture-transfer/releases/download/v1.2.1/publication-figures-v1.2.1.zip) — Figures 1–9 and S1–S4 in 600-dpi PNG/TIFF and vector SVG/PDF: 52 files.
+- [SHA256SUMS.txt](https://github.com/bear-55/lstm-architecture-transfer/releases/download/v1.2.1/SHA256SUMS.txt) — attachment checksums.
 
 Download the three ZIP files to a sibling `release-assets` directory and run:
 

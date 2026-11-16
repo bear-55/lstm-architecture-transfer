@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.2.1",
   "extract_at": "repository root",
   "assets": [
     {
@@ -3484,9 +3484,9 @@
       "download_url": "https://github.com/bear-55/lstm-architecture-transfer/releases/download/v1.0.0/training-cache-v1.0.0.zip"
     },
     {
-      "name": "publication-figures-v1.2.0.zip",
-      "bytes": 33650889,
-      "sha256": "91c93b0eee725fd8b38e054923fb9de08bcc75c14d36a31c9b4b900fc332611c",
+      "name": "publication-figures-v1.2.1.zip",
+      "bytes": 33646808,
+      "sha256": "3309c42b7efa7f34d7ff63f8e22b9650b153197d38775727d15bd2ee7a513577",
       "files": [
         {
           "path": "figures/Fig01/fig1.pdf",
@@ -3510,23 +3510,23 @@
         },
         {
           "path": "figures/Fig02/fig2.pdf",
-          "bytes": 1667203,
-          "sha256": "d1bb5766cbc7e0147f4eea5dfec5932346f37a9c7a02f8aebc7a4ad0e29555c6"
+          "bytes": 1667205,
+          "sha256": "709f5b23ca25197c483d22f24203d866cd0604fba82ae508d420d990ad20b5f7"
         },
         {
           "path": "figures/Fig02/fig2.png",
-          "bytes": 1606034,
-          "sha256": "3eb34c4ead1dc4153a374aca6c53dc677e50fa73759e196a700df5884c28c3aa"
+          "bytes": 1603722,
+          "sha256": "814aea76949a1f3780cf1c13dd0c4f002cc81c66420f58f4cceaf2089105e3ae"
         },
         {
           "path": "figures/Fig02/fig2.svg",
-          "bytes": 4834508,
-          "sha256": "feec6614960a12dd8367a2a4b39791f0bcbee0c1cbeca52f0c006b9dc23e68be"
+          "bytes": 4834515,
+          "sha256": "1b47ca9a1ac5b20bf53aba58ca891ccbe070099e3ff2a9e2704fbe377ccb1b72"
         },
         {
           "path": "figures/Fig02/fig2.tif",
-          "bytes": 2454474,
-          "sha256": "556551db87461608c6e5c7e097fdecee5830edad5fd513ae31cff77b5defe317"
+          "bytes": 2452672,
+          "sha256": "7f9a391f6a6a02024bdcc524abbf2d2b7475f958aa47116b10360099d8a4d139"
         },
         {
           "path": "figures/Fig03/fig3.pdf",
@@ -3749,7 +3749,7 @@
           "sha256": "ee93b698b1b4f4143812a610feb09ccff235073c28d55b9fe20b68d97c90d7c2"
         }
       ],
-      "download_url": "https://github.com/bear-55/lstm-architecture-transfer/releases/download/v1.2.0/publication-figures-v1.2.0.zip"
+      "download_url": "https://github.com/bear-55/lstm-architecture-transfer/releases/download/v1.2.1/publication-figures-v1.2.1.zip"
     }
   ]
 }

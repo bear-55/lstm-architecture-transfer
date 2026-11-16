@@ -82,7 +82,7 @@ for r in ["train", "val", "test"]:
     d = meta[meta.role == r]; s = ROLE[r]
     ax.scatter(d.gauge_lon, d.gauge_lat, marker=s["marker"], s=s["s"], fc=s["fc"], ec=s["ec"], lw=s["lw"],
                zorder=s["z"] + 2, label=f'{s["lab"]} ({len(d)})')
-ax.legend(loc="lower left", prop={"weight": "bold", "size": 6.8}, frameon=False, handletextpad=0.2, borderaxespad=0.3)
+ax.legend(loc="lower left", bbox_to_anchor=(0, 0), prop={"weight": "bold", "size": 6.2}, frameon=False, handletextpad=0.2, borderaxespad=0.3)
 ax.set_title("(a) Catchment roles")
 
 # (b) early skill map

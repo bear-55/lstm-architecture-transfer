@@ -69,7 +69,7 @@ Download the three linked ZIP files into a sibling `release-assets` directory. T
 
 - [model-artifacts-v1.0.0.zip](https://github.com/bear-55/lstm-architecture-transfer/releases/download/v1.0.0/model-artifacts-v1.0.0.zip): all 30 selected checkpoints, final/resume checkpoints, histories, run metadata and seed-specific daily predictions.
 - [training-cache-v1.0.0.zip](https://github.com/bear-55/lstm-architecture-transfer/releases/download/v1.0.0/training-cache-v1.0.0.zip): the frozen training/validation cache, scalers, metadata and held-out observation arrays.
-- [publication-figures-v1.2.0.zip](https://github.com/bear-55/lstm-architecture-transfer/releases/download/v1.2.0/publication-figures-v1.2.0.zip): the 52 final figure files used for the manuscript, four formats for each of Figures 1–9 and S1–S4.
+- [publication-figures-v1.2.1.zip](https://github.com/bear-55/lstm-architecture-transfer/releases/download/v1.2.1/publication-figures-v1.2.1.zip): the 52 final figure files used for the manuscript, four formats for each of Figures 1–9 and S1–S4.
 
 Verify the ZIPs and optionally extract them at repository root:
 

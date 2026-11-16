@@ -776,5 +776,21 @@
     ],
     "figure_2_original_renderer": "Matplotlib 3.9.2",
     "figure_attachment_sha256": "91c93b0eee725fd8b38e054923fb9de08bcc75c14d36a31c9b4b900fc332611c"
+  },
+  "v1_2_1": {
+    "scope": "Figure 2 layout only",
+    "figure_attachment_sha256": "3309c42b7efa7f34d7ff63f8e22b9650b153197d38775727d15bd2ee7a513577",
+    "unchanged_archive_entries": 48,
+    "replaced_archive_entries": [
+      "figures/Fig02/fig2.pdf",
+      "figures/Fig02/fig2.png",
+      "figures/Fig02/fig2.svg",
+      "figures/Fig02/fig2.tif"
+    ],
+    "verified": "2026-11-16",
+    "figure_2_redraw_pixel_match": true,
+    "figure_2_submission_pixel_match": true,
+    "figure_2_renderer": "Matplotlib 3.9.2",
+    "data_files_unchanged": true
   }
 }

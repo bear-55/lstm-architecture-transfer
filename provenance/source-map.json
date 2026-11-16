@@ -333,8 +333,8 @@
     },
     {
       "path": "figures/Fig02/plot_figure2.py",
-      "source_sha256": "0f5c0e2259ace42e140c16b7b6beefaacf6cf123bd95f92bc433a53e738662bb",
-      "release_sha256": "075280a7f29e57a7cedb774a95f07fc5470404ddf71c01627b688515aa86cb43",
+      "source_sha256": "5b11b912543e362130572bb8e3ad5e39ebf39a0fa718be5648d195eb33f8aeff",
+      "release_sha256": "47f7f2c5af9cabe6f22c1039c6f783729d230308bf9e825b985b857b40827bc5",
       "copied_unchanged": false
     },
     {
@@ -2537,5 +2537,9 @@
       "9": "7",
       "10": "9"
     }
+  },
+  "v1_2_1": {
+    "scope": "Figure 2 layout only",
+    "unchanged": "All figure input data and numerical results"
   }
 }
