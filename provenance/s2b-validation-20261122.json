@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "date": "2026-11-22",
+  "table": "tables/Table_S2b.csv",
+  "existing_rows_preserved": 24,
+  "new_bounded_NSE_sensitivity_rows": 8,
+  "raw_sensitivity_rows_verified": 8,
+  "rounded_to_decimals": 2,
+  "script": "scripts/reproduce_s2b_sensitivity.py",
+  "input_and_subset_provenance": "outputs/s2b_sensitivity_20261122/provenance.json",
+  "full_precision_results": "outputs/s2b_sensitivity_20261122/reml_full_precision.json",
+  "scope": "Late-period bounded-NSE sensitivity rows and explicit scale labels; existing full-set estimates unchanged."
+}

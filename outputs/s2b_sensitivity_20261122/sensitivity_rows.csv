@@ -1,0 +1,17 @@
+Group,Contrast,Scale,N,Catchment,Seed,Interaction / residual
+Held-out,M1/B0,"NSE, nonnegative early NSE",79,0.00,1.43,98.57
+Held-out,M1/B0,"NSE, omit 5 largest early differences",102,0.00,1.19,98.81
+Held-out,M1/B0,"NSE*, nonnegative early NSE",79,0.00,2.53,97.47
+Held-out,M1/B0,"NSE*, omit 5 largest early differences",102,0.00,2.69,97.31
+Held-out,EA/B0,"NSE, nonnegative early NSE",79,0.00,0.38,99.62
+Held-out,EA/B0,"NSE, omit 5 largest early differences",102,4.86,0.50,94.64
+Held-out,EA/B0,"NSE*, nonnegative early NSE",79,4.25,0.75,95.00
+Held-out,EA/B0,"NSE*, omit 5 largest early differences",102,9.00,0.63,90.37
+Training,M1/B0,"NSE, nonnegative early NSE",331,1.55,5.76,92.69
+Training,M1/B0,"NSE, omit 5 largest early differences",365,0.00,0.88,99.12
+Training,M1/B0,"NSE*, nonnegative early NSE",331,0.00,10.80,89.20
+Training,M1/B0,"NSE*, omit 5 largest early differences",365,0.00,9.48,90.52
+Training,EA/B0,"NSE, nonnegative early NSE",337,0.98,2.18,96.84
+Training,EA/B0,"NSE, omit 5 largest early differences",365,0.00,0.47,99.53
+Training,EA/B0,"NSE*, nonnegative early NSE",337,3.33,4.45,92.23
+Training,EA/B0,"NSE*, omit 5 largest early differences",365,2.81,4.17,93.02

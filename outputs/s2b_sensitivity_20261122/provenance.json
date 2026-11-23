@@ -1,0 +1,11 @@
+{
+  "inputs_sha256": {
+    "outputs/training_domain_followup_20261102/unseen_aligned/metric_arrays.npz": "afa5d1b17a0d88c51aeee4f9d727f9bb88fdcdf8d92cced8da351cc7507fcce7",
+    "outputs/weakness_resolution_20261102/local_internal/metric_arrays.npz": "035d08351094ff3739d4693f2e96ff27cd59624e6eb186c6a4a13f9f039445d6"
+  },
+  "estimator": "scripts/weakness_stats.py:reml (balanced crossed-factor REML)",
+  "evaluation_period": "WY2004-2008",
+  "subset_definition_period": "WY2000-2003",
+  "bounded_transform": "NSE* = NSE / (2 - NSE), applied before candidate-minus-B0 differences",
+  "subset_rule": "Identical early-raw-NSE subsets on both scales; ten paired seeds per contrast."
+}

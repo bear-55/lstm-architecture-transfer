@@ -2391,8 +2391,9 @@
       "path": "tables/Table_S2b.csv",
       "source_sha256": "3c4770c174ffc22900d7c7bf98187e0584a5c77e825a852991bda0bac1264e05",
       "source_kind": "English manuscript table",
-      "release_sha256": "6935abdfc512894d9818845f85c3c699109348c379ca51e50ace78bb3c384fe3",
-      "copied_unchanged": false
+      "release_sha256": "74fbc1dbe292b876a6d2fefd74b8f43338d5b06d5d42705d24736465cdb19f00",
+      "copied_unchanged": false,
+      "sensitivity_update": "outputs/s2b_sensitivity_20261122/provenance.json"
     },
     {
       "path": "tables/Table_S3.csv",
@@ -2541,5 +2542,11 @@
   "v1_2_1": {
     "scope": "Figure 2 layout only",
     "unchanged": "All figure input data and numerical results"
+  },
+  "s2b_update_20261122": {
+    "table": "tables/Table_S2b.csv",
+    "added_rows": 8,
+    "scale": "bounded NSE*",
+    "validation": "provenance/s2b-validation-20261122.json"
   }
 }

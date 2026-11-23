@@ -36,6 +36,14 @@ The command also runs `scripts/selection_sensitivity.py` to reconstruct the seed
 
 The score-level reproduction uses the archived observation-normalizer table. Its values were originally computed from daily observations; effective-day counts are checked against the individual-score records. The release validation additionally checks these normalizers against the daily-prediction attachment.
 
+### Table S2b sensitivity checks
+
+```bash
+python scripts/reproduce_s2b_sensitivity.py --out work/s2b_sensitivity
+```
+
+This recomputes the late-period REML variance components on raw NSE and bounded NSE* for two subsets: catchments with nonnegative early NSE for all ten instances of both architectures, and catchments remaining after omitting the five largest absolute ten-seed mean early candidate-minus-B0 differences. Both subsets are defined from early raw NSE and are identical on the two scales. The script reuses `scripts/weakness_stats.py:reml`, checks the sensitivity rows against `tables/Table_S2b.csv`, and preserves the full-set rows when writing the complete 32-row table. Full-precision estimates, subset membership and input hashes are archived in `outputs/s2b_sensitivity_20261122/`.
+
 ## 3. Reproduce the figures
 
 ```bash
